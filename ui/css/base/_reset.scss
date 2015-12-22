@@ -1,0 +1,51 @@
+﻿html{
+	min-height:100%;
+	background-image:url(#{$bg-path}background.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+
+body,input,select{
+	font:14px/ 1.7 "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+	color:#333;
+}
+
+body,h1,h2,h3,ul{
+	margin:0;
+}
+
+ul{
+	padding:0;
+}
+
+li{
+	list-style:none;
+}
+
+a{
+	color:#666;
+	text-decoration:none;
+	&:hover{
+		color:#333;
+		text-decoration:underline;
+	}
+}
+
+.clearfix{
+	*zoom:1;
+	&:after{
+		content:"\20";
+		display:block;
+		height:0;
+		visibility:hidden;
+		clear:both;
+	}
+}
+
+.hide{
+	font-size:0;
+	line-height:0;
+	text-indent:-99rem;
+	overflow:hidden;
+}

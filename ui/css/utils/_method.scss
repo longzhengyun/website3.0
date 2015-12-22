@@ -1,0 +1,68 @@
+﻿//moblie
+//主菜单
+.main-menu{
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:.1rem;
+	height:.32rem;
+	z-index:49;
+	text-align:right;
+	nav{
+		display:inline-block;
+		width:.3rem;
+		height:.3rem;
+		margin-right:.1rem;
+		border:.01rem solid #eee;
+		line-height:.3rem;
+		vertical-align:top;
+		text-align:center;
+		font-size:.2rem;
+		background-color:rgba(255,255,255,.5);
+		border-radius:50%;
+		&:active{
+			background-color:#eee;
+			color:#999;
+		}
+	}
+}
+
+//LOGO
+.main-logo{
+	position:absolute;
+	@include positionCenter;//水平居中
+	top:.1rem;
+	width:1.2rem;
+	height:.375rem;
+	z-index:49;
+	background-image:url(#{$bg-path}logo.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+
+//content
+
+
+//loading状态
+.load-layer{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:999;
+	background-color:#eee;
+	.load-con{
+		position:absolute;
+		@include positionCenterMiddle;//水平垂直居中
+		width:.72rem;
+		height:.72rem;
+		background-color:#000;
+		border-radius:.06rem;
+		opacity:.5;
+		background-image:url(#{$bg-path}loading.gif);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:50%;
+	}
+}

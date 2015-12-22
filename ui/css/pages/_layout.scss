@@ -1,0 +1,43 @@
+﻿//PC
+.pc-aside{
+	background-color:#f3f3f3;
+	font-family:Arial, Helvetica, sans-serif;
+	.logo{
+		img{
+			display:block;
+			width:100%;
+		}
+	}
+	.signature{
+		color:#999;
+		font-size:14px;
+	}
+	.menu{
+		span{
+			background-color:#fefefe;
+			cursor:pointer;
+			&:hover{
+				background-color:#f9f9f9;
+			}
+		}
+		i{
+			padding-left:.04rem;
+		}
+	}
+	.list-nav{
+		display:none;
+		li{
+			text-align:center;
+			background-color:#fff;
+			cursor:pointer;
+			&:hover{
+				background-color:#e3e3e3;
+			}
+		}
+	}
+	.copyright{
+		color:#999;
+		font-size:12px;
+		a{color:#999;}
+	}
+}

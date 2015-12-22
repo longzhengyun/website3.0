@@ -1,0 +1,60 @@
+﻿@media screen and (max-width: 639px) {
+
+.pc-aside{
+	padding-bottom:.1rem;
+	border-bottom:1px solid #ccc;
+	.logo{
+		width:1rem;
+		padding-top:.1rem;
+		margin-left:.1rem;
+	}
+	.signature{
+		display:block;
+		margin-left:.1rem;
+	}
+	.menu{
+		position:absolute;
+		top:0;
+		right:.05rem;
+		padding-top:.1rem;
+		span{
+			display:inline-block;
+			padding:.05rem .08rem;
+			margin-left:.02rem;
+			border-radius:.05rem;
+			font-size:.08rem;
+		}
+		.current{
+			color:#f00;
+		}
+		i{
+			font-size:.105rem;
+		}
+	}
+	.list-nav{
+		position:fixed;
+		@include positionCenterMiddle;//水平垂直居中
+		width:70%;
+		padding-bottom:.05rem;
+		background-color:#eee;
+		font-size:0;
+		li{
+			display:inline-block;
+			width:47%;
+			margin:.05rem 0 0 2%;
+			padding:.05rem 0;
+			font-size:14px;
+		}
+	}
+	.copyright{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		text-align:center;
+	}
+}
+.pc-content{
+}
+
+}

@@ -1,0 +1,5 @@
+{
+	"mainMenu":"<section class='main-menu' id='main-menu'><nav class='icon-home' title='菜单一'></nav><nav class='icon-tree' title='菜单二'></nav><nav class='icon-location' title='菜单三'></nav><nav class='icon-books' title='菜单四'></nav></section>",
+	"mainLogo":"<section class='main-logo' id='main-logo'></section>",
+	"mainContent":"<section class='main-content' id='main-content'><div class='content-wrap'></div></section>"
+}

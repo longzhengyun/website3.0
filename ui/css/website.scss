@@ -1,0 +1,13 @@
+﻿//全局样式
+@import "utils/variables";//变量
+@import "base/reset";//重置
+@import "base/icon-font";//字体icon
+@import "utils/method";//模块
+
+//布局
+@import "pages/layout";//layout样式
+
+//按分辨率加载样式
+@import "resolution/mdpi";//320x480
+@import "resolution/xhdpi";//720x1280
+@import "resolution/xxhdpi";//1080x1920

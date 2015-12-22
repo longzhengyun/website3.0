@@ -1,0 +1,46 @@
+@charset "UTF-8";
+//单位换算 rem vs px 1:100
+
+//字体icon路径
+$font-path: "../fonts/";
+
+//图片路径
+$bg-path: "../images/";
+
+//基本颜色定义
+$color-error: 					 #ff4646;
+$borderColor:                    #dbdbdb !default;
+$gray: 							 #ccc !default;
+$barHeight:                      .44rem !default;
+$barHeightFt:                    .48rem !default;
+
+//水平居中
+@mixin positionCenter(){
+	left:50%;
+	-webkit-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	-o-transform:translateX(-50%);
+	transform:translateX(-50%);
+}
+
+//垂直居中
+@mixin positionMiddle(){
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+//水平垂直居中
+@mixin positionCenterMiddle(){
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+}
