@@ -1,18 +1,29 @@
-﻿html{
-	min-height:100%;
+﻿html,body,.container{
+	height:100%;
+}
+html{
 	background-image:url(#{$bg-path}background.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:cover;
 }
 
-body,input,select{
-	font:14px/ 1.7 "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+body,input,select,button{
+	font:14px/1.5 "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
 	color:#333;
 }
 
-body,h1,h2,h3,ul{
+body,h1,h2,h3,ul,p{
 	margin:0;
+}
+
+h1,h2,h3{
+	font-size:16px;
+	font-weight:normal;
+}
+
+input,button{
+	outline:none;
 }
 
 ul{
@@ -23,6 +34,10 @@ li{
 	list-style:none;
 }
 
+i,em,cite{
+	font-style:normal;
+}
+
 a{
 	color:#666;
 	text-decoration:none;
@@ -30,6 +45,12 @@ a{
 		color:#333;
 		text-decoration:underline;
 	}
+}
+
+input[type="text"],input[type="password"],select{
+	padding:5px;
+	box-sizing:border-box;
+	border:1px solid #ddd;
 }
 
 .clearfix{
@@ -48,4 +69,23 @@ a{
 	line-height:0;
 	text-indent:-99rem;
 	overflow:hidden;
+}
+
+.btn{
+	display:inline-block;
+	color:#fff;
+	cursor:pointer;
+	border-radius:3px;
+	&:hover{
+		opacity:.8;
+	}
+	&.btn-red{
+		background-color:red;
+	}
+	&.btn-gray{
+		background-color:gray;
+	}
+}
+.btn-red,.btn-gray{
+	border:none;
 }

@@ -1,4 +1,27 @@
-﻿//moblie
+﻿//loading状态
+.load-layer{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:999;
+	background-color:#eee;
+	.load-con{
+		position:absolute;
+		@include positionCenterMiddle;//水平垂直居中
+		width:.72rem;
+		height:.72rem;
+		background-color:#000;
+		border-radius:.06rem;
+		opacity:.5;
+		background-image:url(#{$bg-path}loading.gif);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:50%;
+	}
+}
+
 //主菜单
 .main-menu{
 	position:fixed;
@@ -40,29 +63,100 @@
 	background-size:contain;
 }
 
-//content
+//分页
+.pagination{
+	display:inline-block;
+	position:relative;
+	@include positionCenter;//水平居中
+	font-size:0;
+	li{
+		display:inline-block;
+		padding:5px 10px;
+		margin:0 2px;
+		font-size:12px;
+		background-color:#999;
+		color:#fff;
+		border-radius:3px;
+		cursor:pointer;
+		&:hover,&.current{
+			background-color:#f00;
+		}
+	}
+}
 
-
-//loading状态
-.load-layer{
+//遮罩层
+.mask-layer{
 	position:fixed;
 	top:0;
 	right:0;
 	bottom:0;
 	left:0;
-	z-index:999;
-	background-color:#eee;
-	.load-con{
+	z-index:499;
+	background-color:rgba(0,0,0,.5);
+}
+
+//弹出层
+.pop-layer{
+	position:fixed;
+	@include positionCenterMiddle;//水平垂直居中
+	padding:0 20px;
+	z-index:500;
+	background-color:#fff;
+	box-shadow:2px 2px 3px rgba(0,0,0,.1),-2px -2px 3px rgba(0,0,0,.1);
+	border-radius:5px;
+	.pop-title{
+		padding:10px 0;
+		border-bottom:1px solid #c3c3c3;
+	}
+	.pop-cont{
+		padding:10px 0;
+	}
+	.pop-close{
 		position:absolute;
-		@include positionCenterMiddle;//水平垂直居中
-		width:.72rem;
-		height:.72rem;
-		background-color:#000;
-		border-radius:.06rem;
-		opacity:.5;
-		background-image:url(#{$bg-path}loading.gif);
-		background-repeat:no-repeat;
-		background-position:center;
-		background-size:50%;
+		top:10px;
+		right:20px;
+		width:24px;
+		height:24px;
+		cursor:pointer;
+		&:hover{
+			opacity:.5;
+		}
+		&:before, &:after{
+			position:absolute;
+			left:50%;
+			top:50%;
+			width:1px;
+			height:20px;
+			content:' ';
+			overflow:hidden;
+			background-color:#999;
+		}
+		&:before{
+			transform:translate(-50%,-50%) rotate(-45deg);
+		}
+		&:after{
+			transform:translate(-50%,-50%) rotate(45deg);
+		}
+	}
+}
+
+//登录框
+.login-layer{
+	.login-form{
+		li{
+			padding:5px 0;
+		}
+		input[type="text"],input[type="password"]{
+			display:block;
+			width:100%;
+			padding:5px;
+		}
+		.handler{
+			text-align:center;
+		}
+		.btn{
+			padding:5px 30px;
+			margin:0 10px;
+		}
 	}
 }

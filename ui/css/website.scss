@@ -6,8 +6,8 @@
 
 //布局
 @import "pages/layout";//layout样式
+@import "pages/mobile";//320x480
 
 //按分辨率加载样式
-@import "resolution/mdpi";//320x480
-@import "resolution/xhdpi";//720x1280
-@import "resolution/xxhdpi";//1080x1920
+@import "resolution/xhdpi";//小于1080
+@import "resolution/xxhdpi";//大于1080

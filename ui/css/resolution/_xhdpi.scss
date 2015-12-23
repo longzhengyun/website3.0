@@ -1,14 +1,9 @@
-﻿@media screen and (min-width: 640px) and (max-width: 1079px) {
+﻿@media screen and (max-width: 1079px) {
 
-.pc-aside{
-	position:fixed;
-	top:0;
-	left:0;
-	bottom:0;
-	width:.3rem;
-	box-shadow:1px 0 5px rgba(0,0,0,.3);
+.pc .aside{
+	width:70px;
 	.logo{
-		padding:.05rem .01rem;
+		padding:10px 5px 20px 5px;
 		a{
 			display:block;
 			overflow:hidden;
@@ -20,35 +15,31 @@
 	.signature{
 		display:none;
 	}
-	.menu{
-		span{
-			display:block;
-			padding:.05rem 0;
-			margin-bottom:.04rem;
-			text-align:center;
-			font-size:.1rem;
-		}
-		.current{
+	.menu-nav{
+		text-align:center;
+		&.current{
 			color:#f00;
 		}
 		i{
 			display:none;
 		}
 	}
-	.list-nav{margin-bottom:.05rem;
+	.list-nav{
+		margin-bottom:10px;
 		li{
-			margin-bottom:.02rem;
+			margin-bottom:5px;
+			padding:10px 0;
 		}
 	}
 	.copyright{
 		position:fixed;
-		left:0;
-		right:.05rem;
-		bottom:0;
 		text-align:right;
+		background-color:#f3f3f3;
+		border-top-left-radius:100%;
 	}
 }
-.pc-content{
+.pc .content{
+	padding-left:110px;
 }
 
 }
