@@ -337,7 +337,6 @@ input[type="text"], input[type="password"], select {
       color: #999; }
 
 .pc .content {
-  max-width: 1280px;
   height: 100%;
   padding-right: 40px;
   padding-top: 20px;
@@ -407,12 +406,12 @@ input[type="text"], input[type="password"], select {
     font-family: simHei; }
   .pc .article-nav .prev {
     float: left;
-    border-radius: 5px 0 0 5px; }
+    border-radius: 10px 0 0 10px; }
     .pc .article-nav .prev dfn {
       margin-right: 10px; }
   .pc .article-nav .next {
     float: right;
-    border-radius: 0 5px 5px 0; }
+    border-radius: 0 10px 10px 0; }
     .pc .article-nav .next dfn {
       margin-left: 10px; }
 
