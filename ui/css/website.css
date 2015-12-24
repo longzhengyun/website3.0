@@ -27,7 +27,7 @@ ul {
 li {
   list-style: none; }
 
-i, em, cite {
+i, em, cite, dfn {
   font-style: normal; }
 
 a {
@@ -228,6 +228,7 @@ input[type="text"], input[type="password"], select {
       background-color: #f00; }
 
 .mask-layer {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -237,6 +238,7 @@ input[type="text"], input[type="password"], select {
   background-color: rgba(0, 0, 0, 0.5); }
 
 .pop-layer {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -335,14 +337,24 @@ input[type="text"], input[type="password"], select {
       color: #999; }
 
 .pc .content {
+  max-width: 1280px;
   height: 100%;
   padding-right: 40px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   box-sizing: border-box;
   overflow: auto;
   overflow-x: hidden;
   background-color: rgba(255, 255, 255, 0.5); }
+
+.pc .crumbs {
+  margin-bottom: 10px; }
+  .pc .crumbs a {
+    color: #999; }
+  .pc .crumbs dfn {
+    margin: 0 10px;
+    color: #999;
+    font-family: SimHei; }
 
 .pc .article-list > li {
   padding-bottom: 20px;
@@ -364,6 +376,54 @@ input[type="text"], input[type="password"], select {
 .pc .article-list .text {
   font-size: 16px;
   color: #666; }
+
+.pc .article-detail .title {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #333; }
+.pc .article-detail .info {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  color: #999; }
+.pc .article-detail .cont {
+  padding: 10px 0; }
+  .pc .article-detail .cont p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #666; }
+
+.pc .article-nav {
+  padding: 20px 0; }
+  .pc .article-nav a {
+    padding: 5px 10px;
+    background-color: #dedede;
+    max-width: 49%;
+    box-sizing: border-box;
+    overflow: hidden; }
+    .pc .article-nav a:hover {
+      text-decoration: none; }
+  .pc .article-nav dfn {
+    font-family: simHei; }
+  .pc .article-nav .prev {
+    float: left;
+    border-radius: 5px 0 0 5px; }
+    .pc .article-nav .prev dfn {
+      margin-right: 10px; }
+  .pc .article-nav .next {
+    float: right;
+    border-radius: 0 5px 5px 0; }
+    .pc .article-nav .next dfn {
+      margin-left: 10px; }
+
+.pc .article-about .title {
+  margin-bottom: 5px; }
+.pc .article-about .cont li {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+  padding: 5px 0;
+  list-style: inside square; }
 
 .pc .login-layer {
   width: 40%;
@@ -500,4 +560,5 @@ input[type="text"], input[type="password"], select {
 
   .pc .content {
     padding-left: 320px; } }
+
 /*# sourceMappingURL=website.css.map */

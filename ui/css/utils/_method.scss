@@ -86,6 +86,7 @@
 
 //遮罩层
 .mask-layer{
+	display:none;
 	position:fixed;
 	top:0;
 	right:0;
@@ -97,6 +98,7 @@
 
 //弹出层
 .pop-layer{
+	display:none;
 	position:fixed;
 	@include positionCenterMiddle;//水平垂直居中
 	padding:0 20px;
