@@ -77,14 +77,20 @@ input[type="text"],input[type="password"],select{
 	border:1px solid #ddd;
 }
 
+.align-l{text-align:left !important;}
+
 .btn{
+	display:inline-block;
 	padding:10px 40px;
 	border-radius:3px;
 	font-size:16px;
 	border:1px solid;
+	&:hover{
+		text-decoration:none;
+	}
 }
 
-.btn-red{
+.btn-red,.btn-red:hover{
 	border-color:red;
 	background-color:red;
 	color:#fff;
@@ -100,7 +106,7 @@ input[type="text"],input[type="password"],select{
 	}
 }
 
-.btn-gray{
+.btn-gray,.btn-gray:hover{
 	border-color:gray;
 	background-color:gray;
 	color:#fff;
@@ -209,9 +215,12 @@ input[type="text"],input[type="password"],select{
 	dd{
 		padding:5px 10px;
 		border-bottom:1px dashed #ddd;
-		cursor:pointer;
-		&:hover{
+		&:hover, &.cur{
 			background-color:#f3f3f3;
+		}
+		a{
+			display:block;
+			text-decoration:none;
 		}
 	}
 }
@@ -239,18 +248,6 @@ input[type="text"],input[type="password"],select{
 	a{
 		text-decoration:underline;
 	}
-	.order{
-		width:40px;
-	}
-	.author,.date,.pirce,.handle{
-		width:160px;
-	}
-	.handle{
-		width:80px;
-	}
-	.name,.author{
-		text-align:left;
-	}
 }
 
 .list-page{
@@ -271,6 +268,7 @@ input[type="text"],input[type="password"],select{
 	top:60px;
 	left:50%;
 	width:50%;
+	min-width:720px;
 	transform:translateX(-50%);
 	border:1px solid #ddd;
 	background-color:#fff;

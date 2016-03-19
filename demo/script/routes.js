@@ -2,7 +2,7 @@ define(['app'], function(app) {
     return app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     	$urlRouterProvider.otherwise('/list');
         $stateProvider.state('/', {
-            url: '/list',
+            url: '/list/:id',//在id前面加一个冒号，从而制订了一个参数化URL
             views: {
 				'aside': {
 					templateUrl: 'views/aside.html',
@@ -14,22 +14,9 @@ define(['app'], function(app) {
 				}
 			}
         })
-        .state('login', {
-            url: '/login',
-            views: {
-				'login': {
-					templateUrl: 'views/login.html',
-					controller: 'LoginController'
-				}
-			}
-        })
         .state('add', {
             url: '/add',
             views: {
-				'aside': {
-					templateUrl: 'views/aside.html',
-					controller: 'AsideController'
-				},
 				'add': {
 					templateUrl: 'views/add.html',
 					controller: 'AddController'
@@ -37,11 +24,20 @@ define(['app'], function(app) {
 			}
         })
         .state('detail', {
-            url: '/detail',
+            url: '/detail/:id',//在id前面加一个冒号，从而制订了一个参数化URL
             views: {
 				'detail': {
 					templateUrl: 'views/detail.html',
 					controller: 'DetailController'
+				}
+			}
+        })
+        .state('login', {
+            url: '/login',
+            views: {
+				'login': {
+					templateUrl: 'views/login.html',
+					controller: 'LoginController'
 				}
 			}
         });

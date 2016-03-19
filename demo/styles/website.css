@@ -59,13 +59,19 @@ input[type="text"], input[type="password"], select {
   box-sizing: border-box;
   border: 1px solid #ddd; }
 
+.align-l {
+  text-align: left !important; }
+
 .btn {
+  display: inline-block;
   padding: 10px 40px;
   border-radius: 3px;
   font-size: 16px;
   border: 1px solid; }
+  .btn:hover {
+    text-decoration: none; }
 
-.btn-red {
+.btn-red, .btn-red:hover {
   border-color: red;
   background-color: red;
   color: #fff; }
@@ -78,7 +84,7 @@ input[type="text"], input[type="password"], select {
     color: #fff;
     background-color: red; }
 
-.btn-gray {
+.btn-gray, .btn-gray:hover {
   border-color: gray;
   background-color: gray;
   color: #fff; }
@@ -168,10 +174,12 @@ input[type="text"], input[type="password"], select {
   border-radius: 5px; }
 .aside-cont dd {
   padding: 5px 10px;
-  border-bottom: 1px dashed #ddd;
-  cursor: pointer; }
-  .aside-cont dd:hover {
+  border-bottom: 1px dashed #ddd; }
+  .aside-cont dd:hover, .aside-cont dd.cur {
     background-color: #f3f3f3; }
+  .aside-cont dd a {
+    display: block;
+    text-decoration: none; }
 
 .main-wrap {
   overflow: hidden;
@@ -190,14 +198,6 @@ input[type="text"], input[type="password"], select {
     background-color: #f3f3f3; }
   .list-table a {
     text-decoration: underline; }
-  .list-table .order {
-    width: 40px; }
-  .list-table .author, .list-table .date, .list-table .pirce, .list-table .handle {
-    width: 160px; }
-  .list-table .handle {
-    width: 80px; }
-  .list-table .name, .list-table .author {
-    text-align: left; }
 
 .list-page {
   padding-top: 10px; }
@@ -214,6 +214,7 @@ input[type="text"], input[type="password"], select {
   top: 60px;
   left: 50%;
   width: 50%;
+  min-width: 720px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);

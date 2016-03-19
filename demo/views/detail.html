@@ -1,10 +1,10 @@
-<div class="detail-wrap" ng-repeat="value in detailData">
+<div class="detail-wrap" ng-repeat="value in detailData" ng-if="value.order == detailId">
 	<h1 class="wrap-title">{{::value.name}}</h1>
 	<div class="wrap-cont">
 		<table class="wrap-table">
 			<tbody>
 				<tr>
-					<td rowspan="6" class="book-img"><img src="{{::value.pic}}" /></td>
+					<td rowspan="6" class="book-img"><img ng-src="{{::value.pic}}" /></td>
 					<td><span class="book-title">出版日期：</span>{{::value.date}}</td>
 				</tr>
 				<tr>
@@ -25,7 +25,7 @@
 			</tbody>
 		</table>
 		<div class="btn-item">
-			<button class="btn btn-gray btn-goback" ng-click="goto(list)">返回列表</button>
+			<a ng-href="#/list/{{::value.order}}" class="btn btn-gray">返回列表</a>
 		</div>
 	</div>
 </div>
