@@ -18,7 +18,7 @@ body{background-color:#eee;}
 .user-action .btn-send{width:13%;border-radius:0 4px 4px 0;}
 
 /* content */
-.content{padding:54px 0;}
+.content{margin:54px 0;}
 
 .hint-text{margin-bottom:10px;text-align:center;}
 .hint-text .text-cont{display:inline-block;background-color:#ccc;padding:5px 10px;border-radius:4px;font-size:12px;color:#fff;word-wrap:break-word;}
@@ -54,3 +54,16 @@ body{background-color:#eee;}
 .interaction-result .result-icon{position:absolute;top:0;left:0;width:60px;height:60px;line-height:60px;text-align:center;background-color:#eee;font-size:60px;}
 .interaction-result .info-title{display:block;line-height:26px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .interaction-result .info-text{font-size:12px;color:#999;margin-bottom:0;height:34px;overflow:hidden;}
+
+/* screen */
+@media (min-width: 992px) {
+.website-wrap{padding:50px 0;background:url(http://att.x2.hiapk.com/forum/201302/08/134823gryrrr9llplllg90.jpg) center center no-repeat;background-size:cover;}
+.decorate-wrap{position:relative;width:454px;padding:80px 20px;margin:0 auto;border-radius:40px;background-color:#fff;}
+.decorate-wrap .decorate-top{position:absolute;top:45px;left:50%;margin-left:-5px;width:10px;height:10px;background-color:#999;border-radius:100%;}
+.decorate-wrap .decorate-bottom{position:absolute;bottom:20px;left:50%;margin-left:-20px;width:38px;height:38px;border:2px solid #999;border-radius:100%;}
+.decorate-wrap .decorate-bottom .icon-menu{position:absolute;top:11px;left:11px;width:12px;height:12px;border:1px solid #bbb;}
+
+.decorate-content{position:relative;border:1px solid #999;background-color:#eee;}
+
+.header,.user-action{position:absolute;}
+}

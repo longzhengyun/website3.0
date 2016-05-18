@@ -1,43 +1,51 @@
 define(['app'], function(app) {
     return app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-    	$urlRouterProvider.otherwise('/list/0');
-        $stateProvider.state('list', {
-            url: '/list/:id',//在id前面加一个冒号，从而制订了一个参数化URL
+    	$urlRouterProvider.otherwise('/content');
+        $stateProvider.state('content', {
+            url: '/content',
             views: {
-				'aside': {
-					templateUrl: 'views/aside.html',
-					controller: 'AsideController'
+				'header': {
+					templateUrl: 'views/header.html',
+					controller: 'headerController'
 				},
-				'main': {
+				'content': {
 					templateUrl: 'views/main.html',
-					controller: 'MainController'
-				}
-			}
-        })
-        .state('add', {
-            url: '/add',
-            views: {
-				'add': {
-					templateUrl: 'views/add.html',
-					controller: 'AddController'
-				}
-			}
-        })
-        .state('detail', {
-            url: '/detail/:id',//在id前面加一个冒号，从而制订了一个参数化URL
-            views: {
-				'detail': {
-					templateUrl: 'views/detail.html',
-					controller: 'DetailController'
+					controller: 'mainController',
+					resolve: 'PhoneListCtrl.resolve'
+				},
+				'user-action@content': {
+					templateUrl: 'views/user-action.html',
+					controller: 'userActionController'
 				}
 			}
         })
         .state('login', {
             url: '/login',
             views: {
-				'login': {
+            	'header': {
+					templateUrl: 'views/header.html',
+					controller: 'headerController'
+				},
+				'content': {
 					templateUrl: 'views/login.html',
-					controller: 'LoginController'
+					controller: 'loginController'
+				}
+			}
+        })
+        .state('detail', {
+            url: '/detail/:id',//在id前面加一个冒号，从而制订了一个参数化URL
+            views: {
+            	'header': {
+					templateUrl: 'views/header.html',
+					controller: 'headerController'
+				},
+				'content': {
+					templateUrl: 'views/detail.html',
+					controller: 'detailController'
+				},
+				'user-action@detail': {
+					templateUrl: 'views/user-action.html',
+					controller: 'userActionController'
 				}
 			}
         });
