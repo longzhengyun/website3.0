@@ -1,70 +1,75 @@
-<div class="content" login-directive ng-scrollbar bottom>
+<div class="content" login-directive>
 	<div class="container-fluid">
-		<div class="panel panel-default">
+		<div class="panel panel-default" ng-if="loginStep.firstVisit">
 			<div class="panel-heading">欢迎来到这里，我该怎么称呼你？</div>
 			<div class="panel-body">
-				<form class="form-horizontal">
-					<div class="form-group">
+				<form class="form-horizontal" name="addForm" novalidate>
+					<div class="form-group has-feedback" ng-class="{'has-success':addForm.userName.$valid}">
 						<label class="col-sm-12">昵称：</label>
 						<div class="col-sm-12">
-							<input type="email" class="form-control" placeholder="请输入昵称" require />
+							<input type="text" name="userName" id="userName" ng-model="loginForm.userName" class="form-control" placeholder="请输入昵称" ng-minlength="2" ng-maxlength="10" required />
+							<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.userName.$dirty && addForm.userName.$valid"></span>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
 							<div class="checkbox">
 								<label>
-									<input type="checkbox"> 我要设密码
+									<input type="checkbox" ng-model="setPassword"> 我要设密码
 								</label>
 							</div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback" ng-class="{'has-success':addForm.userPassword.$valid}" ng-if="setPassword">
 						<label class="col-sm-12">密码：</label>
 						<div class="col-sm-12">
-							<input type="password" class="form-control" placeholder="请输入密码" />
+							<input type="password" name="userPassword" id="userPassword" ng-model="loginForm.userPassword" class="form-control" placeholder="请输入密码" ng-minlength="6" ng-maxlength="16" required />
+							<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.userPassword.$dirty && addForm.userPassword.$valid"></span>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback" ng-class="{'has-success':addForm.confirmPassword.$valid}" ng-if="setPassword">
 						<label class="col-sm-12">确认密码：</label>
 						<div class="col-sm-12">
-							<input type="password" class="form-control" placeholder="请再次输入密码" />
+							<input type="password" name="confirmPassword" id="confirmPassword" ng-model="loginForm.confirmPassword" class="form-control" placeholder="请再次输入密码" ng-minlength="6" ng-maxlength="16" pw-check-directive="userPassword" required />
+							<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.confirmPassword.$dirty && addForm.confirmPassword.$valid"></span>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<button type="submit" class="btn btn-primary">确认</button>
+							<input type="submit" class="btn btn-primary" value="确认" ng-click="loginSubmit()" ng-disabled="addForm.$invalid" />
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-		<div class="panel panel-default">
+		<div class="panel panel-default" ng-if="loginStep.moreVisit">
 			<div class="panel-heading">Hi，访问之前，我需求确认一下你的身份！</div>
 			<div class="panel-body">
-				<span class="help-block">请问你是 <span class="text-danger">Mary</span> 吗？</span>
-				<form class="form-horizontal">
+				<span class="help-block">请问你是 <span class="text-danger">{{loginForm.userName}}</span> 吗？</span>
+				<form class="form-horizontal" name="addForm" novalidate>
 					<div class="form-group">
 						<div class="col-sm-12">
 							<div class="radio">
 								<label class="radio-inline">
-									<input type="radio" name="blankRadio" value="option1" aria-label="..."> 是
+									<input type="radio" name="oneself" ng-model="oneself" value="yes" ng-click="oneselfChange('yes')"> 是
 								</label>
 								<label class="radio-inline">
-									<input type="radio" name="blankRadio" value="option1" aria-label="..."> 否
+									<input type="radio" name="oneself" ng-model="oneself" value="not" ng-click="oneselfChange('not')"> 否
 								</label>
 							</div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback" ng-if="oneself == 'yes'">
 						<label class="col-sm-12">密码：</label>
+						<div class="col-sm-12"><p class="text-danger" ng-if="loginForm.loginFailed">密码错误，请重新输入！</p></div>
 						<div class="col-sm-12">
-							<input type="password" class="form-control" placeholder="请输入密码" />
+							<input type="password" name="loginPassword" id="loginPassword" ng-model="loginForm.loginPassword" class="form-control" placeholder="请输入密码" ng-minlength="6" ng-maxlength="16" required />
+							<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.loginPassword.$dirty && addForm.loginPassword.$valid"></span>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<button type="submit" class="btn btn-primary">确认</button>
+							<input type="submit" class="btn btn-primary" value="确认" ng-click="loginSubmit()" ng-disabled="addForm.$invalid" />
 						</div>
 					</div>
 				</form>

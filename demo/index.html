@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html ng-app="app">
 <head>
 <meta charset="utf-8" />
 <title>Jary Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- 无缓存设置 -->
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<!-- 无缓存设置 -->
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta content="email=no" name="format-detection" />
@@ -13,7 +19,6 @@
 <meta name="keywords" content="Jary" />
 <meta name="description" content="Jary" />
 <link rel="stylesheet" href="styles/bootstrap.min.css" />
-<link rel="stylesheet" href="styles/ng-scrollbar.min.css" />
 <link rel="stylesheet" href="styles/website.css" />
 </head>
 <body>
@@ -29,6 +34,28 @@
 		</div>
 	</div>
 </div>
-<script data-main="script/main" src="script/library/require/require.min.js"></script>
+<!-- script library -->
+<script src="scripts/library/jquery/jquery.min.js"></script>
+<script src="scripts/library/angular/angular.min.js"></script>
+<script src="scripts/library/angular/angular-sanitize.min.js"></script>
+<script src="scripts/library/angular/angular-ui-router.js"></script>
+<script src="scripts/library/bootstrap/bootstrap.min.js"></script>
+<script src="scripts/library/ocLazyLoad/ocLazyLoad.min.js"></script>
+<!-- script common -->
+<script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
+<!-- script controllers -->
+<script src="scripts/controllers/headerController.js"></script>
+<script src="scripts/controllers/loginController.js"></script>
+<script src="scripts/controllers/mainController.js"></script>
+<script src="scripts/controllers/userActionController.js"></script>
+<script src="scripts/controllers/detailController.js"></script>
+<!-- script directives -->
+<script src="scripts/directives/loginDirective.js"></script>
+<script src="scripts/directives/pwCheckDirective.js"></script>
+<script src="scripts/directives/mainDirective.js"></script>
+<!-- script services -->
+<script src="scripts/services/loginService.js"></script>
+<script src="scripts/services/localService.js"></script>
 </body>
 </html>
