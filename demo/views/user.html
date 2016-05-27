@@ -1,0 +1,96 @@
+<div class="container-fluid">
+	<div class="panel panel-default" ng-if="!localData.loginState && !localData.visitState">
+		<div class="panel-heading">欢迎来到这里，我该怎么称呼你？</div>
+		<div class="panel-body">
+			<form class="form-horizontal" name="addForm" novalidate>
+				<div class="form-group has-feedback" ng-class="{'has-success':addForm.userName.$valid}">
+					<label class="col-sm-12">昵称：</label>
+					<div class="col-sm-12">
+						<p class="text-danger" ng-if="loginForm.userNameFailed">昵称已被使用！</p>
+					</div>
+					<div class="col-sm-12">
+						<input type="text" name="userName" id="userName" ng-model="loginForm.userName" class="form-control" placeholder="请输入昵称" ng-minlength="2" ng-maxlength="10" required />
+						<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.userName.$dirty && addForm.userName.$valid"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" ng-model="setPassword"> 我要设密码（可选）
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group has-feedback" ng-class="{'has-success':addForm.userPassword.$valid}" ng-if="setPassword">
+					<label class="col-sm-12">密码：</label>
+					<div class="col-sm-12">
+						<input type="password" name="userPassword" id="userPassword" ng-model="loginForm.userPassword" class="form-control" placeholder="请输入密码" ng-minlength="6" ng-maxlength="16" required />
+						<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.userPassword.$dirty && addForm.userPassword.$valid"></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback" ng-class="{'has-success':addForm.confirmPassword.$valid}" ng-if="setPassword">
+					<label class="col-sm-12">确认密码：</label>
+					<div class="col-sm-12">
+						<input type="password" name="confirmPassword" id="confirmPassword" ng-model="loginForm.confirmPassword" class="form-control" placeholder="请再次输入密码" ng-minlength="6" ng-maxlength="16" pw-check-directive="userPassword" required />
+						<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.confirmPassword.$dirty && addForm.confirmPassword.$valid"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<input type="submit" class="btn btn-primary" value="确认" ng-click="loginSubmit()" ng-disabled="addForm.$invalid" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="panel panel-default" ng-if="!localData.loginState && localData.visitState">
+		<div class="panel-heading">Hi，访问之前，我需求确认一下你的身份！</div>
+		<div class="panel-body">
+			<span class="help-block">请问你有使用以下昵称访问过吗？</span>
+			<form class="form-horizontal" name="addForm" novalidate>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<div class="radio">
+							<label class="radio-inline" ng-repeat="userData in localData.userData track by userData.userName">
+								<input type="radio" name="userName" value="userData.userName" ng-click="userNameChange(userData.userName)"> {{userData.userName}}
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="userName" value="not" ng-click="userNameChange('not')" checked=""> 没有
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group has-feedback" ng-if="userPasswordInput">
+					<label class="col-sm-12">密码：</label>
+					<div class="col-sm-12"><p class="text-danger" ng-if="loginForm.passwordFailed">密码错误，请重新输入！</p></div>
+					<div class="col-sm-12">
+						<input type="password" name="loginPassword" id="loginPassword" ng-model="loginForm.loginPassword" class="form-control" placeholder="请输入密码" ng-minlength="6" ng-maxlength="16" required />
+						<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="addForm.loginPassword.$dirty && addForm.loginPassword.$valid"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<input type="submit" class="btn btn-primary" value="确认" ng-click="validateSubmit()" ng-disabled="addForm.$invalid" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="panel panel-default" ng-if="localData.loginState && localData.visitState">
+		<div class="panel-heading">Hi，<span class="text-danger" ng-bind="userCurrent.userName"></span>。欢迎你回来！</div>
+		<div class="panel-body">
+			<div class="form-group clearfix">
+				<label class="col-sm-12">注册时间：</label>
+				<div class="col-sm-12">{{userCurrent.startDate | date:'yyyy-MM-dd'}} {{ userCurrent.startDate | date:'HH:mm:ss' }}</div>
+			</div>
+			<div class="form-group clearfix">
+				<label class="col-sm-12">登录时间：</label>
+				<div class="col-sm-12">{{userCurrent.endDate | date:'yyyy-MM-dd'}} {{ userCurrent.endDate | date:'HH:mm:ss' }}</div>
+			</div>
+			<div class="form-group clearfix">
+				<div class="col-sm-12"><a href="javascript:;" class="btn btn-primary" ng-click="loginOut()">退出</a></div>
+			</div>
+		</div>
+	</div>
+</div>

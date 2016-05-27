@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', 'userService', function($scope, userService) {
+app.controller('listController', ['$scope', 'userService', function($scope, userService) {
 	//获取本地用户数据
 	$scope.localData = userService.getLocalData();
 

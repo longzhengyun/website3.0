@@ -1,14 +1,14 @@
-app.directive('mainDirective', [function() {
+app.directive('contentDirective', [function() {
 	return {
 		link: function(scope, element, attrs) {
+			//自动设置页面高度
 			var winWidth = $(window).width();
 			if (winWidth >= 992) {
 				var winHeight = $(window).height();
 				var contentTop = $('.content').offset().top;
-				var contentMarginBottom = parseInt($('.content').css('margin-bottom'));
 				var websitePaddingBottom = parseInt($('.website-wrap').css('padding-bottom'));
 				var decoratePaddingBottom = parseInt($('.decorate-wrap').css('padding-bottom'));
-				element.css('height', winHeight - contentTop - contentMarginBottom - websitePaddingBottom - decoratePaddingBottom - 2);
+				element.css('height', winHeight - contentTop - websitePaddingBottom - decoratePaddingBottom - 2);
 			};
 		}
 	};

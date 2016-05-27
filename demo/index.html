@@ -30,7 +30,7 @@
 		</div>
 		<div class="decorate-content">
 			<div ui-view="header"></div>
-			<div ui-view="content"></div>
+			<div ui-view="content" class="content" content-directive></div>
 		</div>
 	</div>
 </div>
@@ -46,16 +46,16 @@
 <script src="scripts/config.js"></script>
 <!-- script controllers -->
 <script src="scripts/controllers/headerController.js"></script>
-<script src="scripts/controllers/loginController.js"></script>
+<script src="scripts/controllers/userController.js"></script>
 <script src="scripts/controllers/mainController.js"></script>
-<script src="scripts/controllers/userActionController.js"></script>
+<script src="scripts/controllers/listController.js"></script>
 <script src="scripts/controllers/detailController.js"></script>
+<script src="scripts/controllers/userActionController.js"></script>
 <!-- script directives -->
-<script src="scripts/directives/loginDirective.js"></script>
+<script src="scripts/directives/contentDirective.js"></script>
 <script src="scripts/directives/pwCheckDirective.js"></script>
-<script src="scripts/directives/mainDirective.js"></script>
 <!-- script services -->
-<script src="scripts/services/loginService.js"></script>
+<script src="scripts/services/userService.js"></script>
 <script src="scripts/services/localService.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 var app = angular.module('app', ['ngSanitize', 'ui.router', 'oc.lazyLoad']);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
-	$urlRouterProvider.otherwise('/content');
-	$stateProvider.state('content', {
-			url: '/content',
+	$urlRouterProvider.otherwise('/main');
+	$stateProvider.state('main', {
+			url: '/main',
 			views: {
 				'header': {
 					templateUrl: 'views/header.html',
@@ -13,7 +13,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', funct
 					templateUrl: 'views/main.html',
 					controller: 'mainController'
 				},
-				'user-action@content': {
+				'user-action@main': {
 					templateUrl: 'views/user-action.html',
 					controller: 'userActionController'
 				}
@@ -30,16 +30,20 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', funct
 			// 	}]
 			// }
 		})
-		.state('login', {
-			url: '/login',
+		.state('list', {
+			url: '/list',
 			views: {
 				'header': {
 					templateUrl: 'views/header.html',
 					controller: 'headerController'
 				},
 				'content': {
-					templateUrl: 'views/login.html',
-					controller: 'loginController'
+					templateUrl: 'views/list.html',
+					controller: 'listController'
+				},
+				'user-action@list': {
+					templateUrl: 'views/user-action.html',
+					controller: 'userActionController'
 				}
 			}
 		})
@@ -53,10 +57,19 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', funct
 				'content': {
 					templateUrl: 'views/detail.html',
 					controller: 'detailController'
+				}
+			}
+		})
+		.state('user', {
+			url: '/user',
+			views: {
+				'header': {
+					templateUrl: 'views/header.html',
+					controller: 'headerController'
 				},
-				'user-action@detail': {
-					templateUrl: 'views/user-action.html',
-					controller: 'userActionController'
+				'content': {
+					templateUrl: 'views/user.html',
+					controller: 'userController'
 				}
 			}
 		});
