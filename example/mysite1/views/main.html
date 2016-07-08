@@ -1,0 +1,43 @@
+<div class="container-fluid" ng-if="!localData.loginState">
+
+</div>
+<div class="container-fluid">
+	<div class="hint-text"><span class="text-cont text-single">{{userCurrent.newDate | date:'yyyy-MM-dd'}} {{ userCurrent.newDate | date:'HH:mm:ss' }}</span></div>
+	<dl class="interaction-model model-me model-white">
+		<dt class="model-icon">
+			<span class="glyphicon glyphicon-th"></span>
+		</dt>
+		<dd class="model-cont">
+			<p class="interaction-text">Hi，<span class="text-danger" ng-bind="userCurrent.userName"></span>。欢迎来到这里。</p>
+		</dd>
+		<dd class="model-arrow"></dd>
+	</dl>
+	<dl class="interaction-model model-me model-white">
+		<dt class="model-icon">
+			<span class="glyphicon glyphicon-th"></span>
+		</dt>
+		<dd class="model-cont">
+			<p class="interaction-text">这里是有一些不错的内容，推荐给你看看：</p>
+			<ul class="interaction-list clearfix">
+				<li class="list-item"><a href="javascript:;">CSS的相关信息相关信息相关信息相关信息</a></li>
+				<li class="list-item"><a href="javascript:;">JS的相关信息</a></li>
+				<li class="list-item"><a href="javascript:;">HTML的相关信息</a></li>
+				<li class="list-item"><a href="javascript:;">Jquery的相关信息</a></li>
+				<li class="list-item"><a href="javascript:;">Angular的相关信息</a></li>
+				<li class="list-item"><a href="javascript:;">Require的相关信息</a></li>
+			</ul>
+		</dd>
+		<dd class="model-arrow"></dd>
+	</dl>
+	<dl class="interaction-model model-me model-white">
+		<dt class="model-icon">
+			<span class="glyphicon glyphicon-th"></span>
+		</dt>
+		<dd class="model-cont">
+			<p class="interaction-text">你也可以点击底部的分类来选择查看感兴趣的内容！</p>
+			<p class="interaction-text">如果分类里没有你想要的，也可以直接输入关键字，如果有相关内容，我会告诉你哦！</p>
+		</dd>
+		<dd class="model-arrow"></dd>
+	</dl>
+</div>
+<div ui-view="user-action" ng-if="localData.loginState"></div>
