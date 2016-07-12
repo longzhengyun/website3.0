@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app" style="font-size:20px;">
+<html ng-app="app">
 <head>
 <meta charset="utf-8" />
 <title>Jary Demo</title>
@@ -18,75 +18,36 @@
 <meta name="renderer" content="webkit" />
 <meta name="keywords" content="Jary" />
 <meta name="description" content="Jary" />
-<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/bootstrap.min.css" />
 <link rel="stylesheet" href="styles/website.css" />
 </head>
 <body>
-<div class="section-wrap">
-	<div class="header">
-		<div class="header-cont">
-			<h1 class="header-title">前端文章</h1>
-			<span class="header-icon icon-search"></span>
-		</div>
-	</div>
-	<div class="content">
-		<div class="sub-menu">
-			<ul class="sub-menu-cont">
-				<li class="menu-item cur">全部</li>
-				<li class="menu-item">HTML</li>
-				<li class="menu-item">CSS</li>
-				<li class="menu-item">JS</li>
-				<li class="menu-item">杂谈</li>
-			</ul>
-		</div>
-		<ul class="article-list">
-			<li class="list-item">
-				<h2 class="article-title">你需要知道的22个HTML5技巧</h2>
-				<p class="article-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
-				<div class="clearfix">
-					<div class="article-data"><span class="article-date">2016-07-01</span></div>
-					<div class="article-tags"><span class="tags-item tags-item1">HTML</span></div>
-				</div>
-				<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
-			</li>
-			<li class="list-item">
-				<h2 class="article-title">你需要知道的22个HTML5技巧</h2>
-				<p class="article-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
-				<div class="clearfix">
-					<div class="article-data"><span class="article-date">2016-07-01</span></div>
-					<div class="article-tags"><span class="tags-item tags-stroke tags-item2">CSS</span></div>
-				</div>
-				<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
-			</li>
-			<li class="list-item">
-				<h2 class="article-title">你需要知道的22个HTML5技巧</h2>
-				<p class="article-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
-				<div class="clearfix">
-					<div class="article-data"><span class="article-date">2016-07-01</span></div>
-					<div class="article-tags"><span class="tags-item tags-stroke tags-item3">JS</span></div>
-				</div>
-				<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
-			</li>
-			<li class="list-item">
-				<h2 class="article-title">你需要知道的22个HTML5技巧</h2>
-				<p class="article-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
-				<div class="clearfix">
-					<div class="article-data"><span class="article-date">2016-07-01</span></div>
-					<div class="article-tags"><span class="tags-item tags-stroke tags-item4">杂谈</span></div>
-				</div>
-				<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
-			</li>
-		</ul>
-	</div>
-	<div class="menu">
-		<ul class="menu-cont">
-			<li class="menu-item cur"><i class="menu-icon icon-home"></i><span class="menu-text">首页</span></li>
-			<li class="menu-item"><i class="menu-icon icon-tree"></i><span class="menu-text">文章</span></li>
-			<li class="menu-item"><i class="menu-icon icon-location"></i><span class="menu-text">网站</span></li>
-			<li class="menu-item"><i class="menu-icon icon-books"></i><span class="menu-text">案例</span></li>
-		</ul>
-	</div>
-	<div class="footer"></div>
+<div class="website-wrap">
+	<div ui-view="header"></div>
+	<div ui-view="content" class="content" content-directive></div>
 </div>
+<!-- script library -->
+<script src="scripts/library/jquery/jquery.min.js"></script>
+<script src="scripts/library/angular/angular.min.js"></script>
+<script src="scripts/library/angular/angular-sanitize.min.js"></script>
+<script src="scripts/library/angular/angular-ui-router.min.js"></script>
+<script src="scripts/library/bootstrap/bootstrap.min.js"></script>
+<script src="scripts/library/ocLazyLoad/ocLazyLoad.min.js"></script>
+<!-- script common -->
+<script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
+<!-- script controllers -->
+<script src="scripts/controllers/headerController.js"></script>
+<script src="scripts/controllers/userController.js"></script>
+<script src="scripts/controllers/mainController.js"></script>
+<script src="scripts/controllers/listController.js"></script>
+<script src="scripts/controllers/detailController.js"></script>
+<script src="scripts/controllers/userActionController.js"></script>
+<!-- script directives -->
+<script src="scripts/directives/contentDirective.js"></script>
+<script src="scripts/directives/pwCheckDirective.js"></script>
+<!-- script services -->
+<script src="scripts/services/userService.js"></script>
+<script src="scripts/services/localService.js"></script>
 </body>
 </html>
