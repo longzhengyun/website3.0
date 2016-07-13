@@ -2,7 +2,7 @@
 	<!-- mask layer -->
 	<div class="mask-layer"></div>
 	<!-- modal -->
-	<div class="modal-wrap modal-normal">
+	<div class="modal-mode modal-normal">
 		<div class="modal-title">模态层<i class="btn-close"></i></div>
 		<div class="modal-cont">
 			<form class="form-wrap">

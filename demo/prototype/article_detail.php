@@ -49,8 +49,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- footer -->
-	<div class="footer">
-		<p class="copyright">@Jary 2016</p>
-	</div>
 <?php include "footer.html"; ?>
