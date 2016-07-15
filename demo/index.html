@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" style="font-size:20px;">
 <head>
 <meta charset="utf-8" />
-<title>Jary Demo</title>
+<title>Jary</title>
+<!-- DNS 缓存 S-->
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//www.jary.dev">
+<!-- DNS 缓存 E-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<!-- 无缓存设置 -->
+<!-- 浏览器无缓存设置 S-->
 <meta http-equiv="Expires" content="0">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-control" content="no-cache">
 <meta http-equiv="Cache" content="no-cache">
-<!-- 无缓存设置 -->
+<!-- 浏览器无缓存设置 E-->
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta content="email=no" name="format-detection" />
@@ -18,36 +22,27 @@
 <meta name="renderer" content="webkit" />
 <meta name="keywords" content="Jary" />
 <meta name="description" content="Jary" />
-<link rel="stylesheet" href="styles/bootstrap.min.css" />
+<link rel="stylesheet" href="styles/base.css" />
 <link rel="stylesheet" href="styles/website.css" />
 </head>
 <body>
-<div class="website-wrap">
-	<div ui-view="header"></div>
-	<div ui-view="content" class="content" content-directive></div>
-</div>
+<div class="section-wrap" ui-view="content"></div>
 <!-- script library -->
 <script src="scripts/library/jquery/jquery.min.js"></script>
 <script src="scripts/library/angular/angular.min.js"></script>
 <script src="scripts/library/angular/angular-sanitize.min.js"></script>
 <script src="scripts/library/angular/angular-ui-router.min.js"></script>
-<script src="scripts/library/bootstrap/bootstrap.min.js"></script>
-<script src="scripts/library/ocLazyLoad/ocLazyLoad.min.js"></script>
 <!-- script common -->
 <script src="scripts/app.js"></script>
 <script src="scripts/config.js"></script>
 <!-- script controllers -->
+<script src="scripts/controllers/homeController.js"></script>
+<script src="scripts/controllers/menuController.js"></script>
 <script src="scripts/controllers/headerController.js"></script>
-<script src="scripts/controllers/userController.js"></script>
-<script src="scripts/controllers/mainController.js"></script>
-<script src="scripts/controllers/listController.js"></script>
-<script src="scripts/controllers/detailController.js"></script>
-<script src="scripts/controllers/userActionController.js"></script>
-<!-- script directives -->
-<script src="scripts/directives/contentDirective.js"></script>
-<script src="scripts/directives/pwCheckDirective.js"></script>
-<!-- script services -->
-<script src="scripts/services/userService.js"></script>
-<script src="scripts/services/localService.js"></script>
+<script src="scripts/controllers/articleListController.js"></script>
+<script src="scripts/controllers/articleDetailController.js"></script>
+<script src="scripts/controllers/siteListController.js"></script>
+<script src="scripts/controllers/caseListController.js"></script>
+<script src="scripts/controllers/searchController.js"></script>
 </body>
 </html>

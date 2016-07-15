@@ -1,12 +1,25 @@
 app.controller('headerController', ['$scope', '$location', function($scope, $location) {
-	//获取当前路由关键字
-	$scope.pathKeyword = $location.path().replace(/\//, '');
+	//初始化
+	// $scope.initHeader = {
+	// 	title:'',
+	// 	btnBack:false,
+	// 	btnSearch:false,
+	// 	btnHome:false,
+	// 	btnCancel:false,
+	// 	contSearch:false
+	// };
 
-	//设置user href
-	if ($scope.pathKeyword == 'user') {
-		$scope.pageHref = "#main"
-	} else {
-		$scope.pageHref = "#user"
-	}
+	$scope.initHeader = $scope.$parent.initArticleList;
+
+	//初始化header的视图
+	// $scope.$on('makeHeaderView', function (e, data) {
+	// 	console.log(data);
+	// 	$scope.initHeader = data;
+	// });
+
+	//点击菜单切换内容
+	$scope.goTarget = function(targetKey){
+		$location.path('/' + targetKey);//切换内容
+	};
 
 }]);

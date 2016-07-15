@@ -1,76 +1,96 @@
-var app = angular.module('app', ['ngSanitize', 'ui.router', 'oc.lazyLoad']);
+var app = angular.module('app', ['ngSanitize', 'ui.router']);
 
-app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
-	$urlRouterProvider.otherwise('/main');
-	$stateProvider.state('main', {
-			url: '/main',
-			views: {
-				'header': {
-					templateUrl: 'views/header.html',
-					controller: 'headerController'
-				},
-				'content': {
-					templateUrl: 'views/main.html',
-					controller: 'mainController'
-				},
-				'user-action@main': {
-					templateUrl: 'views/user-action.html',
-					controller: 'userActionController'
-				}
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise('/home');
+	$stateProvider
+	.state('home', {
+		url: '/home',
+		views: {
+			'content': {
+				templateUrl: 'views/home.html',
+				controller: 'homeController'
+			},
+			'menu@home': {
+				templateUrl: 'views/menu.html',
+				controller: 'menuController'
 			}
-			// resolve: {
-			// 	loadOcModal: ['$ocLazyLoad', function($ocLazyLoad) {
-			// 		return $ocLazyLoad.load([
-			// 			'scripts/directives/mainDirective.js',
-			// 			'styles/ng-scrollbar.min.css',
-			// 			'scripts/library/scrollbar/ng-scrollbar.min.js'
-			// 		]).then(function() {
-			// 			console.log('load');
-			// 		})
-			// 	}]
-			// }
-		})
-		.state('list', {
-			url: '/list',
-			views: {
-				'header': {
-					templateUrl: 'views/header.html',
-					controller: 'headerController'
-				},
-				'content': {
-					templateUrl: 'views/list.html',
-					controller: 'listController'
-				},
-				'user-action@list': {
-					templateUrl: 'views/user-action.html',
-					controller: 'userActionController'
-				}
+		}
+	})
+	.state('articleList', {
+		url: '/articleList',
+		views: {
+			'header@articleList': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/article_list.html',
+				controller: 'articleListController'
+			},
+			'menu@articleList': {
+				templateUrl: 'views/menu.html',
+				controller: 'menuController'
 			}
-		})
-		.state('detail', {
-			url: '/detail/:id', //在id前面加一个冒号，从而制订了一个参数化URL
-			views: {
-				'header': {
-					templateUrl: 'views/header.html',
-					controller: 'headerController'
-				},
-				'content': {
-					templateUrl: 'views/detail.html',
-					controller: 'detailController'
-				}
+		}
+	})
+	.state('articleDetail', {
+		url: '/articleDetail/:id', //在id前面加一个冒号，从而制订了一个参数化URL
+		views: {
+			'header@articleDetail': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/article_detail.html',
+				controller: 'articleDetailController'
 			}
-		})
-		.state('user', {
-			url: '/user',
-			views: {
-				'header': {
-					templateUrl: 'views/header.html',
-					controller: 'headerController'
-				},
-				'content': {
-					templateUrl: 'views/user.html',
-					controller: 'userController'
-				}
+		}
+	})
+	.state('siteList', {
+		url: '/siteList',
+		views: {
+			'header@siteList': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/site_list.html',
+				controller: 'siteListController'
+			},
+			'menu@siteList': {
+				templateUrl: 'views/menu.html',
+				controller: 'menuController'
 			}
-		});
+		}
+	})
+	.state('caseList', {
+		url: '/caseList',
+		views: {
+			'header@caseList': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/case_list.html',
+				controller: 'caseListController'
+			},
+			'menu@caseList': {
+				templateUrl: 'views/menu.html',
+				controller: 'menuController'
+			}
+		}
+	})
+	.state('search', {
+		url: '/search',
+		views: {
+			'header@search': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/search.html',
+				controller: 'searchController'
+			}
+		}
+	});
 }])
