@@ -1,4 +1,4 @@
-app.factory('userService', ['$state', 'localService', function($state, localService) {
+app.factory('homeService', ['$state', 'dataService', function($state, localService) {
 	return {
 		getLocalData: function() {
 			return localService.getObject('localData', '');

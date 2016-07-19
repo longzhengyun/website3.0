@@ -1,0 +1,218 @@
+[
+	{
+		"id":1,
+		"title":"标签？ID还是CLASS？",
+		"description":"想谈一下几个基本的HTML问题，都是围绕着应该怎样使用HTML。",
+		"content":"1. 多用有语义的标签，少用div和span，避免使用没有class的div和span。设想一下HTML的世界最初只有div和span这两个标签，其实网页依然可以写得出来。更多标签的出现，其实是为了替代利用率高但不好书写的和来的。想再接着多说一句的是，在HTML5里越来越多常见的div class组合或div id组合被直接命名为了新的标签。理由也是相同的，像header/footer/aside/nav/section/article都是我之前经常使用的class或id。我甚至觉得w3c创造新html标签的工作很简单，定期统计一下最常用的class和id，然后取前几名作为新的标签名就行了。上周还有人在微博上感慨那个史上最牛的HTML代码：再过几年它真的也许会消失的。反过来思考也可以，尽量使用有语义的标签名，实在想不出来合适的标签名了，再用div然后起个class或id。这样的思路也不错。2. 不要滥用class而回避id，该出手时就出手。和问题1同理，设想一下HTML的世界最初只有class没有id，其实网页依然可以写得出来，语义依然表达得出来。无非就是会出现很多特殊的class呗。因此，我们也很好理解，id的出现，就是可以和class一起协作，使某些语义即使没有现成的标签可以表示它，但依然可以把一般性和唯一性完美的结合在一起。这里驳斥一个观点：尽量都使用class，因为控制样式的时候class的优先级是同级的，id的优先级更高，它的出现会破坏样式优先级的平衡。首先我觉得这是一个假命题，所谓的平衡是不存在的，也没有必要去刻意维护，通过id来表示的内容一定是相对特殊的，优先级自然高一些，这样的优先级设计是如此的自然。我能够接受的全部是class的适用范围仅是一些底层的css基础样式，如oocss里的基础样式，或很多网站都会有common.css文件或general.css文件，里面的东西尽量用class没问题。另一个更重要的理由是，在HTML5里，除了id和class这两个特性可以控制样式之外，还可以通过特性选择器来定义样式，类似E[attr=...]的写法。我们会发现可以控制样式的方式越来越灵活，选择越来越多。这是Web发展的必然趋势。当其他人已经在用id/class/data-*/tagname对样式展开多重维度攻势的时候，我们实在没有必要把自己还关在class的世界里。3. 尽量给每个表示布局的class或id换一个站在内容角度的合理的名字。比如两列布局的左右侧多半是正文和辅助信息的关系，那么就不建议用class=left和class=right而是倾向于class=main-content和class=sidebar，或者直接用article和aside。在自适应Web设计(responsive web design)如火如荼的今天，页面上的某个元素处在网页什么位置更像是个变量，所以通过位置来定义一个元素显然是会承受很多额外的维护成本和扩展成本。当改变发生的那一天，你发现自己的HTML代码变得文不对题。曾经的left跑到最上面去了，right变成了底部通栏，这都是很正常的变化。实在没什么语义的，比如为了给IE加圆角而增设的标签，或清除浮动用的额外的标签，再或者是基础样式的，和具体内容无关的，再用div加表象的class来描述。4. 尽量避免表示纯样式的class或id。比如。印象中网上有很多拙劣的例子，也有很多深刻批判这种用法的文章，我想说的是，如果你非要这样改样式，那不如直接写内联style来得直观。最后想说的是……互联网是一个快速发展的领域，它的快速发展甚至让人们忘却了很多传统领域的停滞不前。在这样的领域里工作，勇敢尝试，关注新技术，把握新趋势是如此的重要。不要拒绝新事物，不要被不思进取的人拖累，不要对大千世界失去好奇心和求知欲，方可永葆青春。",
+		"date":"2012-11-28",
+		"tags":"HTML",
+		"hot":false
+	},
+	{
+		"id":2,
+		"title":"CSS在 Internet Explorer 6, 7 和8中的差别",
+		"description":"关于浏览器的最离奇的统计结果之一就是Internet Explorer 版本6，7和8共存。截至本文，InternetExplorer各个版本总共占据了大约65%的市场份额。",
+		"content":"这些统计中比较有趣的部分是，IE6、IE7、IE8之间的数值很接近，这防止了单个Microsoft的浏览器占居统治地位——与过去的情况相反。根据这些令人遗憾的统计结果，在为客户开发网站的时候开发人员对所有当前使用的IE浏览器做全面的测试是必要的，而且这样在个人项目上也可以拉拢更多的用户。多谢那些JavaScript库(框架)，跨浏览器的Javascript的测试已经像当前形势所允许的那样接近完美了。但在CSS开发中还不是这样，特别是关系到IE目前存在的三个版本。本文尝试为希望了解CSS对IE6、IE7、IE8的支持的不同的开发者提供一份详细的、易用的参考。本参考包含以下情况的概述和兼容情况：· 三个浏览器中的一个支持而另外两个不支持的条目· 三个浏览器中的两个支持而另外一个不支持的条目本文不讨论：· 三个浏览器都不支持的条目· 私有属性因此，本文的中心是三个浏览器中的不同，而不是必要的支持缺陷。该列表被分为以下五个部分：· 选择器与继承· 伪类与伪元素· 属性支持· 其它各种技术· 重要bug和不兼容问题这些统计中比较有趣的部分是，IE6、IE7、IE8之间的数值很接近，这防止了单个Microsoft的浏览器占居统治地位——与过去的情况相反。根据这些令人遗憾的统计结果，在为客户开发网站的时候开发人员对所有当前使用的IE浏览器做全面的测试是必要的，而且这样在个人项目上也可以拉拢更多的用户。多谢那些JavaScript库(框架)，跨浏览器的Javascript的测试已经像当前形势所允许的那样接近完美了。但在CSS开发中还不是这样，特别是关系到IE目前存在的三个版本。本文尝试为希望了解CSS对IE6、IE7、IE8的支持的不同的开发者提供一份详细的、易用的参考。本参考包含以下情况的概述和兼容情况：· 三个浏览器中的一个支持而另外两个不支持的条目· 三个浏览器中的两个支持而另外一个不支持的条目本文不讨论：· 三个浏览器都不支持的条目· 私有属性因此，本文的中心是三个浏览器中的不同，而不是必要的支持缺陷。该列表被分为以下五个部分：· 选择器与继承· 伪类与伪元素· 属性支持· 其它各种技术· 重要bug和不兼容问题",
+		"date":"2012-12-03",
+		"tags":"CSS",
+		"hot":false
+	},
+	{
+		"id":3,
+		"title":"学习JavaScript的最佳方法",
+		"description":"学习新的东西是件可怕的事。对我来说，掌握一项新技能最大的问题是，我不知道自己懂什么。鉴于此，定个计划，学习你感兴趣的东西应该会有用。",
+		"content":"这些统计中比较有趣的部分是，IE6、IE7、IE8之间的数值很接近，这防止了单个Microsoft的浏览器占居统治地位——与过去的情况相反。根据这些令人遗憾的统计结果，在为客户开发网站的时候开发人员对所有当前使用的IE浏览器做全面的测试是必要的，而且这样在个人项目上也可以拉拢更多的用户。多谢那些JavaScript库(框架)，跨浏览器的Javascript的测试已经像当前形势所允许的那样接近完美了。但在CSS开发中还不是这样，特别是关系到IE目前存在的三个版本。本文尝试为希望了解CSS对IE6、IE7、IE8的支持的不同的开发者提供一份详细的、易用的参考。本参考包含以下情况的概述和兼容情况：· 三个浏览器中的一个支持而另外两个不支持的条目· 三个浏览器中的两个支持而另外一个不支持的条目本文不讨论：· 三个浏览器都不支持的条目· 私有属性因此，本文的中心是三个浏览器中的不同，而不是必要的支持缺陷。该列表被分为以下五个部分：· 选择器与继承· 伪类与伪元素· 属性支持· 其它各种技术· 重要bug和不兼容问题这些统计中比较有趣的部分是，IE6、IE7、IE8之间的数值很接近，这防止了单个Microsoft的浏览器占居统治地位——与过去的情况相反。根据这些令人遗憾的统计结果，在为客户开发网站的时候开发人员对所有当前使用的IE浏览器做全面的测试是必要的，而且这样在个人项目上也可以拉拢更多的用户。多谢那些JavaScript库(框架)，跨浏览器的Javascript的测试已经像当前形势所允许的那样接近完美了。但在CSS开发中还不是这样，特别是关系到IE目前存在的三个版本。本文尝试为希望了解CSS对IE6、IE7、IE8的支持的不同的开发者提供一份详细的、易用的参考。本参考包含以下情况的概述和兼容情况：· 三个浏览器中的一个支持而另外两个不支持的条目· 三个浏览器中的两个支持而另外一个不支持的条目本文不讨论：· 三个浏览器都不支持的条目· 私有属性因此，本文的中心是三个浏览器中的不同，而不是必要的支持缺陷。该列表被分为以下五个部分：· 选择器与继承· 伪类与伪元素· 属性支持· 其它各种技术· 重要bug和不兼容问题",
+		"date":"2012-12-24",
+		"tags":"JavaScript",
+		"hot":true
+	},
+	{
+		"id":4,
+		"title":"W3C携google、firefox等公司共推Web Platform",
+		"description":"W3C一直致力于互联网技术标准的制定和推广，这一次直接和互联网巨头一起，推行WebPlatform.org网站，建设一个标准化社区来推广标准。",
+		"content":"CanvasRenderingContext2D 对象的属性canvas 属性这个环境可以绘制于其上的 Canvas 元素。fillStyle 属性用来填充路径的当前的颜色、模式或渐变。这个属性可以设置为一个字符串或者一个 CanvasGradient 对象 或 CanvasPattern 对象。当设置为一个字符串时，它被解析为一个 CSS 颜色值并且用来进行实心填充。当设置为一个 CanvasGradient 或 CanvasPattern 对象，通过使用指定的渐变或模式来完成填充。globalAlpha 属性指定在画布上绘制的内容的不透明度。这个值的范围在 0.0（完全透明）和 1.0（完全不透明）之间。默认值为 1.0。globalCompositeOperation 属性指定颜色如何与画布上已有的颜色组合（合成）。如需更多细节，请参阅 globalCompositeOperation 属性参考页。lineCap 属性指定线条的末端如何绘制。合法的值是butt、round 和 square。默认值是 butt。如需更多细节，请参阅 lineCap 属性参考页。lineJoin 属性指定两条线条如何连接。合法的值是round、bevel 和 miter。默认值是 miter。如需更多细节，请参阅 lineJoin 属性参考页。lineWidth 属性指定了画笔（绘制线条）操作的线条宽度。默认值是 1.0，并且这个属性必须大于 0.0。较宽的线条在路径上居中，每边有线条宽的一半。miterLimit 属性当 lineJoin 属性为 miter 的时候，这个属性指定了斜连接长度和线条宽度的最大比率。如需更多细节，请参阅 miterLimit 属性参考页。shadowBlur 属性指定羽化阴影的程度。默认值是 0。阴影效果得到 safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。shadowColor 属性把阴影的颜色指定为一个 CSS 字符串或 Web 样式字符串，并且可以包含一个 alpha 部分来表示透明度。默认值是 black。阴影效果得到 Safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。shadowOffsetX, shadowOffsetY 属性指定阴影的水平偏移和垂直偏移。较大的值使得阴影化的对象似乎漂浮在背景的较高位置上。默认值是 0。阴影效果得到 Safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。strokeStyle 属性指定了用于画笔（绘制）路径的颜色、模式和渐变。这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。",
+		"date":"2013-01-08",
+		"tags":"杂谈",
+		"hot":true
+	},
+	{
+		"id":5,
+		"title":"HTML5的Canvas帮助手册",
+		"description":"canvas.getContext(2d) 是 CanvasRenderingContext2D 对象",
+		"content":"CanvasRenderingContext2D 对象的属性canvas 属性这个环境可以绘制于其上的 Canvas 元素。fillStyle 属性用来填充路径的当前的颜色、模式或渐变。这个属性可以设置为一个字符串或者一个 CanvasGradient 对象 或 CanvasPattern 对象。当设置为一个字符串时，它被解析为一个 CSS 颜色值并且用来进行实心填充。当设置为一个 CanvasGradient 或 CanvasPattern 对象，通过使用指定的渐变或模式来完成填充。globalAlpha 属性指定在画布上绘制的内容的不透明度。这个值的范围在 0.0（完全透明）和 1.0（完全不透明）之间。默认值为 1.0。globalCompositeOperation 属性指定颜色如何与画布上已有的颜色组合（合成）。如需更多细节，请参阅 globalCompositeOperation 属性参考页。lineCap 属性指定线条的末端如何绘制。合法的值是butt、round 和 square。默认值是 butt。如需更多细节，请参阅 lineCap 属性参考页。lineJoin 属性指定两条线条如何连接。合法的值是round、bevel 和 miter。默认值是 miter。如需更多细节，请参阅 lineJoin 属性参考页。lineWidth 属性指定了画笔（绘制线条）操作的线条宽度。默认值是 1.0，并且这个属性必须大于 0.0。较宽的线条在路径上居中，每边有线条宽的一半。miterLimit 属性当 lineJoin 属性为 miter 的时候，这个属性指定了斜连接长度和线条宽度的最大比率。如需更多细节，请参阅 miterLimit 属性参考页。shadowBlur 属性指定羽化阴影的程度。默认值是 0。阴影效果得到 safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。shadowColor 属性把阴影的颜色指定为一个 CSS 字符串或 Web 样式字符串，并且可以包含一个 alpha 部分来表示透明度。默认值是 black。阴影效果得到 Safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。shadowOffsetX, shadowOffsetY 属性指定阴影的水平偏移和垂直偏移。较大的值使得阴影化的对象似乎漂浮在背景的较高位置上。默认值是 0。阴影效果得到 Safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。strokeStyle 属性指定了用于画笔（绘制）路径的颜色、模式和渐变。这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。",
+		"date":"2013-01-14",
+		"tags":"HTML",
+		"hot":false
+	},
+	{
+		"id":6,
+		"title":"用CSS画三角形",
+		"description":"新建一个元素，随便什么元素，不过我习惯性的会用块元素来做。如果行内元素就display:block它。",
+		"content":"CanvasRenderingContext2D 对象的属性canvas 属性这个环境可以绘制于其上的 Canvas 元素。fillStyle 属性用来填充路径的当前的颜色、模式或渐变。这个属性可以设置为一个字符串或者一个 CanvasGradient 对象 或 CanvasPattern 对象。当设置为一个字符串时，它被解析为一个 CSS 颜色值并且用来进行实心填充。当设置为一个 CanvasGradient 或 CanvasPattern 对象，通过使用指定的渐变或模式来完成填充。globalAlpha 属性指定在画布上绘制的内容的不透明度。这个值的范围在 0.0（完全透明）和 1.0（完全不透明）之间。默认值为 1.0。globalCompositeOperation 属性指定颜色如何与画布上已有的颜色组合（合成）。如需更多细节，请参阅 globalCompositeOperation 属性参考页。lineCap 属性指定线条的末端如何绘制。合法的值是butt、round 和 square。默认值是 butt。如需更多细节，请参阅 lineCap 属性参考页。lineJoin 属性指定两条线条如何连接。合法的值是round、bevel 和 miter。默认值是 miter。如需更多细节，请参阅 lineJoin 属性参考页。lineWidth 属性指定了画笔（绘制线条）操作的线条宽度。默认值是 1.0，并且这个属性必须大于 0.0。较宽的线条在路径上居中，每边有线条宽的一半。miterLimit 属性当 lineJoin 属性为 miter 的时候，这个属性指定了斜连接长度和线条宽度的最大比率。如需更多细节，请参阅 miterLimit 属性参考页。shadowBlur 属性指定羽化阴影的程度。默认值是 0。阴影效果得到 safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。shadowColor 属性把阴影的颜色指定为一个 CSS 字符串或 Web 样式字符串，并且可以包含一个 alpha 部分来表示透明度。默认值是 black。阴影效果得到 Safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。shadowOffsetX, shadowOffsetY 属性指定阴影的水平偏移和垂直偏移。较大的值使得阴影化的对象似乎漂浮在背景的较高位置上。默认值是 0。阴影效果得到 Safari 的支持，但是并没有得到 FireFox 1.5 或 Opera 9 的支持。strokeStyle 属性指定了用于画笔（绘制）路径的颜色、模式和渐变。这个属性可能是一个字符串，或者一个 CanvasGradient 对象 或 CanvasPattern 对象。如果是一个字符串，它被解析为一个 CSS 颜色值，并且画笔用所得的实色来绘制。如果这个属性的值是一个 CanvasGradient 对象或 CanvasPattern 对象，画笔使用这个渐变或模式来实现。",
+		"date":"2013-01-22",
+		"tags":"CSS",
+		"hot":false
+	},
+	{
+		"id":7,
+		"title":"不可错过的10个超棒jQuery表单操作代码片段",
+		"description":"jQuery绝对是一个伟大的开源javascript类库，是帮助我们快速和高效开发前端应用的利器。可能大家在日常的开发过程中常常会处理表单相关的javascript",
+		"content":"现在只要这么简单的15个字符就可以了。（注意：你的doctype的申明需要出现在你html文件的第一行。）2. 图形（Figure）元素你还在考虑用下面的代码来标记图片吗？上面的代码它不能以简单而且富有语义关联的方式与图形的标题关联，因为它仅仅是用段落标记以及图片元素包裹，而 HTML5通过引进元素，改进了这一点。当结合元素使用时，我们就可以将图形标题与图形配对起来。代码如下：1This is an image of something interesting. 3. 重新定义原来你可以利用元素来创建与logo密切相关的副标题。不过，现在HTML5修改了这个用法，元素被重新定义了，或者更恰当地说，它现在用来代表小字或其他边注（如，网站底部的版权声明）。4. 不再需要脚本、链接类型很可能你仍然像下面的代码一样给你的链接和脚本标签添加类型的属性。在HTML5中，这已经不再需要了。 意味着说这两个标签分别代表着样式和脚本。因此，我们可以将它们的类型属性都删除掉。代码如下：5. 使用还是不使用引号记住，HTML5与XHTML不同，如果你不喜欢的话你不必用引号将属性包裹起来。不过，要是你觉得用引号会让你觉得更加舒服的话，当然也不会有任何问题。在这点上，你可以自己决定。如果你想要一个结构非常清楚的文档的话，坚持使用引号也挺好的。6. 使你的内容可编辑点击查看原图HTML5其中一个非常强大的功能就是contenteditable，顾名思义它将允许用户编辑元素（包括他的子元素）内包含的任何文本内容。它的用途非常广，如，简单的任务清单或是基于wiki的站点也非常实用，此外，它还有一个优势就是利用了本地的存储。",
+		"date":"2013-02-05",
+		"tags":"JavaScript",
+		"hot":true
+	},
+	{
+		"id":8,
+		"title":"让我们一起黑了ie",
+		"description":"老外好无聊，又整了一个网站，来推动大家消灭旧版本的IE浏览器，不过与以往不同的是，这次行动建议在10月26日那天统一进行，只上线一天。这有点儿像之前的CSS 裸奔日活动。",
+		"content":"现在只要这么简单的15个字符就可以了。（注意：你的doctype的申明需要出现在你html文件的第一行。）2. 图形（Figure）元素你还在考虑用下面的代码来标记图片吗？上面的代码它不能以简单而且富有语义关联的方式与图形的标题关联，因为它仅仅是用段落标记以及图片元素包裹，而 HTML5通过引进元素，改进了这一点。当结合元素使用时，我们就可以将图形标题与图形配对起来。代码如下：1This is an image of something interesting. 3. 重新定义原来你可以利用元素来创建与logo密切相关的副标题。不过，现在HTML5修改了这个用法，元素被重新定义了，或者更恰当地说，它现在用来代表小字或其他边注（如，网站底部的版权声明）。4. 不再需要脚本、链接类型很可能你仍然像下面的代码一样给你的链接和脚本标签添加类型的属性。在HTML5中，这已经不再需要了。 意味着说这两个标签分别代表着样式和脚本。因此，我们可以将它们的类型属性都删除掉。代码如下：5. 使用还是不使用引号记住，HTML5与XHTML不同，如果你不喜欢的话你不必用引号将属性包裹起来。不过，要是你觉得用引号会让你觉得更加舒服的话，当然也不会有任何问题。在这点上，你可以自己决定。如果你想要一个结构非常清楚的文档的话，坚持使用引号也挺好的。6. 使你的内容可编辑点击查看原图HTML5其中一个非常强大的功能就是contenteditable，顾名思义它将允许用户编辑元素（包括他的子元素）内包含的任何文本内容。它的用途非常广，如，简单的任务清单或是基于wiki的站点也非常实用，此外，它还有一个优势就是利用了本地的存储。",
+		"date":"2013-02-16",
+		"tags":"杂谈",
+		"hot":false
+	},
+	{
+		"id":9,
+		"title":"天煞的HTML 5到底是个什么东西",
+		"description":"DamnDigital近日制作了一篇由浅入深的知识普及帖，详细介绍了HTML5的方方面面，包括什么是HTML5?HTML5有哪些特质?HTML5/4有什么区别?谁先试水HTML5的?",
+		"content":"一、什么是HTML，以及HTML51. HTMLHTML是超文本标记语言的英文缩写，这是一种标记语言，不需要进行编译，直接由浏览器执行。语言就必须有一个语法的规则，如果没有规则，谁知道应该把一个HTML元素以怎样的形式展现给用户呢?目前HTML语言的标准是由 W3C(World Wide Web Consortium)负责制定的。依照规则，无论是何种浏览器，对于相同的HTML代码，应当展现给用户相同的效果。目前HTML语言最新版本为4(HTML4)，此外还有一个可扩展超文本标记语言(XHTML)作为其扩展版本，提供更为丰富的功能和更严谨的语法规范。2. HTML5HTML5草案的前身名为Web Applications 1.0。於2004年被WHATWG提出，於2007年被W3C接纳，并成立了新的HTML工作团队。2008年1月22日，W3C发布了最新的HTML5工作草案，HTML工作组包括AOL、Apple、Google、IBM、 Microsoft、Mozilla、Nokia、Opera等数百个开发上。HTML5中增加了许多新特性，例如嵌入音频、视频和图片的函数、客户端存 储数据、交互式文档等，通过制定如何处理所有HTML元素以及如何从错误中恢复的精确规则，HTML5进一步增强了互动性，并有效减少了开发成本。二、HTML5 有哪些特质点击查看原图我们来看看W3.org列举出来的8个Class技术描述：A. 语义特性(Class：Semantic)HTML5赋予网页更好的意义和结构。更加丰富的标签将随着对RDFa的，微数据与微格式等方面的支持，构建对程序、对用户都更有价值的数据驱动的Web。B. 本地存储特性(Class：OFFLINE & STORAGE)基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度，这些全得益于HTML5 APP Cache，以及本地存储功能。Indexed DB(HTML5本地存储最重要的技术之一) 和API说明文档。C. 设备兼容特性 (Class：DEVICE ACCESS)从Geolocation 功能的API文档公开以来，HTML5为网页应用开发者们提供了更多功能上的优化选择，带来了更多体验功能的优势。HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连，例如视频影音可直接与microphones及摄像头相联D. 连接特性(Class：CONNECTIVITY)更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现。HTML5拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特性能够帮助我们实现服务器将数据’推送’到客户端的功能。E. 网页多媒体特性(Class：MULTIMEDIA)支持网页端的Audio、Video等多媒体功能， 与网站自带的APPS、摄像头、影音功能相得益彰。F. 三维、图形及特效特性(Class：3D, Graphics & Effects)基于SVG、Canvas、WebGL及CSS3的3D功能，用户会惊叹于在浏览器中，所呈现的惊人视觉效果。G. 性能与集成特性(Class：Performance & Integration)没有用户会永远等待你的Loading——HML5会通过XMLHttpRequest2等技术，帮助您的Web应用和网站在多样化的环境中更快速的工作。H. CSS3特性(Class：CSS3)在不牺牲性能和语义结构的前提下，CSS3中提供了更多的风格和更强的效果。此外，较之以前的Web排版，Web的开放字体格式(WOFF)也提供了更高的灵活性和控制性。Apple 官方对HTML5的各个特性做了详细并且动态的展示：http://www.apple.com/HTML5/showcase",
+		"date":"2013-03-07",
+		"tags":"HTML",
+		"hot":true
+	},
+	{
+		"id":10,
+		"title":"css3 calc()功能小窥",
+		"description":"之前，我们想要实现一个完美的宽度自适应的输入框好麻烦，曾经也被作为对前端技术的一个挑战。类似的常见场景还有100%宽+边框的容器等。",
+		"content":"大家都知道Web2.0以来，应用程序的实现使用了大量Ajax，而Loading的小图标也有很多，甚至还有专门提供Loading图片的网站，所以我就想能不能让HTML5一并解决这个以前用gif文件才能解决的问题。出乎我意料的是，实现的过程非常简单，只用了不到一小时的时间我就用HTML5实验出了两个Loading效果，而且这样做出来的Loading图标是可定制的，既可以定制颜色，也可以定制大小等属性。第一个带着小尾巴转动的loading图标画图的思路是，首先画一个圆，然后在圆的边上按顺序画大小逐渐减小的小圆点，在每次刷新画布时改变这一系列的小圆点在大圆边上的位置。第二个较为简单，在一个圆环上有一个相同圆心相同半径的圆弧在不停的转动。画图的步骤是首先画一个圆环，然后画一个不同颜色相同圆心半径的圆弧，在每次刷新画布时改变圆弧的起始角度。目前从移动设备对HTML5的支持来看，HTML5将来必定大有可为。天下大势，合久必分，分久必和。PC开发时Web应用在很大程度上统一了客户端程序；而现在移动开发使用不同的系统不同的语言，将来大多数应用必然会统一到一种语言，这种语言必然是html5加Javascript。注意：由于目前支持HTML5的浏览器还不是很多，请各位在查看演示案例的时候使用Firefox10或者Oprea11等高版本浏览器。",
+		"date":"2013-04-13",
+		"tags":"CSS",
+		"hot":false
+	},
+	{
+		"id":11,
+		"title":"jQuery Mobile 入门教程",
+		"description":"你每天都会对着它讲话，和它玩游戏，用它看新闻——没错，它就是你裤兜里的智能手机。android，黑莓还是iphone？为了让你清楚意识到究竟哪些才算是智能手机",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-04-29",
+		"tags":"JavaScript",
+		"hot":false
+	},
+	{
+		"id":12,
+		"title":"什么是响应式Web设计？怎样进行？",
+		"description":"在Web设计和开发领域，很快的，我们将会无法跟上设备与分辨率革新的步伐。对于多数网站来说，为每种新设备及分辨率创建其独立的版本根本就是不切实际的",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-05-03",
+		"tags":"杂谈",
+		"hot":true
+	},
+	{
+		"id":13,
+		"title":"为什么使用&lt;!DOCTYPE HTML&gt;",
+		"description":"不管是刚接触前端，还是你已经“精通”web前端开发的内容，你应该知道在你写html的时候需要定义文档类型",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-05-16",
+		"tags":"HTML",
+		"hot":false
+	},
+	{
+		"id":14,
+		"title":"CSS文字排版",
+		"description":"先介绍如何设定字体、颜色、大小、段落空白等比较简单的应用，后面再介绍下比如首字下沉、首行缩进。最后讲一些常用的web页面中文排版",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-05-21",
+		"tags":"CSS",
+		"hot":true
+	},
+	{
+		"id":15,
+		"title":"jquery要怎么写才能速度最快？",
+		"description":"jQuery的版本更新很快，你应该总是使用最新的版本。因为新版本会改进性能，还有很多新功能。",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-06-01",
+		"tags":"JavaScript",
+		"hot":true
+	},
+	{
+		"id":16,
+		"title":"谷歌研发先进编程技术 简化Web应用开发",
+		"description":"北京时间3月28日消息，据国外媒体报道，谷歌工程师亚历克斯·拉塞尔(Alex Russell)本周在EclipseCon会议上表示，该公司在开发许多先进的编程技术，简化Web应用开发。",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-06-14",
+		"tags":"杂谈",
+		"hot":false
+	},
+	{
+		"id":17,
+		"title":"HTML文字与段落",
+		"description":"在浏览网页中最先关注的是文章的标题,字体很大很突出. 通常使用&lt;h1&gt;&lt;/h1&gt;对标签.h标签分为6种",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-06-26",
+		"tags":"HTML",
+		"hot":true
+	},
+	{
+		"id":18,
+		"title":"CSS实现文字竖排布局，CSS文字垂直竖排显示如何实现？",
+		"description":"有时我们需要一段文字进行从上到下竖列排版（设计师需要这种效果），我们知道CSS样式中有一样式可以让其竖列排版，但所有浏览器不全兼容，逼不得已放弃。",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-06-03",
+		"tags":"CSS",
+		"hot":true
+	},
+	{
+		"id":19,
+		"title":"原生JavaScript实现全选、不选、反选功能",
+		"description":"在制作页面的时候通常会用到复选框操作，如：全选、不选、反选等功能，下面是通过JavaScript来实现功能的思路，可供大家参考。",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-06-17",
+		"tags":"JavaScript",
+		"hot":false
+	},
+	{
+		"id":20,
+		"title":"前端，我为什么不要你",
+		"description":"一位大牛在招聘时对前端行业的思考与总结，值得前端们好好看看，好好思考。今年一月份以前端主管的身份进入现在的公司，到现在为止陆陆续续面试了十几个应聘者，惊讶地发现前端这个细分岗位的市场行情竟如此奇怪",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-06-29",
+		"tags":"杂谈",
+		"hot":true
+	},
+	{
+		"id":21,
+		"title":"HTML4，HTML5，XHTML 之间的区别与联系",
+		"description":"我来从HTML的历史谈谈他们3者的区别。在HTML的早期发展中，W3C成立之前，很多标准的制定都是在浏览器的开发者们互相讨论的情况下完成的",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-07-03",
+		"tags":"HTML",
+		"hot":true
+	},
+	{
+		"id":22,
+		"title":"What Is CSS Reset ?",
+		"description":"很多地方都提到过CSS Reset这个概念，而且细心的朋友会发现，许多大网站的CSS文件中也含有CSS Reset内容。",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-07-19",
+		"tags":"CSS",
+		"hot":false
+	},
+	{
+		"id":23,
+		"title":"JQuery避免$符和其他JS库冲突的几种方法及优缺点对比",
+		"description":"jQuery中需要用到$符号，如果其他js库也定义了$符号，那么就会造成冲突，会影响到js代码的正常执行，下面有几个不错的解决方法，大家可以参考下。",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-08-01",
+		"tags":"JavaScript",
+		"hot":true
+	},
+	{
+		"id":24,
+		"title":"你真的了解每天都要使用的浏览器吗？",
+		"description":"浏览器的种类，如果按照生产商的品牌分，不说数以万计，起码也有成百上千种了，如果按浏览器核心分类，它的种类就会少的多。",
+		"content":"HTML Spec: “The div element has no special meaning at all.”这个标签是我们见得最多、用得最多的一个标签。本身没有任何语义，用作布局以及样式化或脚本的钩子(hook)。HTML Spec: “The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.”与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。看到这里，我们也许会想到，那么一篇博客文章，或者一条单独的评论岂不是正好可以用 section 吗？接着看：“Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the elemen.”当元素内容聚合起来更加言之有物时，应该使用 article 来替换 section 。那么，section 应该什么时候用呢？再接着看：“Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.”section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。其实我对这里传达信息很感兴趣，因为感觉 section 和下面要介绍的 artilce 更加适用于模块化应用，这个话题以后会出篇专门的文章来讨论，这里暂时略过。要注意，W3C 还警告说：“The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.”section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。",
+		"date":"2013-08-24",
+		"tags":"杂谈",
+		"hot":false
+	}
+]

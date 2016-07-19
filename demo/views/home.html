@@ -18,12 +18,7 @@
 		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧1</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧2</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧3</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧4</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧5</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧6</a></li>
+				<li class="list-item" ng-repeat="item in initData.articleData | filter:{'hot':true} | limitTo:6"><a href="javascript:;">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -34,12 +29,7 @@
 		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧1</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧2</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧3</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧4</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧5</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧6</a></li>
+				<li class="list-item" ng-repeat="item in initData.siteData | filter:{'hot':true} | limitTo:6"><a href="javascript:;">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -50,12 +40,7 @@
 		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧1</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧2</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧3</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧4</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧5</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧6</a></li>
+				<li class="list-item" ng-repeat="item in initData.caseData | filter:{'hot':true} | limitTo:6"><a href="javascript:;">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>
