@@ -1,9 +1,9 @@
 app.controller('homeController', ['$scope', 'dataService', function($scope, dataService) {
 	//初始化数据
 	$scope.initData = {
-		articleData:{},
-		siteData:{},
-		caseData:{}
+		articleData:'',
+		siteData:'',
+		caseData:''
 	};
 
 	//推荐文章

@@ -1,98 +1,98 @@
 [
 	{
-		"id":1,
+		"id":"1",
 		"title":"w3school 在线教程",
 		"description":"全球最大的中文 Web 技术教程。",
 		"url":"http://www.w3school.com.cn／",
 		"tags":"技术",
-		"hot":true
+		"hot":"true"
 	},
 	{
-		"id":2,
+		"id":"2",
 		"title":"WEB前端开发 - 专注前端开发，关注用户体验",
 		"description":"web前端开发，专注前端开发，关注用户体验，关注国内外最新最好的前端开发技术和前端开发资讯的专业博客",
 		"url":"http://www.css88.com/",
 		"tags":"工具",
-		"hot":false
+		"hot":"false"
 	},
 	{
-		"id":3,
+		"id":"3",
 		"title":"腾讯CDC",
 		"description":"腾讯CDC是一个设计团队，做世界一流的互联网设计团队，为用户创造优质在线生活体验。CDC关注于互联网视觉设计、交互设计、用户研究、前端开发。",
 		"url":"http://cdc.tencent.com/",
 		"tags":"技术",
-		"hot":true
+		"hot":"true"
 	},
 	{
-		"id":4,
+		"id":"4",
 		"title":"网易用户体验设计中心 | 有态度的互联网设计团队，为用户创造优质的使用体验",
 		"description":"网易用户体验设计中心（User Experience Design Center），简称‘设计中心(UEDC)’，成立于2008年底。崭新的团队赋予新的使命，我们将要以‘不断提升网易产品用户体验，带给用户良好的上网感受’为目标而努力。",
 		"url":"http://uedc.163.com/",
 		"tags":"技术",
-		"hot":true
+		"hot":"true"
 	},
 	{
-		"id":5,
+		"id":"5",
 		"title":"Learn to code | Codecademy",
 		"description":"Learn to code interactively, for free.",
 		"url":"https://www.codecademy.com",
 		"tags":"工具",
-		"hot":false
+		"hot":"false"
 	},
 	{
-		"id":6,
+		"id":"6",
 		"title":"Bootstrap中文网",
 		"description":"Bootstrap是Twitter推出的一个用于前端开发的开源工具包。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。目前，Bootstrap最新版本为3.0 。Bootstrap中文网致力于为广大国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这一框架。",
 		"url":"http://www.bootcss.com/",
 		"tags":"工具",
-		"hot":false
+		"hot":"false"
 	},
 	{
-		"id":7,
+		"id":"7",
 		"title":"RunJS - 在线编辑、展示、分享、交流你的 JavaScript 代码",
 		"description":"RunJS,在线编写、展示html、js、css代码，拥有实时预览、分享、Fork、代码高亮、自动完成等多项特性，提供文件上传、多种登录方式。",
 		"url":"http://runjs.cn/",
 		"tags":"工具",
-		"hot":true
+		"hot":"true"
 	},
 	{
-		"id":8,
+		"id":"8",
 		"title":"网易云课堂 - 领先的实用技能学习平台",
 		"description":"云课堂是网易公司研发的一款大型在线教育平台服务，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验，自由开放的交流互动环境。继网易公开课后，云课堂是网易公司在教育领域的又一重量级产品。",
 		"url":"http://study.163.com/",
 		"tags":"其他",
-		"hot":false
+		"hot":"false"
 	},
 	{
-		"id":9,
+		"id":"9",
 		"title":"Learn HTML5, CSS3, Javascript - video style tutorials",
 		"description":"TheCodePlayer plays code like a video helping people to learn front end technologies like HTML5, CSS3, Javascript, Jquery easily, quickly and interactively.",
 		"url":"http://thecodeplayer.com/",
 		"tags":"其他",
-		"hot":true
+		"hot":"true"
 	},
 	{
-		"id":10,
+		"id":"10",
 		"title":"慕课网(IMOOC)-国内最大的IT技能学习平台",
 		"description":"慕课网（IMOOC）是国内最大的IT技能学习平台。慕课网(IMOOC)提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。并且富有交互性及趣味性，你还可以和朋友一起编程。",
 		"url":"http://www.imooc.com/",
 		"tags":"其他",
-		"hot":false
+		"hot":"false"
 	},
 	{
-		"id":11,
+		"id":"11",
 		"title":"Icon Font &amp; SVG Icon Sets ❍ IcoMoon",
 		"description":"IcoMoon provides a package of vector icons, along with a free HTML5 app for making custom icon fonts or SVG sprites. Browse among thousands of pixel perfect icons or import your own vectors.",
 		"url":"https://icomoon.io/",
 		"tags":"工具",
-		"hot":false
+		"hot":"false"
 	},
 	{
-		"id":12,
+		"id":"12",
 		"title":"TinyPNG – Compress PNG images while preserving transparency",
 		"description":"Make your website faster and save bandwidth. TinyPNG optimizes your PNG images by 50-80% while preserving full transparency!",
 		"url":"https://tinypng.com/",
 		"tags":"工具",
-		"hot":true
+		"hot":"true"
 	}
 ]

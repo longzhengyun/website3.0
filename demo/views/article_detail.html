@@ -4,28 +4,12 @@
 <div class="content">
 	<!-- article detail -->
 	<div class="article-detail">
-		<h2 class="detail-title">你需要知道的22个HTML5技巧</h2>
+		<h2 class="detail-title">{{detailData.title}}</h2>
 		<div class="detail-data">
-			<span class="data-item">HTML</span>
-			<span class="data-item">2016-07-01</span>
+			<span class="data-item">{{detailData.tags}}</span>
+			<span class="data-item">{{detailData.date}}</span>
 		</div>
-		<div class="detail-cont">
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧，你需要知道的22个技巧</p>
-			<p>你需要知道的22个HTML5技巧，你需要知道的22个技巧</p>
-		</div>
+		<div class="detail-cont">{{detailData.content}}</div>
 	</div>
 	<!-- list mode -->
 	<div class="list-mode1">
@@ -34,10 +18,7 @@
 		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧1</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧2</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧3</a></li>
-				<li class="list-item"><a href="javascript:;">你需要知道的22个HTML5技巧4</a></li>
+				<li class="list-item" ng-repeat="item in articleData | filter:{'tags':detailData.tags} | filter:{'hot':true} | limitTo:4"><a href="#/articleDetail/{{item.id}}">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>

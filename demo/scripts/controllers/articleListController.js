@@ -5,6 +5,4 @@ app.controller('articleListController', ['$scope', function($scope) {
 		btnSearch:true
 	};
 	
-	//通知header初始化
-	// $scope.$broadcast('makeHeaderView', $scope.initArticleList);
 }]);
