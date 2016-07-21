@@ -18,7 +18,7 @@
 		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
-				<li class="list-item" ng-repeat="item in articleData | filter:{'tags':detailData.tags} | filter:{'hot':true} | limitTo:4"><a href="#/articleDetail/{{item.id}}">{{item.title}}</a></li>
+				<li class="list-item" ng-repeat="item in articleData | orderBy:'-date' | filter:{'tags':detailData.tags} | filter:{'hot':true} | limitTo:4"><a href="#/articleDetail/{{item.id}}">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>

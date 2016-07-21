@@ -1,4 +1,4 @@
-app.controller('menuController', ['$scope', '$location', function($scope, $location) {
+app.controller('menuController', ['$scope', '$state', function($scope, $state) {
 	//初始化
 	$scope.initMenu = {
 		items:[
@@ -9,19 +9,16 @@ app.controller('menuController', ['$scope', '$location', function($scope, $locat
 		]
 	};
 
-	//获取当前路由关键字
-	$scope.pathKeyword = $location.path().replace(/\//, '');
-
 	//设置菜单当前项高亮
-	for (var i = $scope.initMenu.items.length - 1; i >= 0; i--) {
-		if($scope.initMenu.items[i].itemKey == $scope.pathKeyword){
-			$scope.initMenu.items[i].isCurrent = true;
-		};
-	};
+	angular.forEach($scope.initMenu.items, function(value){
+		if(value.itemName == $scope.$parent.initData.itemName){
+			value.isCurrent = true;
+		}
+	});
 
 	//点击菜单切换内容
-	$scope.menuAction = function(item){
-		$location.path('/' + item.itemKey);//切换内容
+	$scope.goTarget = function(targetKey){
+		$state.go(targetKey);
 	};
 
 }]);

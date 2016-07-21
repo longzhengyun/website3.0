@@ -14,10 +14,10 @@
 .header .header-search .icon-search-input,.header .header-search .btn-clear{position:absolute;top:50%;width:1.5rem;height:1.5rem;background:url(../images/icon_header.png) no-repeat;background-size:2.2rem auto;-webkit-transform:translateY(-50%);transform:translateY(-50%);}
 .header .header-search .icon-search-input{left:.25rem;background-position:0 -6.6rem;}
 .header .header-search .btn-clear{right:.25rem;background-position:0 -8.1rem;}
-.header .header-search .btn-search{position:absolute;top:50%;right:-2.25rem;padding:0 .25rem;border:1px solid #304353;border-radius:.25rem;font-size:.65rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);}
+/*.header .header-search .btn-search{position:absolute;top:50%;right:-2.25rem;padding:0 .25rem;border:1px solid #304353;border-radius:.25rem;font-size:.65rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);}*/
 
 .header .header-search-wide{margin-left:.75rem;margin-right:3.25rem;}
-.header .header-search-narrow{margin-left:2.75rem;margin-right:2.75rem;}
+/*.header .header-search-narrow{margin-left:2.75rem;margin-right:2.75rem;}*/
 
 /* footer */
 .footer .copyright{padding:.5rem 0;text-align:center;font-size:.6rem;color:#999;}
@@ -49,7 +49,7 @@
 .index-search .index-logo img{display:block;width:100%;height:100%;}
 .index-search .search-cont{margin:0 1rem;padding:.25rem;border-radius:.25rem;border:1px solid #ccc;}
 .index-search .search-input{height:1.5rem;padding-left:.25rem;padding-right:3.25rem;}
-.index-search .text{width:100%;height:100%;font-size:.7rem;}
+.index-search .text{width:100%;height:100%;font-size:.7rem;line-height:1.5rem;color:#999;}
 .index-search .submit{float:right;width:3rem;height:1.5rem;font-size:1rem;border-radius:0 .25rem .25rem 0;background-color:#eee;}
 .index-list{margin-top:.5rem;}
 

@@ -1,4 +1,4 @@
-app.controller('articleDetailController', ['$scope', 'dataService', '$location', function($scope, dataService, $location) {
+app.controller('articleDetailController', ['$scope', '$location', 'dataService', 'ARTICLE_DATA', function($scope, $location, dataService, ARTICLE_DATA) {
 	//初始化
 	$scope.initHeader = {
 		title:'文章详情',
@@ -10,7 +10,7 @@ app.controller('articleDetailController', ['$scope', 'dataService', '$location',
 	var id = detailPath.substr(detailPath.lastIndexOf('/') + 1);
 
 	//获取文章数据
-	dataService.getData('data/articleData.json').success(function(data){
+	dataService.getData(ARTICLE_DATA).success(function(data){
 		$scope.articleData = data;
 		angular.forEach($scope.articleData, function(value){
 			if(value.id == id){

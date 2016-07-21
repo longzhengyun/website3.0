@@ -1,26 +1,29 @@
 <!-- header -->
-<div class="header" ui-view="header"></div>
+<div class="header">
+	<div class="header-cont">
+		<span class="header-btn" ng-click="goBack()">取消</span>
+		<div class="header-search header-search-wide">
+			<span class="icon-search-input"></span>
+			<input type="text" class="in-search" placeholder="请输入要搜索关键字" ng-model="searchValue" ng-change="searchAction(searchValue)" />
+			<span class="btn-clear" ng-if="searchValue" ng-click="clearSearch()"></span>
+		</div>
+	</div>
+</div>
 <!-- content -->
 <div class="content">
 	<!-- search-title -->
 	<div class="search-title">
-		<h2 class="title-cont">历史搜索</h2>
+		<h2 class="title-cont" ng-if="!searchResult">历史搜索</h2>
+		<h2 class="title-cont" ng-if="searchResult">搜索结果({{searchCount}})</h2>
 	</div>
 	<!-- history-list -->
 	<ul class="list-mode3 history-list">
-		<li class="list-item">HTML</li>
-		<li class="list-item">CSS</li>
-		<li class="list-item">JS</li>
-		<li class="list-item">JavaScript</li>
-		<li class="list-item">jQuery</li>
-		<li class="list-item">AngularJS</li>
-		<li class="list-item">IE6兼容</li>
-		<li class="list-item">修复浏览器BUG</li>
+		<li class="list-item" ng-repeat="item in searchData | orderBy:'-date'">{{item.title}}</li>
 	</ul>
 	<!-- history-action -->
 	<div class="history-action">
 		<div class="action-cont">
-			<button class="btn-stroke btn-blue color-blue btn-normal">清空历史搜索</button>
+			<button class="btn-stroke btn-blue color-blue btn-normal" ng-click="clearHistory()">清空历史搜索</button>
 		</div>
 	</div>
 </div>

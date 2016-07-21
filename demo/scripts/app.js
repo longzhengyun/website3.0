@@ -83,10 +83,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 	.state('search', {
 		url: '/search',
 		views: {
-			'header@search': {
-				templateUrl: 'views/header.html',
-				controller: 'headerController'
-			},
 			'content': {
 				templateUrl: 'views/search.html',
 				controller: 'searchController'

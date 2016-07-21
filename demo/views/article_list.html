@@ -5,50 +5,19 @@
 	<!-- sub menu -->
 	<div class="sub-menu">
 		<ul class="sub-menu-cont">
-			<li class="menu-item cur">全部</li>
-			<li class="menu-item">HTML</li>
-			<li class="menu-item">CSS</li>
-			<li class="menu-item">JavaScript</li>
-			<li class="menu-item">杂谈</li>
+			<li ng-repeat="item in initSubMenu.items" ng-class="{true:'menu-item cur', false:'menu-item'}[item.isCurrent]" ng-click="subMenuAction(item)">{{item.itemName}}</li>
 		</ul>
 	</div>
 	<!-- article list -->
 	<ul class="list-mode2 article-list">
-		<li class="list-item">
-			<h2 class="item-title">你需要知道的22个HTML5技巧</h2>
-			<p class="item-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
+		<li class="list-item" ng-repeat="item in articleData | orderBy:'-date' | filter:{'tags':initSubMenu.tagsKey} | limitTo:10">
+			<h2 class="item-title">{{item.title}}</h2>
+			<p class="item-info">{{item.description}}</p>
 			<div class="clearfix">
-				<div class="item-data"><span class="data-date">2016-07-01</span></div>
-				<div class="item-tags"><span class="tags-item tags-item1">HTML</span></div>
+				<div class="item-data"><span class="data-date">{{item.date}}</span></div>
+				<div class="item-tags" ng-if="initSubMenu.tagsShow"><span ng-class="{'tags-item tags-item1':item.tags=='HTML', 'tags-item tags-item2':item.tags=='CSS', 'tags-item tags-item3':item.tags=='JavaScript', 'tags-item tags-item4':item.tags=='杂谈'}">{{item.tags}}</span></div>
 			</div>
-			<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
-		</li>
-		<li class="list-item">
-			<h2 class="item-title">你需要知道的22个HTML5技巧</h2>
-			<p class="item-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
-			<div class="clearfix">
-				<div class="item-data"><span class="data-date">2016-07-01</span></div>
-				<div class="item-tags"><span class="tags-item tags-item2">CSS</span></div>
-			</div>
-			<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
-		</li>
-		<li class="list-item">
-			<h2 class="item-title">你需要知道的22个HTML5技巧</h2>
-			<p class="item-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
-			<div class="clearfix">
-				<div class="item-data"><span class="data-date">2016-07-01</span></div>
-				<div class="item-tags"><span class="tags-item tags-item3">JavaScript</span></div>
-			</div>
-			<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
-		</li>
-		<li class="list-item">
-			<h2 class="item-title">你需要知道的22个HTML5技巧</h2>
-			<p class="item-info">当今科技发展的速度真惊人，稍不留神，就可能无法跟上它的步伐。新一代的HTML-HTML5的发展也不停的带给我们新的惊喜，我们将通过这篇文章向大家介绍一些HTML技巧。</p>
-			<div class="clearfix">
-				<div class="item-data"><span class="data-date">2016-07-01</span></div>
-				<div class="item-tags"><span class="tags-item tags-item4">杂谈</span></div>
-			</div>
-			<a href="#" title="你需要知道的22个HTML5技巧" class="item-link"></a>
+			<a href="#/articleDetail/{{item.id}}" title="{{item.title}}" class="item-link"></a>
 		</li>
 	</ul>
 </div>
