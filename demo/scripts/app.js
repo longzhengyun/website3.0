@@ -88,5 +88,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 				controller: 'searchController'
 			}
 		}
+	})
+	.state('owner', {
+		url: '/owner',
+		views: {
+			'header@owner': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/owner.html',
+				controller: 'ownerController'
+			}
+		}
 	});
 }])

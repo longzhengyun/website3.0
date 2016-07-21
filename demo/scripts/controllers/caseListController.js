@@ -5,7 +5,8 @@ app.controller('caseListController', ['$scope', 'dataService', 'CASE_DATA', func
 	};
 
 	$scope.initHeader = {
-		title:'个人案例'
+		title:'个人案例',
+		btnOwner:true
 	};
 
 	$scope.initSubMenu = {

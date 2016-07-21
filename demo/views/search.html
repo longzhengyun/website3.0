@@ -2,23 +2,22 @@
 <div class="header">
 	<div class="header-cont">
 		<span class="header-btn" ng-click="goBack()">取消</span>
-		<div class="header-search header-search-wide">
+		<div class="header-search">
 			<span class="icon-search-input"></span>
-			<input type="text" class="in-search" placeholder="请输入要搜索关键字" ng-model="searchValue" ng-change="searchAction(searchValue)" />
+			<input type="text" class="in-search" placeholder="请输入要搜索的关键字" ng-model="searchValue" ng-change="searchAction(searchValue)" />
 			<span class="btn-clear" ng-if="searchValue" ng-click="clearSearch()"></span>
 		</div>
 	</div>
 </div>
 <!-- content -->
-<div class="content">
+<div class="content" ng-if="!searchResult">
 	<!-- search-title -->
 	<div class="search-title">
-		<h2 class="title-cont" ng-if="!searchResult">历史搜索</h2>
-		<h2 class="title-cont" ng-if="searchResult">搜索结果({{searchCount}})</h2>
+		<h2 class="title-cont">历史搜索</h2>
 	</div>
 	<!-- history-list -->
-	<ul class="list-mode3 history-list">
-		<li class="list-item" ng-repeat="item in searchData | orderBy:'-date'">{{item.title}}</li>
+	<ul class="list-mode3">
+		<li class="list-item" ng-repeat="item in searchData">{{item}}</li>
 	</ul>
 	<!-- history-action -->
 	<div class="history-action">
@@ -26,4 +25,14 @@
 			<button class="btn-stroke btn-blue color-blue btn-normal" ng-click="clearHistory()">清空历史搜索</button>
 		</div>
 	</div>
+</div>
+<div class="content" ng-if="searchResult">
+	<!-- search-title -->
+	<div class="search-title">
+		<h2 class="title-cont">搜索结果({{searchCount}})</h2>
+	</div>
+	<!-- article-list -->
+	<ul class="list-mode3">
+		<li class="list-item" ng-repeat="item in searchData | orderBy:'-date'"><a href="#/articleDetail/{{item.id}}" title="{{item.title}}">{{item.title}}</a></li>
+	</ul>
 </div>
