@@ -1,4 +1,4 @@
-app.controller('ownerController', ['$scope', '$location', 'dataService', 'ARTICLE_DATA', function($scope, $location, dataService, ARTICLE_DATA) {
+app.controller('ownerController', ['$scope', '$state', function($scope, $state) {
 	//初始化
 	$scope.initHeader = {
 		title:'我',
@@ -6,17 +6,9 @@ app.controller('ownerController', ['$scope', '$location', 'dataService', 'ARTICL
 		btnHome:true
 	};
 
-	var detailPath = $location.path();
-	var id = detailPath.substr(detailPath.lastIndexOf('/') + 1);
-
-	//获取文章数据
-	dataService.getData(ARTICLE_DATA).success(function(data){
-		$scope.articleData = data;
-		angular.forEach($scope.articleData, function(value){
-			if(value.id == id){
-				$scope.detailData = value;
-			}
-		});
-	});
+	//点击按钮切换页面
+	$scope.goTarget = function(targetKey){
+		$state.go(targetKey);
+	};
 
 }]);

@@ -157,7 +157,7 @@ h3{font:600 0.8rem/1.5 Tahoma;}
 .form-group .form-textarea{width:100%;max-width:100%;}
 
 .form-group .group-arrow{padding-right:2.15rem;}
-.form-group .group-arrow:after{content:"";position:absolute;top:50%;right:-.75rem;width:2.15rem;height:2.1rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);}
+.form-group .group-arrow:after{content:"";position:absolute;top:50%;right:-.75rem;width:2.15rem;height:2.1rem;background:url(../images/icon_form.png) center -7.65rem no-repeat;background-size:2.15rem auto;-webkit-transform:translateY(-50%);transform:translateY(-50%);}
 
 .form-group .group-cont.error{border-color:rgba(242, 38, 38, .7);}
 

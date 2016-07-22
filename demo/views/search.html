@@ -17,7 +17,7 @@
 	</div>
 	<!-- history-list -->
 	<ul class="list-mode3">
-		<li class="list-item" ng-repeat="item in searchData">{{item}}</li>
+		<li class="list-item" ng-repeat="item in searchData track by $index">{{item}}</li>
 	</ul>
 	<!-- history-action -->
 	<div class="history-action">
@@ -29,10 +29,14 @@
 <div class="content" ng-if="searchResult">
 	<!-- search-title -->
 	<div class="search-title">
-		<h2 class="title-cont">搜索结果({{searchCount}})</h2>
+		<h2 class="title-cont">搜索结果({{searchCount.length}})</h2>
 	</div>
 	<!-- article-list -->
 	<ul class="list-mode3">
-		<li class="list-item" ng-repeat="item in searchData | orderBy:'-date'"><a href="#/articleDetail/{{item.id}}" title="{{item.title}}">{{item.title}}</a></li>
+		<li class="list-item" ng-repeat="item in searchData | orderBy:'-date' | filter:searchValue as searchCount"><a href="#/articleDetail/{{item.id}}" title="{{item.title}}">{{item.title}}</a></li>
 	</ul>
+	<!-- search nothing -->
+	<div class="search-nothing" ng-if="searchCount.length == 0">
+		<p class="text">没有搜到符合条件的结果，<br>请修改后重新搜索~</p>
+	</div>
 </div>

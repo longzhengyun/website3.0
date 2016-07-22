@@ -28,7 +28,7 @@ app.controller('articleListController', ['$scope', 'dataService', 'ARTICLE_DATA'
 
 	//点击菜单切换内容
 	$scope.subMenuAction = function(item){
-		angular.forEach($scope.initSubMenu.items ,function(value){
+		angular.forEach($scope.initSubMenu.items, function(value){
 			if(value.itemName == item.itemName){
 				value.isCurrent = true;
 				$scope.initSubMenu.tagsKey = value.itemKey;
