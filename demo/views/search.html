@@ -4,7 +4,7 @@
 		<span class="header-btn" ng-click="goBack()">取消</span>
 		<div class="header-search">
 			<span class="icon-search-input"></span>
-			<input type="text" class="in-search" placeholder="请输入要搜索的关键字" ng-model="searchValue" ng-change="searchAction(searchValue)" />
+			<input type="text" class="in-search" placeholder="请输入要搜索的关键字" ng-model="searchValue" ng-change="searchAction()" />
 			<span class="btn-clear" ng-if="searchValue" ng-click="clearSearch()"></span>
 		</div>
 	</div>
@@ -17,7 +17,7 @@
 	</div>
 	<!-- history-list -->
 	<ul class="list-mode3">
-		<li class="list-item" ng-repeat="item in searchData track by $index">{{item}}</li>
+		<li class="list-item" ng-repeat="item in searchData track by $index" ng-click="searchHistory(item)">{{item}}</li>
 	</ul>
 	<!-- history-action -->
 	<div class="history-action">

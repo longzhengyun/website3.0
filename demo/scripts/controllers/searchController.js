@@ -1,15 +1,28 @@
 app.controller('searchController', ['$scope', '$window', 'dataService', 'searchService', 'ARTICLE_DATA', function($scope, $window, dataService, searchService, ARTICLE_DATA) {
+	//空对象转空数组
+	function isEmptyObject(OBJ){
+		if(typeof OBJ === 'object' && !(OBJ instanceof Array)){
+			var hasProp = false;
+			for(var prop in OBJ){
+				hasProp = true;
+				break;
+			};
+			if(!hasProp){
+				return [];
+			};
+		}else{
+			return OBJ;
+		};
+	};
 	//获取本地用户数据
-	$scope.searchData = searchService.getLocalData();
-
-	//定义一个数组存储searchValue
-	$scope.localData = [];
+	$scope.localData = isEmptyObject(searchService.getLocalData());
+	$scope.searchData = $scope.localData;
 
 	//点击清空搜索内容
 	$scope.clearSearch = function(){
 		$scope.searchValue = '';
 		$scope.searchResult = false;
-		$scope.searchData = searchService.getLocalData();
+		$scope.searchData = $scope.localData;
 	};
 
 	//点击按钮返回
@@ -20,7 +33,7 @@ app.controller('searchController', ['$scope', '$window', 'dataService', 'searchS
 	//延迟
 	function isDelay(fn, interval){
 		var timer;//定时器
-		return function(){console.log('a');
+		return function(){
 			if(timer){
 				return false;
 			};
@@ -34,19 +47,34 @@ app.controller('searchController', ['$scope', '$window', 'dataService', 'searchS
 
 	//搜索
 	$scope.searchAction = isDelay(function(){
-		if($scope.searchValue == ''){
-			$scope.searchResult = false;
-			$scope.searchData = searchService.getLocalData();
-		}else{
+		if(!$scope.searchValue == ''){
 			$scope.searchResult = true;
 			//获取案例数据
 			dataService.getData(ARTICLE_DATA).success(function(data){
 				$scope.searchData = data;
 			});
-			$scope.localData.push($scope.searchValue);
-			searchService.setLocalDate($scope.localData); //本地存储用户数据
+			//判断是否有重复
+			var pushState = true;
+			angular.forEach($scope.localData, function(value){
+				if(value == $scope.searchValue){
+					pushState = false;
+				}
+			});
+			if(pushState){
+				$scope.localData.push($scope.searchValue);
+				searchService.setLocalDate($scope.localData); //本地存储用户数据
+			};
+		}else{
+			// $scope.searchResult = false;
+			// $scope.searchData = '';
+			// console.log($scope.searchData);
 		};
 	}, 2000);
+
+	//点击历史搜索
+	$scope.searchHistory = function(item){
+		$scope.searchValue = item;
+	};
 
 	//点击清空历史搜索
 	$scope.clearHistory = function(){
