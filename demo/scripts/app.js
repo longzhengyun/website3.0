@@ -101,5 +101,31 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 				controller: 'ownerController'
 			}
 		}
+	})
+	.state('resume', {
+		url: '/resume',
+		views: {
+			'header@resume': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/resume.html',
+				controller: 'resumeController'
+			}
+		}
+	})
+	.state('about', {
+		url: '/about',
+		views: {
+			'header@about': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/about.html',
+				controller: 'aboutController'
+			}
+		}
 	});
 }])
