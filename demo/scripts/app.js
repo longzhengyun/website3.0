@@ -127,5 +127,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 				controller: 'aboutController'
 			}
 		}
+	})
+	.state('version', {
+		url: '/version',
+		views: {
+			'header@version': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/version.html',
+				controller: 'versionController'
+			}
+		}
 	});
 }])

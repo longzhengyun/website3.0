@@ -1,4 +1,4 @@
-app.factory('searchService', ['$state', 'localService', function($state, localService) {
+app.factory('searchService', ['localService', function(localService) {
 	return {
 		getLocalData: function() {
 			return localService.getObject('searchData', '');
