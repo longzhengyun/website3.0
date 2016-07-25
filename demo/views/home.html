@@ -40,14 +40,10 @@
 		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
-				<li class="list-item" ng-repeat="item in initData.caseData | orderBy:'-date' | filter:{'hot':'true'} | limitTo:6"><a target="_blank" href="{{item.url}}">{{item.title}}</a></li>
+				<li class="list-item" ng-repeat="item in initData.caseData | orderBy:'-date' | filter:{'hot':'true'} | limitTo:10"><a href="#/caseDetail/{{item.id}}">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>
-</div>
-<!-- footer -->
-<div class="footer">
-	<p class="copyright">@Jary 2016</p>
 </div>
 <!-- menu -->
 <div class="menu" ui-view="menu"></div>

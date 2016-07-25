@@ -80,6 +80,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 			}
 		}
 	})
+	.state('caseDetail', {
+		url: '/caseDetail/:id', //在id前面加一个冒号，从而制订了一个参数化URL
+		views: {
+			'header@caseDetail': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/case_detail.html',
+				controller: 'caseDetailController'
+			}
+		}
+	})
 	.state('search', {
 		url: '/search',
 		views: {

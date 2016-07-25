@@ -18,9 +18,6 @@
 .header .header-search .icon-search-input{left:.25rem;background-position:0 -6.6rem;}
 .header .header-search .btn-clear{right:.25rem;background-position:0 -8.1rem;}
 
-/* footer */
-.footer .copyright{padding:.5rem 0;text-align:center;font-size:.6rem;color:#999;}
-
 /* menu */
 .menu{height:2.45rem;}
 .menu .menu-cont{display:-webkit-flex;display:-webkit-box;display:flex;position:fixed;bottom:0;right:0;left:0;z-index:99;height:2.45rem;border-top:1px solid #d4d4d4;text-align:center;background-color:#fff;}
@@ -42,6 +39,15 @@
 .tags-item3{color:#0b9ee7;border-color:#87cbec;}
 .tags-item4{color:#fe8d13;border-color:#f1b97c;}
 
+/* detail */
+.detail-mode{background-color:#fff;margin-bottom:.5rem;}
+.detail-mode .detail-title{padding:.5rem;text-align:center;font-size:1rem;font-weight:normal;line-height:1.5;}
+.detail-mode .detail-data{padding:0 .5rem;text-align:center;font-size:0;color:#999;}
+.detail-mode .detail-data .data-item{display:inline-block;margin:0 .25rem;font-size:.6rem;}
+.detail-mode .detail-cont{padding:.5rem;font-size:.7rem;color:#666;}
+.detail-mode .detail-cont p{margin-bottom:.25rem;}
+.detail-mode .detail-cont img{max-width:100%;}
+
  /* index */
 .index-search{padding:2.5rem 0 1rem 0;background-color:#fff;}
 .index-search .index-logo{width:8rem;height:2.5rem;margin:0 auto 1rem auto;}
@@ -53,18 +59,12 @@
 .index-list{margin-top:.5rem;}
 
 /* article */
-.article-detail{background-color:#fff;margin-bottom:.5rem;}
-.article-detail .detail-title{padding:.5rem;text-align:center;font-size:1rem;font-weight:normal;line-height:1.5;}
-.article-detail .detail-data{padding:0 .5rem;text-align:center;font-size:0;color:#999;}
-.article-detail .detail-data .data-item{display:inline-block;margin:0 .25rem;font-size:.6rem;}
-.article-detail .detail-cont{padding:.5rem;font-size:.7rem;color:#666;}
-.article-detail .detail-cont p{margin-bottom:.25rem;}
-.article-detail .detail-cont img{max-width:100%;}
 
 /* site */
 .site-list .item-tags{float:right;padding-top:.25rem;}
 
 /* case */
+.case-detail .detail-list{}
 
 /* search */
 .search-title .title-cont{padding:.5rem .75rem 0 .75rem;font-size:.8rem;font-weight:normal;color:#82898d;background-color:#efeff4;border-bottom:1px solid #dfdfdf;}
