@@ -13,8 +13,7 @@ app.controller('caseListController', ['$scope', 'dataService', 'CASE_DATA', func
 		items:[
 			{itemName:'全部', itemKey:'', isCurrent:true},
 			{itemName:'Mobile', itemKey:'Mobile', isCurrent:false},
-			{itemName:'PC', itemKey:'PC', isCurrent:false},
-			{itemName:'其他', itemKey:'其他', isCurrent:false}
+			{itemName:'PC', itemKey:'PC', isCurrent:false}
 		],
 		tagsKey:'',
 		tagsShow:true

@@ -1,80 +1,81 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Я��������: �ƺ�����ƽ̨</title>
-<meta name="keywords" content="�Ƶ�Ԥ��,��ƱԤ��,���ζȼ�,���ù���,�Ƶ�Ԥ��,��ƱԤ��,�����ѯ,���ӿ�Ʊ,��Ʊ,�Ƶ�,����" />
-<meta name="description" content="Я�����������й����ȵ��������з���˾���򳬹�1400���Ա�ṩ���Ƶ�Ԥ������ƱԤ�����ȼ�Ԥ�������ù������ػ��̻���������Ѷ���ڵ�ȫ��λ���з���" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/basis.css" rel="stylesheet" type="text/css" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/seaclouds.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width" />
+<title>携程旅行网: 云海竞赛平台</title>
+<meta name="keywords" content="酒店预订,机票预订,旅游度假,商旅管理,酒店预定,机票预定,航班查询,电子客票,机票,酒店,旅行" />
+<meta name="description" content="携程旅行网是中国领先的在线旅行服务公司，向超过1400万会员提供集酒店预订、机票预订、度假预订、商旅管理、特惠商户及旅游资讯在内的全方位旅行服务。" />
+<link href="css/basis.css" rel="stylesheet" type="text/css" />
+<link href="css/seaclouds.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- ҳͷ S -->
+<!-- 页头 S -->
 <?php include('header.php') ?>
-<!-- ҳͷ E -->
+<!-- 页头 E -->
 <div class="sc-wrap">
-	<!-- ���� S -->
-	<div class="sc-crumbs"><a href="index.php">�����б�</a><dfn>&gt;</dfn>Я�����������ģ��Ʒͼ�������㷨����</div>
-	<!-- ���� E -->
-	<!-- �б� S -->
+	<!-- 导航 S -->
+	<div class="sc-crumbs"><a href="index.php">赛事列表</a><dfn>&gt;</dfn>携程旅行网大规模商品图像搜索算法大赛</div>
+	<!-- 导航 E -->
+	<!-- 列表 S -->
 	<ul class="sc-list sc-detail-list">
 		<li>
 			<div class="btn-action">
-				<a href="javascript:;" class="state-enroll"><i class="icon"></i>��Ҫ����</a>
-				<!-- <a href="javascript:;" class="state-end"><i class="icon"></i>�����ɹ�</a> -->
+				<a href="javascript:;" class="state-enroll"><i class="icon"></i>我要报名</a>
+				<!-- <a href="javascript:;" class="state-end"><i class="icon"></i>报名成功</a> -->
 			</div>
 			<dl class="info">
-				<dt><i class="icon"></i><span class="title">Я�����������ģ��Ʒͼ�������㷨����</span></dt>
-				<dd class="head"><span class="item">״̬</span><span class="item">���½�ֹ����</span><span class="item">��߽���</span><span class="item">��������</span></dd>
-				<dd class="cont"><span class="item ongoing">������</span><span class="item">2016-08-31</span><span class="item">15,000,000</span><span class="item">3227</span></dd>
+				<dt><i class="icon"></i><span class="title">携程旅行网大规模商品图像搜索算法大赛</span></dt>
+				<dd class="head"><span class="item">状态</span><span class="item">赛事截止日期</span><span class="item">最高奖金</span><span class="item">参赛人数</span></dd>
+				<dd class="cont"><span class="item ongoing">进行中</span><span class="item">2016-08-31</span><span class="item">15,000,000</span><span class="item">3227</span></dd>
 			</dl>
 		</li>
 	</ul>
-	<!-- �б� E -->
-	<!-- ���� S -->
+	<!-- 列表 E -->
+	<!-- 详情 S -->
 	<div class="sc-layout sc-detail clearfix">
 		<ul class="sc-layout-aside">
-			<li class="cur"><a href="detail.php">���ƽ���</a></li>
-			<li><a href="detail_data.php">����������</a></li>
+			<li class="cur"><a href="detail.php">赛制介绍</a></li>
+			<li><a href="detail_data.php">赛题与数据</a></li>
 			<li><a href="detail_faq.php" class="tags-dashed">FAQ</a></li>
-			<li><a href="detail_ranking.php" class="tags-dashed tags-disable">��ҫ��</a></li>
-			<li><a href="detail_delivery.php" class="tags-dashed tags-disable">��Ҫ����</a></li>
+			<li><a href="detail_ranking.php" class="tags-dashed tags-disable">荣耀榜</a></li>
+			<li><a href="detail_delivery.php" class="tags-dashed tags-disable">我要交稿</a></li>
 		</ul>
 		<div class="sc-layout-main">
 			<dl class="detail-item">
-				<dt>���ⱳ����</dt>
+				<dt>赛题背景：</dt>
 				<dd>
-					<p style="text-indent:2em;">2015���������� �����ƶˡ��㶫������ͨ�����ݾ���������ȫ�򿪷ţ��ṩ�����������ݼ�¼��Ҫ��ѡ���ھ������ڹ�����ͨ�е���Ϊģʽ������������������й�����·ѡ��Ԥ��Ϊ���⣬����������ͨ�������㶫ʡ���ֹ�����·����ʷ�������������ݣ��ھ�̶���Ⱥ�ڹ�����ͨ�е���Ϊģʽ�������Ʋ�˿͵ĳ���ϰ�ߺ�ƫ�ã��Ӷ�����ģ��Ԥ��������δ��һ���ڽ�������Щ������·��Ϊ���˿��ṩ��Ϣ�Գơ���ȫ���ʵĳ��л���������������δ�������ǻ۳��С�</p>
+					<p style="text-indent:2em;">2015“数据引领 飞粤云端”广东公共交通大数据竞赛，面向全球开放，提供海量公交数据记录，要求选手挖掘市民在公共交通中的行为模式。本场比赛以市民出行公交线路选乘预测为赛题，期望参赛者通过分析广东省部分公交线路的历史公交卡交易数据，挖掘固定人群在公共交通中的行为模式，分析推测乘客的出行习惯和偏好，从而建立模型预测人们在未来一周内将会搭乘哪些公交线路，为广大乘客提供信息对称、安全舒适的出行环境，用数据引领未来城市智慧出行。</p>
 				</dd>
 			</dl>
 			<dl class="detail-item">
-				<dt>���ư��ţ�</dt>
+				<dt>赛制安排：</dt>
 				<dd>
-					<p>������Ч�ڣ�10��1��-10��26��</p><br/>
-					<p>���ݽ�ֹ�ϴ�ʱ�䣬11��1��-11��26��</p><br/>
-					<p>���½�ֹ���ڣ�12��1��-12��26��</p><br/>
-					<p>1. Ҫ���Ը�����ʽ�����������ȷ��������Ϣ׼ȷ��Ч������ᱻȡ�������ʸ񼰼�����<br/>2. ������Ч����2015��11��26��10:00��<br/>3. ������ʽ�����Ա��������˺ŵ�����ع�������ɸ�����Ϣע�ᣬ���ɱ���������<br/>4. ʵ����֤���������������֧����ʵ����֤��ˣ���֤��ڣ������վ-��������-��֤-֧����ʵ����֤�������˺���Ȩ��ֹ��11��26��10:00��ǰ�����֤�������޷�������<br/>5. ����ƽ̨�˺���Ȩ�����ξ���ʹ�����ŷ�ƽ̨���������������ŷ�ƽ̨����Ȩ�ޣ���������Ȩ��ɺ�ѡ�ֿɵ�¼���ŷ�����ʹ�ò����ֶ���Ȩ����Ȩ��ɺ�ѡ�ֿɵ�¼���ŷ�����ʹ�ò���</p>
+					<p>报名有效期，10月1日-10月26日</p><br/>
+					<p>数据截止上传时间，11月1日-11月26日</p><br/>
+					<p>赛事截止日期，12月1日-12月26日</p><br/>
+					<p>1. 要求以个人形式参与比赛，并确保报名信息准确有效，否则会被取消参赛资格及激励；<br/>2. 报名有效期至2015年11月26日10:00；<br/>3. 报名方式：用淘宝或阿里云账号登入天池官网，完成个人信息注册，即可报名参赛；<br/>4. 实名认证：报名队伍需进行支付宝实名认证审核，认证入口：天池网站-个人中心-认证-支付宝实名认证，并在账号授权截止（11月26日10:00）前完成认证；否则无法参赛；<br/>5. 竞赛平台账号授权：本次竞赛使用御膳房平台，请勿自行在御膳房平台申请权限！！！，授权完成后选手可登录御膳房进行使用操作手动授权，授权完成后选手可登录御膳房进行使用操作</p>
 				</dd>
 			</dl>
 			<dl class="detail-item">
-				<dt>�������ã�</dt>
+				<dt>奖项设置：</dt>
 				<dd>
-					<p>�ھ���1֧���飬����ʰ�򣬰䷢��֤��<br/><br/>�Ǿ���1֧���飬�������򣬰䷢��֤��<br/><br/>������1֧���飬�����򣬰䷢��֤��<br/><br/>���ͽ���7֧���飬�䷢��֤��<br/><br/> �����������Ծ��������������ξ�����</p>
+					<p>冠军：1支队伍，奖金贰拾万，颁发获奖证书<br/><br/>亚军：1支队伍，奖金伍万，颁发获奖证书<br/><br/>季军：1支队伍，奖金贰万，颁发获奖证书<br/><br/>极客奖：7支队伍，颁发获奖证书<br/><br/> （上述奖项以决赛答辩的最终名次决定）</p>
 				</dd>
 			</dl>
 			<dl class="detail-item">
-				<dt>���췽��Ϣ��</dt>
+				<dt>主办方信息：</dt>
 				<dd>
-					<p>�Ϻ��о��ú���Ϣ��ί���Ϻ��н�ͨ���������Ϻ��н��������������Ϻ���ίԱ�ᡢЯ�̼�����Ϣ�������޹�˾</p>
+					<p>上海市经济和信息化委、上海市交通运输厅、上海市教育厅、共青团上海市委员会、携程计算信息技术有限公司</p>
 				</dd>
 			</dl>
 		</div>
 	</div>
-	<!-- ���� E -->
+	<!-- 详情 E -->
 </div>
-<!-- ҳ�� S -->
+<!-- 页脚 S -->
 <?php include('footer.php') ?>
-<!-- ҳ�� E -->
+<!-- 页脚 E -->
 </body>
 </html>

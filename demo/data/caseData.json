@@ -56,92 +56,46 @@
 	},
 	{
 		"id":"3",
-		"title":"腾讯CDC",
-		"description":"腾讯CDC是一个设计团队，做世界一流的互联网设计团队，为用户创造优质在线生活体验。CDC关注于互联网视觉设计、交互设计、用户研究、前端开发。",
-		"url":"http://cdc.tencent.com/",
-		"date":"2013-09-27",
-		"tags":"其他",
-		"hot":"false"
+		"title":"携程旅行网: 云海竞赛平台",
+		"description":"云海是携程旗下的大数据算法竞赛平台，旨在发掘和培养优秀的大数据人才，以“众创、众智、众包”的新模式，共同探索大数据和云计算的无限潜能。",
+		"date":"2016-03-08",
+		"belong":"携程",
+		"tags":"PC",
+		"pages":[
+			{"name":"首页", "url":"seaclouds_online/index.php"},
+			{"name":"详情页-赛制介绍", "url":"seaclouds_online/detail.php"},
+			{"name":"详情页-赛题与数据", "url":"seaclouds_online/detail_data.php"},
+			{"name":"详情页-FAQ", "url":"seaclouds_online/detail_faq.php"},
+			{"name":"详情页-荣耀榜", "url":"seaclouds_online/detail_ranking.php"},
+			{"name":"详情页-我要交稿", "url":"seaclouds_online/detail_delivery.php"},
+			{"name":"用户中心-参加的活动", "url":"seaclouds_online/user_center.php"},
+			{"name":"用户中心-个人信息", "url":"seaclouds_online/user_center_info.php"},
+			{"name":"用户中心-编辑个人信息", "url":"seaclouds_online/user_center_edit.php"},
+			{"name":"用户中心-实名认证", "url":"seaclouds_online/user_center_certified.php"},
+			{"name":"用户中心-身份认证", "url":"seaclouds_online/user_center_identity.php"},
+			{"name":"用户中心-学历认证", "url":"seaclouds_online/user_center_diploma.php"},
+			{"name":"用户中心-个人学历", "url":"seaclouds_online/user_center_resume.php"},
+			{"name":"关于我们", "url":"seaclouds_online/aboutus.php"},
+			{"name":"竞赛协议", "url":"seaclouds_online/agreement.php"}
+		],
+		"hot":"true"
 	},
 	{
 		"id":"4",
-		"title":"网易用户体验设计中心 | 有态度的互联网设计团队，为用户创造优质的使用体验",
-		"description":"网易用户体验设计中心（User Experience Design Center），简称‘设计中心(UEDC)’，成立于2008年底。崭新的团队赋予新的使命，我们将要以‘不断提升网易产品用户体验，带给用户良好的上网感受’为目标而努力。",
-		"url":"http://uedc.163.com/",
-		"date":"2013-10-11",
-		"tags":"Mobile",
-		"hot":"false"
-	},
-	{
-		"id":"5",
-		"title":"Learn to code | Codecademy",
-		"description":"Learn to code interactively, for free.",
-		"url":"https://www.codecademy.com",
-		"date":"2013-10-25",
+		"title":"携程旅行网: 云海竞赛平台后台管理系统",
+		"description":"云海是携程旗下的大数据算法竞赛平台，旨在发掘和培养优秀的大数据人才，以“众创、众智、众包”的新模式，共同探索大数据和云计算的无限潜能。",
+		"date":"2016-04-12",
+		"belong":"携程",
 		"tags":"PC",
-		"hot":"true"
-	},
-	{
-		"id":"6",
-		"title":"Bootstrap中文网",
-		"description":"Bootstrap是Twitter推出的一个用于前端开发的开源工具包。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。目前，Bootstrap最新版本为3.0 。Bootstrap中文网致力于为广大国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这一框架。",
-		"url":"http://www.bootcss.com/",
-		"date":"2013-11-02",
-		"tags":"其他",
-		"hot":"true"
-	},
-	{
-		"id":"7",
-		"title":"RunJS - 在线编辑、展示、分享、交流你的 JavaScript 代码",
-		"description":"RunJS,在线编写、展示html、js、css代码，拥有实时预览、分享、Fork、代码高亮、自动完成等多项特性，提供文件上传、多种登录方式。",
-		"url":"http://runjs.cn/",
-		"date":"2013-11-14",
-		"tags":"Mobile",
-		"hot":"false"
-	},
-	{
-		"id":"8",
-		"title":"网易云课堂 - 领先的实用技能学习平台",
-		"description":"云课堂是网易公司研发的一款大型在线教育平台服务，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验，自由开放的交流互动环境。继网易公开课后，云课堂是网易公司在教育领域的又一重量级产品。",
-		"url":"http://study.163.com/",
-		"date":"2013-11-27",
-		"tags":"PC",
-		"hot":"true"
-	},
-	{
-		"id":"9",
-		"title":"Learn HTML5, CSS3, Javascript - video style tutorials",
-		"description":"TheCodePlayer plays code like a video helping people to learn front end technologies like HTML5, CSS3, Javascript, Jquery easily, quickly and interactively.",
-		"url":"http://thecodeplayer.com/",
-		"date":"2013-12-03",
-		"tags":"其他",
-		"hot":"false"
-	},
-	{
-		"id":"10",
-		"title":"慕课网(IMOOC)-国内最大的IT技能学习平台",
-		"description":"慕课网（IMOOC）是国内最大的IT技能学习平台。慕课网(IMOOC)提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。并且富有交互性及趣味性，你还可以和朋友一起编程。",
-		"url":"http://www.imooc.com/",
-		"date":"2013-12-29",
-		"tags":"Mobile",
-		"hot":"true"
-	},
-	{
-		"id":"11",
-		"title":"Icon Font &amp; SVG Icon Sets ❍ IcoMoon",
-		"description":"IcoMoon provides a package of vector icons, along with a free HTML5 app for making custom icon fonts or SVG sprites. Browse among thousands of pixel perfect icons or import your own vectors.",
-		"url":"https://icomoon.io/",
-		"date":"2014-01-17",
-		"tags":"PC",
-		"hot":"true"
-	},
-	{
-		"id":"12",
-		"title":"TinyPNG – Compress PNG images while preserving transparency",
-		"description":"Make your website faster and save bandwidth. TinyPNG optimizes your PNG images by 50-80% while preserving full transparency!",
-		"url":"https://tinypng.com/",
-		"date":"2014-01-23",
-		"tags":"其他",
+		"pages":[
+			{"name":"首页", "url":"seaclouds_offline/index.php"},
+			{"name":"用户信息管理", "url":"seaclouds_offline/user_manage.php"},
+			{"name":"身份审核", "url":"seaclouds_offline/examine_identity.php"},
+			{"name":"排行审核", "url":"seaclouds_offline/examine_ranking.php"},
+			{"name":"发布新任务-赛制介绍", "url":"seaclouds_offline/add_step1.php"},
+			{"name":"发布新任务-赛题与数据", "url":"seaclouds_offline/add_step2.php"},
+			{"name":"发布新任务-FAQ", "url":"seaclouds_offline/add_step3.php"}
+		],
 		"hot":"false"
 	}
 ]

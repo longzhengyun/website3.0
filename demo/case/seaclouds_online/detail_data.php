@@ -1,92 +1,93 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Я��������: �ƺ�����ƽ̨</title>
-<meta name="keywords" content="�Ƶ�Ԥ��,��ƱԤ��,���ζȼ�,���ù���,�Ƶ�Ԥ��,��ƱԤ��,�����ѯ,���ӿ�Ʊ,��Ʊ,�Ƶ�,����" />
-<meta name="description" content="Я�����������й����ȵ��������з���˾���򳬹�1400���Ա�ṩ���Ƶ�Ԥ������ƱԤ�����ȼ�Ԥ�������ù������ػ��̻���������Ѷ���ڵ�ȫ��λ���з���" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/basis.css" rel="stylesheet" type="text/css" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/seaclouds.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width" />
+<title>携程旅行网: 云海竞赛平台</title>
+<meta name="keywords" content="酒店预订,机票预订,旅游度假,商旅管理,酒店预定,机票预定,航班查询,电子客票,机票,酒店,旅行" />
+<meta name="description" content="携程旅行网是中国领先的在线旅行服务公司，向超过1400万会员提供集酒店预订、机票预订、度假预订、商旅管理、特惠商户及旅游资讯在内的全方位旅行服务。" />
+<link href="css/basis.css" rel="stylesheet" type="text/css" />
+<link href="css/seaclouds.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- ҳͷ S -->
+<!-- 页头 S -->
 <?php include('header.php') ?>
-<!-- ҳͷ E -->
+<!-- 页头 E -->
 <div class="sc-wrap">
-	<!-- ���� S -->
-	<div class="sc-crumbs"><a href="index.php">�����б�</a><dfn>&gt;</dfn>Я�����������ģ��Ʒͼ�������㷨����</div>
-	<!-- ���� E -->
-	<!-- �б� S -->
+	<!-- 导航 S -->
+	<div class="sc-crumbs"><a href="index.php">赛事列表</a><dfn>&gt;</dfn>携程旅行网大规模商品图像搜索算法大赛</div>
+	<!-- 导航 E -->
+	<!-- 列表 S -->
 	<ul class="sc-list sc-detail-list">
 		<li>
 			<div class="btn-action">
-				<a href="javascript:;" class="state-enroll"><i class="icon"></i>��Ҫ����</a>
-				<!-- <a href="javascript:;" class="state-end"><i class="icon"></i>�����ɹ�</a> -->
+				<a href="javascript:;" class="state-enroll"><i class="icon"></i>我要报名</a>
+				<!-- <a href="javascript:;" class="state-end"><i class="icon"></i>报名成功</a> -->
 			</div>
 			<dl class="info">
-				<dt><i class="icon"></i><span class="title">Я�����������ģ��Ʒͼ�������㷨����</span></dt>
-				<dd class="head"><span class="item">״̬</span><span class="item">���½�ֹ����</span><span class="item">��߽���</span><span class="item">��������</span></dd>
-				<dd class="cont"><span class="item ongoing">������</span><span class="item">2016/05/01</span><span class="item">15,000,000</span><span class="item">3227</span></dd>
+				<dt><i class="icon"></i><span class="title">携程旅行网大规模商品图像搜索算法大赛</span></dt>
+				<dd class="head"><span class="item">状态</span><span class="item">赛事截止日期</span><span class="item">最高奖金</span><span class="item">参赛人数</span></dd>
+				<dd class="cont"><span class="item ongoing">进行中</span><span class="item">2016/05/01</span><span class="item">15,000,000</span><span class="item">3227</span></dd>
 			</dl>
 		</li>
 	</ul>
-	<!-- �б� E -->
-	<!-- ���� S -->
+	<!-- 列表 E -->
+	<!-- 详情 S -->
 	<div class="sc-layout sc-detail clearfix">
 		<ul class="sc-layout-aside">
-			<li><a href="detail.php">���ƽ���</a></li>
-			<li class="cur"><a href="detail_data.php">����������</a></li>
+			<li><a href="detail.php">赛制介绍</a></li>
+			<li class="cur"><a href="detail_data.php">赛题与数据</a></li>
 			<li><a href="detail_faq.php" class="tags-dashed">FAQ</a></li>
-			<li><a href="detail_ranking.php" class="tags-dashed tags-disable">��ҫ��</a></li>
-			<li><a href="detail_delivery.php" class="tags-dashed tags-disable">��Ҫ����</a></li>
+			<li><a href="detail_ranking.php" class="tags-dashed tags-disable">荣耀榜</a></li>
+			<li><a href="detail_delivery.php" class="tags-dashed tags-disable">我要交稿</a></li>
 		</ul>
 		<div class="sc-layout-main">
 			<dl class="detail-item">
-				<dt>�������ݣ�</dt>
+				<dt>参赛数据：</dt>
 				<dd>
 					<!-- <table class="table-model data-table">
 						<thead>
 							<tr>
-								<th>�ļ�����</th>
-								<th>�ļ���ʽ</th>
+								<th>文件名称</th>
+								<th>文件格式</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>mars_tianchi_songs.csv</td>
-								<td>.csv(886KB)<a href="javascript:;" class="btn btn-border btn-mini weight-n margin-l">����</a></td>
+								<td>.csv(886KB)<a href="javascript:;" class="btn btn-border btn-mini weight-n margin-l">下载</a></td>
 							</tr>
 						</tbody>
 					</table> -->
-					<a href="javascript:;" class="btn btn-border btn-normal">�������</a>
-					<a href="javascript:;" class="btn btn-border btn-normal btn-disable">�������</a>
+					<a href="javascript:;" class="btn btn-border btn-normal">点击下载</a>
+					<a href="javascript:;" class="btn btn-border btn-normal btn-disable">点击下载</a>
 				</dd>
 			</dl>
 			<dl class="detail-item">
-				<dt>������Ŀ��</dt>
+				<dt>竞赛题目：</dt>
 				<dd>
-					<p>Я�����������ģ��Ʒͼ�������㷨����</p>
+					<p>携程旅行网大规模商品图像搜索算法大赛</p>
 				</dd>
 			</dl>
 			<dl class="detail-item">
-				<dt>����˵����</dt>
+				<dt>数据说明：</dt>
 				<dd>
-					<p>2015���������� �����ƶˡ��㶫������ͨ�����ݾ���������ȫ�򿪷ţ��ṩ�����������ݼ�¼��Ҫ��ѡ���ھ������ڹ�����ͨ�е���Ϊģʽ������������������й�����·ѡ��Ԥ��Ϊ���⣬����������ͨ�������㶫ʡ���ֹ�����·����ʷ�������������ݣ��ھ�̶���Ⱥ�ڹ�����ͨ�е���Ϊģʽ�������Ʋ�˿͵ĳ���ϰ�ߺ�ƫ�ã��Ӷ�����ģ��Ԥ��������δ��һ���ڽ�������Щ������·��Ϊ���˿��ṩ��Ϣ�Գơ���ȫ���ʵĳ��л���������������δ�������ǻ۳��С�</p>
+					<p>2015“数据引领 飞粤云端”广东公共交通大数据竞赛，面向全球开放，提供海量公交数据记录，要求选手挖掘市民在公共交通中的行为模式。本场比赛以市民出行公交线路选乘预测为赛题，期望参赛者通过分析广东省部分公交线路的历史公交卡交易数据，挖掘固定人群在公共交通中的行为模式，分析推测乘客的出行习惯和偏好，从而建立模型预测人们在未来一周内将会搭乘哪些公交线路，为广大乘客提供信息对称、安全舒适的出行环境，用数据引领未来城市智慧出行。</p>
 				</dd>
 			</dl>
 			<dl class="detail-item">
-				<dt>������׼��</dt>
+				<dt>评估标准：</dt>
 				<dd>
-					<p>2015���������� �����ƶˡ��㶫������ͨ�����ݾ���������ȫ�򿪷ţ��ṩ�����������ݼ�¼��Ҫ��ѡ���ھ������ڹ�����ͨ�е���Ϊģʽ������������������й�����·ѡ��Ԥ��Ϊ���⣬����������ͨ�������㶫ʡ���ֹ�����·����ʷ�������������ݣ��ھ�̶���Ⱥ�ڹ�����ͨ�е���Ϊģʽ�������Ʋ�˿͵ĳ���ϰ�ߺ�ƫ�ã��Ӷ�����ģ��Ԥ��������δ��һ���ڽ�������Щ������·��Ϊ���˿��ṩ��Ϣ�Գơ���ȫ���ʵĳ��л���������������δ�������ǻ۳��С�</p>
+					<p>2015“数据引领 飞粤云端”广东公共交通大数据竞赛，面向全球开放，提供海量公交数据记录，要求选手挖掘市民在公共交通中的行为模式。本场比赛以市民出行公交线路选乘预测为赛题，期望参赛者通过分析广东省部分公交线路的历史公交卡交易数据，挖掘固定人群在公共交通中的行为模式，分析推测乘客的出行习惯和偏好，从而建立模型预测人们在未来一周内将会搭乘哪些公交线路，为广大乘客提供信息对称、安全舒适的出行环境，用数据引领未来城市智慧出行。</p>
 				</dd>
 			</dl>
 		</div>
 	</div>
-	<!-- ���� E -->
+	<!-- 详情 E -->
 </div>
-<!-- ҳ�� S -->
+<!-- 页脚 S -->
 <?php include('footer.php') ?>
-<!-- ҳ�� E -->
+<!-- 页脚 E -->
 </body>
 </html>

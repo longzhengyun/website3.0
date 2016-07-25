@@ -87,7 +87,9 @@ app.controller('searchController', ['$scope', '$window', 'dataService', 'searchS
 
 	//点击历史搜索
 	$scope.searchHistory = function(item){
+		$scope.searchResult = true;
 		$scope.searchValue = item;
+		$scope.searchData = $scope.articleData;
 	};
 
 	//点击清空历史搜索

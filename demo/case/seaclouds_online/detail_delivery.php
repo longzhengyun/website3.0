@@ -1,98 +1,99 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+ï»¿<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Ð¯³ÌÂÃÐÐÍø: ÔÆº£¾ºÈüÆ½Ì¨</title>
-<meta name="keywords" content="¾ÆµêÔ¤¶©,»úÆ±Ô¤¶©,ÂÃÓÎ¶È¼Ù,ÉÌÂÃ¹ÜÀí,¾ÆµêÔ¤¶¨,»úÆ±Ô¤¶¨,º½°à²éÑ¯,µç×Ó¿ÍÆ±,»úÆ±,¾Æµê,ÂÃÐÐ" />
-<meta name="description" content="Ð¯³ÌÂÃÐÐÍøÊÇÖÐ¹úÁìÏÈµÄÔÚÏßÂÃÐÐ·þÎñ¹«Ë¾£¬Ïò³¬¹ý1400Íò»áÔ±Ìá¹©¼¯¾ÆµêÔ¤¶©¡¢»úÆ±Ô¤¶©¡¢¶È¼ÙÔ¤¶©¡¢ÉÌÂÃ¹ÜÀí¡¢ÌØ»ÝÉÌ»§¼°ÂÃÓÎ×ÊÑ¶ÔÚÄÚµÄÈ«·½Î»ÂÃÐÐ·þÎñ¡£" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/basis.css" rel="stylesheet" type="text/css" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/seaclouds.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width" />
+<title>æºç¨‹æ—…è¡Œç½‘: äº‘æµ·ç«žèµ›å¹³å°</title>
+<meta name="keywords" content="é…’åº—é¢„è®¢,æœºç¥¨é¢„è®¢,æ—…æ¸¸åº¦å‡,å•†æ—…ç®¡ç†,é…’åº—é¢„å®š,æœºç¥¨é¢„å®š,èˆªç­æŸ¥è¯¢,ç”µå­å®¢ç¥¨,æœºç¥¨,é…’åº—,æ—…è¡Œ" />
+<meta name="description" content="æºç¨‹æ—…è¡Œç½‘æ˜¯ä¸­å›½é¢†å…ˆçš„åœ¨çº¿æ—…è¡ŒæœåŠ¡å…¬å¸ï¼Œå‘è¶…è¿‡1400ä¸‡ä¼šå‘˜æä¾›é›†é…’åº—é¢„è®¢ã€æœºç¥¨é¢„è®¢ã€åº¦å‡é¢„è®¢ã€å•†æ—…ç®¡ç†ã€ç‰¹æƒ å•†æˆ·åŠæ—…æ¸¸èµ„è®¯åœ¨å†…çš„å…¨æ–¹ä½æ—…è¡ŒæœåŠ¡ã€‚" />
+<link href="css/basis.css" rel="stylesheet" type="text/css" />
+<link href="css/seaclouds.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- Ò³Í· S -->
+<!-- é¡µå¤´ S -->
 <?php include('header.php') ?>
-<!-- Ò³Í· E -->
+<!-- é¡µå¤´ E -->
 <div class="sc-wrap">
-	<!-- µ¼º½ S -->
-	<div class="sc-crumbs"><a href="index.php">ÈüÊÂÁÐ±í</a><dfn>&gt;</dfn>Ð¯³ÌÂÃÐÐÍø´ó¹æÄ£ÉÌÆ·Í¼ÏñËÑË÷Ëã·¨´óÈü</div>
-	<!-- µ¼º½ E -->
-	<!-- ÁÐ±í S -->
+	<!-- å¯¼èˆª S -->
+	<div class="sc-crumbs"><a href="index.php">èµ›äº‹åˆ—è¡¨</a><dfn>&gt;</dfn>æºç¨‹æ—…è¡Œç½‘å¤§è§„æ¨¡å•†å“å›¾åƒæœç´¢ç®—æ³•å¤§èµ›</div>
+	<!-- å¯¼èˆª E -->
+	<!-- åˆ—è¡¨ S -->
 	<ul class="sc-list sc-detail-list">
 		<li>
 			<div class="btn-action">
-				<!-- <a href="javascript:;" class="state-enroll"><i class="icon"></i>ÎÒÒª±¨Ãû</a> -->
-				<a href="javascript:;" class="state-end"><i class="icon"></i>±¨Ãû³É¹¦</a>
+				<!-- <a href="javascript:;" class="state-enroll"><i class="icon"></i>æˆ‘è¦æŠ¥å</a> -->
+				<a href="javascript:;" class="state-end"><i class="icon"></i>æŠ¥åæˆåŠŸ</a>
 			</div>
 			<dl class="info">
-				<dt><i class="icon"></i><span class="title">Ð¯³ÌÂÃÐÐÍø´ó¹æÄ£ÉÌÆ·Í¼ÏñËÑË÷Ëã·¨´óÈü</span></dt>
-				<dd class="head"><span class="item">×´Ì¬</span><span class="item">ÈüÊÂ½ØÖ¹ÈÕÆÚ</span><span class="item">×î¸ß½±½ð</span><span class="item">²ÎÈüÈËÊý</span></dd>
-				<dd class="cont"><span class="item ongoing">½øÐÐÖÐ</span><span class="item">2016/05/01</span><span class="item">15,000,000</span><span class="item">3227</span></dd>
+				<dt><i class="icon"></i><span class="title">æºç¨‹æ—…è¡Œç½‘å¤§è§„æ¨¡å•†å“å›¾åƒæœç´¢ç®—æ³•å¤§èµ›</span></dt>
+				<dd class="head"><span class="item">çŠ¶æ€</span><span class="item">èµ›äº‹æˆªæ­¢æ—¥æœŸ</span><span class="item">æœ€é«˜å¥–é‡‘</span><span class="item">å‚èµ›äººæ•°</span></dd>
+				<dd class="cont"><span class="item ongoing">è¿›è¡Œä¸­</span><span class="item">2016/05/01</span><span class="item">15,000,000</span><span class="item">3227</span></dd>
 			</dl>
 		</li>
 	</ul>
-	<!-- ÁÐ±í E -->
-	<!-- ÏêÇé S -->
+	<!-- åˆ—è¡¨ E -->
+	<!-- è¯¦æƒ… S -->
 	<div class="sc-layout sc-detail clearfix">
 		<ul class="sc-layout-aside">
-			<li><a href="detail.php">ÈüÖÆ½éÉÜ</a></li>
-			<li><a href="detail_data.php">ÈüÌâÓëÊý¾Ý</a></li>
+			<li><a href="detail.php">èµ›åˆ¶ä»‹ç»</a></li>
+			<li><a href="detail_data.php">èµ›é¢˜ä¸Žæ•°æ®</a></li>
 			<li><a href="detail_faq.php" class="tags-dashed">FAQ</a></li>
-			<li><a href="detail_ranking.php" class="tags-dashed tags-disable">ÈÙÒ«°ñ</a></li>
-			<li class="cur"><a href="detail_delivery.php">ÎÒÒª½»¸å</a></li>
+			<li><a href="detail_ranking.php" class="tags-dashed tags-disable">è£è€€æ¦œ</a></li>
+			<li class="cur"><a href="detail_delivery.php">æˆ‘è¦äº¤ç¨¿</a></li>
 		</ul>
 		<div class="sc-layout-main">
 			<ul class="form-cont">
 				<li class="line-item clearfix">
-					<span class="cont-l"><i class="color-r size-12">*</i> Ñ¡ÔñÎÄ¼þ</span>
+					<span class="cont-l"><i class="color-r size-12">*</i> é€‰æ‹©æ–‡ä»¶</span>
 					<span class="cont-r">
-						<label class="input-file"><a href="javascript:;" class="btn btn-border btn-mini weight-n">ä¯ÀÀÎÄ¼þ</a><input type="text" class="input-item input-normal margin-l text-field" size="28" /><input type="file" class="file-field" size="28" /></label><i class="hint">Ñ¹Ëõ°ü£»´óÐ¡²»µÃ³¬¹ý3M</i>
+						<label class="input-file"><a href="javascript:;" class="btn btn-border btn-mini weight-n">æµè§ˆæ–‡ä»¶</a><input type="text" class="input-item input-normal margin-l text-field" size="28" /><input type="file" class="file-field" size="28" /></label><i class="hint">åŽ‹ç¼©åŒ…ï¼›å¤§å°ä¸å¾—è¶…è¿‡3M</i>
 					</span>
 				</li>
 				<li class="line-item clearfix">
-					<span class="cont-l"><i class="color-r size-12">*</i> Ñ¡ÔñÎÄ¼þ</span>
+					<span class="cont-l"><i class="color-r size-12">*</i> é€‰æ‹©æ–‡ä»¶</span>
 					<span class="cont-r">
-						<label class="input-file"><a href="javascript:;" class="btn btn-border btn-mini weight-n">ä¯ÀÀÎÄ¼þ</a><input type="text" class="input-item input-normal margin-l text-field" size="28" style="display:inline-block;" /><input type="file" class="file-field" size="28" /></label><i class="hint">Ñ¹Ëõ°ü£»´óÐ¡²»µÃ³¬¹ý3M</i>
+						<label class="input-file"><a href="javascript:;" class="btn btn-border btn-mini weight-n">æµè§ˆæ–‡ä»¶</a><input type="text" class="input-item input-normal margin-l text-field" size="28" style="display:inline-block;" /><input type="file" class="file-field" size="28" /></label><i class="hint">åŽ‹ç¼©åŒ…ï¼›å¤§å°ä¸å¾—è¶…è¿‡3M</i>
 					</span>
 				</li>
 				<li class="line-item clearfix">
-					<span class="cont-l"><i class="color-r size-12">*</i> Ñ¡ÊÖ×ÔÆÀ</span>
+					<span class="cont-l"><i class="color-r size-12">*</i> é€‰æ‰‹è‡ªè¯„</span>
 					<span class="cont-r">
-						<label class="label-item"><input type="text" class="input-item input-normal" /></label><i class="hint">ÇëÆÀ¹À×Ô¼ºµÄ×÷Æ··ÖÊý£¬Âú·Ö100</i>
-						<!--±¨´íÊ¾Àý <label class="label-item"><input type="text" class="input-item input-normal alert" /></label><span class="hint hint-alert"><i class="icon-alert-mini"></i>ÇëÆÀ¹À×Ô¼ºµÄ×÷Æ··ÖÊý</span> -->
+						<label class="label-item"><input type="text" class="input-item input-normal" /></label><i class="hint">è¯·è¯„ä¼°è‡ªå·±çš„ä½œå“åˆ†æ•°ï¼Œæ»¡åˆ†100</i>
+						<!--æŠ¥é”™ç¤ºä¾‹ <label class="label-item"><input type="text" class="input-item input-normal alert" /></label><span class="hint hint-alert"><i class="icon-alert-mini"></i>è¯·è¯„ä¼°è‡ªå·±çš„ä½œå“åˆ†æ•°</span> -->
 					</span>
 				</li>
 				<li class="line-item clearfix">
 					<span class="cont-l"></span>
-					<span class="cont-r"><a href="javascript:;" class="btn btn-fill btn-primary">ÉÏ´«×÷Æ·</a></span>
+					<span class="cont-r"><a href="javascript:;" class="btn btn-fill btn-primary">ä¸Šä¼ ä½œå“</a></span>
 				</li>
 			</ul>
 			<div class="state-delivery">
-				<div class="text-single"><i class="icon-success margin-r"></i>×÷Æ·ÉÏ´«³É¹¦£¡</div>
-				<a href="#" class="btn btn-fill btn-primary">È· ÈÏ</a>
+				<div class="text-single"><i class="icon-success margin-r"></i>ä½œå“ä¸Šä¼ æˆåŠŸï¼</div>
+				<a href="#" class="btn btn-fill btn-primary">ç¡® è®¤</a>
 			</div>
 			<div class="state-delivery">
-				<div class="text-single"><i class="icon-error margin-r"></i>×÷Æ·ÉÏ´«Ê§°Ü£¡</div>
-				<a href="#" class="btn btn-fill btn-primary">ÖØÐÂÉÏ´«</a>
+				<div class="text-single"><i class="icon-error margin-r"></i>ä½œå“ä¸Šä¼ å¤±è´¥ï¼</div>
+				<a href="#" class="btn btn-fill btn-primary">é‡æ–°ä¸Šä¼ </a>
 			</div>
 			<div class="state-delivery">
-				<div class="text-single"><i class="icon-info margin-r"></i>ÄúÒÑÉÏ´«¹ýÎÄ¼þ£¬<a href="#">ÖØÐÂÉÏ´«</a></div>
+				<div class="text-single"><i class="icon-info margin-r"></i>æ‚¨å·²ä¸Šä¼ è¿‡æ–‡ä»¶ï¼Œ<a href="#">é‡æ–°ä¸Šä¼ </a></div>
 			</div>
 		</div>
 	</div>
-	<!-- ÏêÇé E -->
+	<!-- è¯¦æƒ… E -->
 </div>
-<!-- Ò³½Å S -->
+<!-- é¡µè„š S -->
 <?php include('footer.php') ?>
-<!-- Ò³½Å E -->
-<!-- µ¯²ã S -->
+<!-- é¡µè„š E -->
+<!-- å¼¹å±‚ S -->
 <div class="pop-box pop-primary pop-box-msg">
 	<div class="pop-hd"><a href="###" class="c_close">&times;</a></div>
 	<div class="pop-bd">
-		<div class="text-single"><i class="icon-alert margin-r"></i>ÎÞ·¨ÉÏ´«£¬ÇëÏÈ½øÐÐÉí·ÝÈÏÖ¤¼°Ñ§ÀúÈÏÖ¤£¡</div>
+		<div class="text-single"><i class="icon-alert margin-r"></i>æ— æ³•ä¸Šä¼ ï¼Œè¯·å…ˆè¿›è¡Œèº«ä»½è®¤è¯åŠå­¦åŽ†è®¤è¯ï¼</div>
 	</div>
-	<div class="pop-ft"><a href="user_center_certified.php" class="btn btn-fill btn-normal">Á¢¼´ÈÏÖ¤</a></div>
+	<div class="pop-ft"><a href="user_center_certified.php" class="btn btn-fill btn-normal">ç«‹å³è®¤è¯</a></div>
 </div>
-<!-- µ¯²ã S -->
+<!-- å¼¹å±‚ S -->
 </body>
 </html>

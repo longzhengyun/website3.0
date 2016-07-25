@@ -69,7 +69,7 @@
 .sc-list li{padding:15px 0;margin-bottom:18px;background-color:#fff;border-bottom:2px solid #e7e8ed;border-right:1px solid #e7e8ed;}
 .sc-list .info{padding:0 30px 15px 30px;height:90px;border-bottom:1px solid #e5e7f2;}
 .sc-list .info dt{position:relative;display:table;float:left;width:240px;height:90px;padding-left:60px;padding-right:30px;font-size:20px;}
-.sc-list .info .icon{position:absolute;left:0;top:50%;width:56px;height:56px;margin-top:-28px;background:url(http://pic.c-ctrip.com/seaclouds/icon_seaclouds.png) -150px 0 no-repeat;}
+.sc-list .info .icon{position:absolute;left:0;top:50%;width:56px;height:56px;margin-top:-28px;background:url(../images/icon_seaclouds.png) -150px 0 no-repeat;}
 .sc-list .info .title{display:table-cell;vertical-align:middle;color:#333;*display:inline;*zoom:1;*margin-top:15px;}
 .sc-list .info .title:hover{text-decoration:underline;}
 .sc-list .info dd{padding-left:330px;line-height:45px;font-size:0;_float:left;_width:788px;_padding-left:0;}
@@ -88,9 +88,10 @@
 
 /*=s detail */
 .sc-detail-list li{_padding-bottom:4px;}
+.sc-detail-list .info .title:hover{text-decoration:none;}
 .sc-detail-list .btn-action{position:relative;top:-15px;right:1px;float:right;display:table;width:120px;height:120px;text-align:center;}
 .sc-detail-list .btn-action a{display:table-cell;width:100%;height:100%;vertical-align:middle;font-size:20px;color:#fff;*zoom:1;*padding-top:30px;*height:90px;}
-.sc-detail-list .btn-action .icon{display:block;margin:0 auto;width:36px;height:36px;background-image:url(http://pic.c-ctrip.com/seaclouds/icon_seaclouds.png);background-repeat:no-repeat;}
+.sc-detail-list .btn-action .icon{display:block;margin:0 auto;width:36px;height:36px;background-image:url(../images/icon_seaclouds.png);background-repeat:no-repeat;}
 .sc-detail-list .btn-action .state-enroll{background-color:#288fe7;}
 .sc-detail-list .btn-action .state-enroll:hover{opacity:.8;*filter:alpha(opacity=80);}
 .sc-detail-list .btn-action .state-enroll .icon{background-position:-220px 0;}
@@ -165,7 +166,7 @@
 .sc-user .step-cont{width:740px;margin:0 auto 60px auto;padding-top:20px;}
 .sc-user .step-cont li{position:relative;float:left;}
 .sc-user .step-cont .step-line{width:49%;height:3px;border-top:1px solid #d2d5d8;background-color:#eff3f6;}
-.sc-user .step-cont .icon{position:absolute;top:-9px;left:-10px;width:20px;height:20px;background:url(http://pic.c-ctrip.com/seaclouds/icon_seaclouds.png) no-repeat;}
+.sc-user .step-cont .icon{position:absolute;top:-9px;left:-10px;width:20px;height:20px;background:url(../images/icon_seaclouds.png) no-repeat;}
 .sc-user .step-cont .name{position:absolute;top:20px;left:-50px;width:100px;text-align:center;font-weight:bold;color:#666;}
 .sc-user .step-cont .step-done{background-color:#3cba3a;border-top-color:#3cba3a;}
 .sc-user .step-cont .step-done .icon{background-position:-220px -36px;}
@@ -189,7 +190,7 @@
 .sc-user .state-resume + .form-cont{padding-top:0;}
 .sc-user .form-cont .resume-hint{margin-left:0;margin-top:10px;}
 .sc-user .resume-doc{position:relative;display:block;margin-bottom:10px;padding-left:50px;font-family:initial;}
-.sc-user .resume-doc .icon{position:absolute;top:0;left:0;width:35px;height:45px;background:url(http://pic.c-ctrip.com/seaclouds/icon_seaclouds.png) 0 -60px no-repeat;}
+.sc-user .resume-doc .icon{position:absolute;top:0;left:0;width:35px;height:45px;background:url(../images/icon_seaclouds.png) 0 -60px no-repeat;}
 .sc-user .resume-doc .name{display:block;font-size:16px;}
 .sc-user .resume-doc .time{display:block;font-size:12px;color:#999;line-height:14px;}
 /*=e user */

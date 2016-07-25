@@ -79,7 +79,7 @@
 
 /* screen */
 @media (min-width: 992px) {
-html{font-size:24px !important;}
+html{font-size:26px !important;}
 .section-wrap,.header .header-cont,.menu .menu-cont,.sub-menu .sub-menu-cont,.history-action .action-cont{max-width:992px;margin-left:auto;margin-right:auto;}
 .list-mode1 .mode-title{border-radius:0 0 .25rem .25rem;}
 .list-mode1 .mode-cont{border-radius:.25rem .25rem 0 0;}

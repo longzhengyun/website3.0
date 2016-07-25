@@ -1,4 +1,3 @@
 <div class="sc-cr">
-	<p class="copyright">Ð¯³ÌÂÃÐÐÍø °æÈ¨ËùÓÐ 2002-2015 ±£ÁôËùÓÐÈ¨Àû</p>
+	<p class="copyright">æºç¨‹æ—…è¡Œç½‘ ç‰ˆæƒæ‰€æœ‰ 2002-2015 ä¿ç•™æ‰€æœ‰æƒåˆ©</p>
 </div>
-<script type="text/javascript" src="/ws/autoip.js"></script>

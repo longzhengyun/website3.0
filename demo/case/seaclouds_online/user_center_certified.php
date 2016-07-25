@@ -1,58 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Я��������: �ƺ�����ƽ̨</title>
-<meta name="keywords" content="�Ƶ�Ԥ��,��ƱԤ��,���ζȼ�,���ù���,�Ƶ�Ԥ��,��ƱԤ��,�����ѯ,���ӿ�Ʊ,��Ʊ,�Ƶ�,����" />
-<meta name="description" content="Я�����������й����ȵ��������з���˾���򳬹�1400���Ա�ṩ���Ƶ�Ԥ������ƱԤ�����ȼ�Ԥ�������ù������ػ��̻���������Ѷ���ڵ�ȫ��λ���з���" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/basis.css" rel="stylesheet" type="text/css" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOnline/css/seaclouds.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width" />
+<title>携程旅行网: 云海竞赛平台</title>
+<meta name="keywords" content="酒店预订,机票预订,旅游度假,商旅管理,酒店预定,机票预定,航班查询,电子客票,机票,酒店,旅行" />
+<meta name="description" content="携程旅行网是中国领先的在线旅行服务公司，向超过1400万会员提供集酒店预订、机票预订、度假预订、商旅管理、特惠商户及旅游资讯在内的全方位旅行服务。" />
+<link href="css/basis.css" rel="stylesheet" type="text/css" />
+<link href="css/seaclouds.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- ҳͷ S -->
+<!-- 页头 S -->
 <?php include('header.php') ?>
-<!-- ҳͷ E -->
+<!-- 页头 E -->
 <div class="sc-wrap">
-	<!-- �û����� S -->
-	<div class="sc-user-info clearfix"><img src="http://pic.c-ctrip.com/seaclouds/user_pic.png" /><span><i class="margin-r">����˹����</i>���û�����</span></div>
+	<!-- 用户中心 S -->
+	<div class="sc-user-info clearfix"><img src="images/user_pic.png" /><span><i class="margin-r">克里斯蒂娜</i>的用户中心</span></div>
 	<div class="sc-layout sc-user clearfix">
 		<ul class="sc-layout-aside">
-			<li><a href="user_center.php">�μӵĻ</a></li>
-			<li><a href="user_center_info.php">������Ϣ</a></li>
-			<li class="cur"><a href="user_center_certified.php">ʵ����֤<i class="tags">HOT</i></a></li>
-			<li><a href="user_center_resume.php">���˼���</a></li>
+			<li><a href="user_center.php">参加的活动</a></li>
+			<li><a href="user_center_info.php">个人信息</a></li>
+			<li class="cur"><a href="user_center_certified.php">实名认证<i class="tags">HOT</i></a></li>
+			<li><a href="user_center_resume.php">个人简历</a></li>
 		</ul>
 		<div class="sc-layout-main">
-			<p class="certified-hint"><i class="icon-alert-small margin-r"></i>Ϊ���������ƺ�ƽ̨�еı���˳�����У������������֤</p>
+			<p class="certified-hint"><i class="icon-alert-small margin-r"></i>为了您能在云海平台中的比赛顺利进行，请完成身份认证</p>
 			<ul class="user-certified">
 				<li>
-					<span class="title">������֤����ѡ��</span>
-					<span class="text">��ȷ���ϴ�����Ƭ������Ч����δͨ����ˣ���ֻ��һ�β��ύ����˵Ļ���</span>
-					<a href="user_center_identity.php" class="btn btn-fill btn-primary btn-w140">������֤</a>
+					<span class="title">身份认证（必选）</span>
+					<span class="text">请确保上传的照片清晰有效，若未通过审核，您只有一次补提交被审核的机会</span>
+					<a href="user_center_identity.php" class="btn btn-fill btn-primary btn-w140">立即认证</a>
 				</li>
 				<li>
-					<span class="title">ѧ����֤����ѡ��</span>
-					<span class="text">��ȷ���ϴ�����Ƭ������Ч����δͨ����ˣ���ֻ��һ�β��ύ����˵Ļ���</span>
-					<a href="user_center_diploma.php" class="btn btn-fill btn-primary btn-w140">������֤</a>
+					<span class="title">学历认证（可选）</span>
+					<span class="text">请确保上传的照片清晰有效，若未通过审核，您只有一次补提交被审核的机会</span>
+					<a href="user_center_diploma.php" class="btn btn-fill btn-primary btn-w140">立即认证</a>
 				</li>
 				<li>
-					<span class="title">������֤����ѡ��</span>
-					<span class="text">��ȷ���ϴ�����Ƭ������Ч����δͨ����ˣ���ֻ��һ�β��ύ����˵Ļ���</span>
-					<a href="javascript:;" class="btn btn-fill btn-primary btn-w140">�����</a>
+					<span class="title">身份认证（必选）</span>
+					<span class="text">请确保上传的照片清晰有效，若未通过审核，您只有一次补提交被审核的机会</span>
+					<a href="javascript:;" class="btn btn-fill btn-primary btn-w140">审核中</a>
 				</li>
 				<li>
-					<span class="title">ѧ����֤����ѡ��</span>
-					<span class="text">��ȷ���ϴ�����Ƭ������Ч����δͨ����ˣ���ֻ��һ�β��ύ����˵Ļ���</span>
-					<a href="javascript:;" class="btn btn-disable btn-primary btn-w140">����֤</a>
+					<span class="title">学历认证（可选）</span>
+					<span class="text">请确保上传的照片清晰有效，若未通过审核，您只有一次补提交被审核的机会</span>
+					<a href="javascript:;" class="btn btn-disable btn-primary btn-w140">已认证</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<!-- �û����� E -->
+	<!-- 用户中心 E -->
 </div>
-<!-- ҳ�� S -->
+<!-- 页脚 S -->
 <?php include('footer.php') ?>
-<!-- ҳ�� E -->
+<!-- 页脚 E -->
 </body>
 </html>

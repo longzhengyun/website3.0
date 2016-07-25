@@ -1,16 +1,16 @@
 <div class="sc-hd">
-	<div class="sc-wrap">
+    <div class="sc-wrap">
 		<div class="sc-hd-logo"><a href="index.php"></a></div>
-		<!-- µ±Ç°Ò³¸ßÁÁ¼Ó.curÀàÃû -->
+		<!-- å½“å‰é¡µé«˜äº®åŠ .curç±»å -->
 		<ul class="sc-hd-menu">
-			<li class="cur"><a href="index.php">ÔÆº£ÈüÊÂ</a></li>
-			<li><a href="aboutus.php">¹ØÓÚÎÒÃÇ</a></li>
+			<li class="cur"><a href="index.php">äº‘æµ·èµ›äº‹</a></li>
+			<li><a href="aboutus.php">å…³äºŽæˆ‘ä»¬</a></li>
 		</ul>
 		<div class="sc-hd-user">
-			<!-- Î´µÇÂ¼ -->
-			<!-- <span class="not-logged"><a href="#">µÇÂ¼</a><a href="#">×¢²á</a></span> -->
-			<!-- ÒÑµÇÂ¼ -->
-			<span class="logged"><a href="user_center.php" class="color-w"><i class="icon"></i>¿ËÀïË¹µÙÄÈ</a><a href="javascript:;" class="color-w">ÍË³ö</a></span>
+			<!-- æœªç™»å½• -->
+			<!-- <span class="not-logged"><a href="#">ç™»å½•</a><a href="#">æ³¨å†Œ</a></span> -->
+			<!-- å·²ç™»å½• -->
+			<span class="logged"><a href="user_center.php" class="color-w"><i class="icon"></i>å…‹é‡Œæ–¯è’‚å¨œ</a><a href="javascript:;" class="color-w">é€€å‡º</a></span>
 		</div>
 	</div>
 </div>

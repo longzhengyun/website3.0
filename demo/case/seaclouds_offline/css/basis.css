@@ -20,7 +20,7 @@ a:hover{text-decoration:none;}
 .icon-success-primary,.icon-info-primary,.icon-alert-primary,.icon-error-primary,
 .icon-success-normal,.icon-info-normal,.icon-alert-normal,.icon-error-normal,
 .icon-success-small,.icon-info-small,.icon-alert-small,.icon-error-small,
-.icon-success-mini,.icon-info-mini,.icon-alert-mini,.icon-error-mini{display:inline-block;background:url(http://picint.sh.ctriptravel.com/seaclouds/msg-bg.png) no-repeat;vertical-align:middle;*display:inline;*zoom:1;}
+.icon-success-mini,.icon-info-mini,.icon-alert-mini,.icon-error-mini{display:inline-block;background:url(../images/msg-bg.png) no-repeat;vertical-align:middle;*display:inline;*zoom:1;}
 .icon-success-big,.icon-info-big,.icon-alert-big,.icon-error-big{width:64px;height:64px;}
 .icon-success,.icon-info,.icon-alert,.icon-error{width:48px;height:48px;}
 .icon-success-primary,.icon-info-primary,.icon-alert-primary,.icon-error-primary{width:32px;height:32px;}

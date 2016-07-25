@@ -1,48 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+ï»¿<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>Ð¯³ÌÂÃÐÐÍø: ÔÆº£¾ºÈüÆ½Ì¨</title>
-<meta name="keywords" content="¾ÆµêÔ¤¶©,»úÆ±Ô¤¶©,ÂÃÓÎ¶È¼Ù,ÉÌÂÃ¹ÜÀí,¾ÆµêÔ¤¶¨,»úÆ±Ô¤¶¨,º½°à²éÑ¯,µç×Ó¿ÍÆ±,»úÆ±,¾Æµê,ÂÃÐÐ" />
-<meta name="description" content="Ð¯³ÌÂÃÐÐÍøÊÇÖÐ¹úÁìÏÈµÄÔÚÏßÂÃÐÐ·þÎñ¹«Ë¾£¬Ïò³¬¹ý1400Íò»áÔ±Ìá¹©¼¯¾ÆµêÔ¤¶©¡¢»úÆ±Ô¤¶©¡¢¶È¼ÙÔ¤¶©¡¢ÉÌÂÃ¹ÜÀí¡¢ÌØ»ÝÉÌ»§¼°ÂÃÓÎ×ÊÑ¶ÔÚÄÚµÄÈ«·½Î»ÂÃÐÐ·þÎñ¡£" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOffline/css/basis.css" rel="stylesheet" type="text/css" />
-<link href="http://webresource.c-ctrip.com/Pres.Static/Pres.Static/SeaCloudsOffline/css/seaclouds.css" rel="stylesheet" type="text/css" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+<title>æºç¨‹æ—…è¡Œç½‘: äº‘æµ·ç«žèµ›å¹³å°åŽå°ç®¡ç†ç³»ç»Ÿ</title>
+<meta name="keywords" content="é…’åº—é¢„è®¢,æœºç¥¨é¢„è®¢,æ—…æ¸¸åº¦å‡,å•†æ—…ç®¡ç†,é…’åº—é¢„å®š,æœºç¥¨é¢„å®š,èˆªç­æŸ¥è¯¢,ç”µå­å®¢ç¥¨,æœºç¥¨,é…’åº—,æ—…è¡Œ" />
+<meta name="description" content="æºç¨‹æ—…è¡Œç½‘æ˜¯ä¸­å›½é¢†å…ˆçš„åœ¨çº¿æ—…è¡ŒæœåŠ¡å…¬å¸ï¼Œå‘è¶…è¿‡1400ä¸‡ä¼šå‘˜æä¾›é›†é…’åº—é¢„è®¢ã€æœºç¥¨é¢„è®¢ã€åº¦å‡é¢„è®¢ã€å•†æ—…ç®¡ç†ã€ç‰¹æƒ å•†æˆ·åŠæ—…æ¸¸èµ„è®¯åœ¨å†…çš„å…¨æ–¹ä½æ—…è¡ŒæœåŠ¡ã€‚" />
+<link href="css/basis.css" rel="stylesheet" type="text/css" />
+<link href="css/seaclouds.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- Ò³Í· S -->
+<!-- é¡µå¤´ S -->
 <?php include('header.php') ?>
-<!-- Ò³Í· E -->
+<!-- é¡µå¤´ E -->
 <div class="sc-wrap">
 	<div class="sc-layout sc-list">
-		<!-- ÁÐ±í S -->
+		<!-- åˆ—è¡¨ S -->
 		<div class="layout-title clearfix">
-			<a href="add-step1.php" class="btn btn-fill btn-small weight-n float-r">·¢²¼ÐÂÈÎÎñ</a>
-			<h2>ÈÎÎñ¹ÜÀíÁÐ±í</h2>
+			<a href="add_step1.php" class="btn btn-fill btn-small weight-n float-r">å‘å¸ƒæ–°ä»»åŠ¡</a>
+			<h2>ä»»åŠ¡ç®¡ç†åˆ—è¡¨</h2>
 		</div>
 		<table class="table-wrap">
 			<thead>
 				<tr>
-					<th>ÈüÊÂÃû³Æ</th>
-					<th>²Ù×÷</th>
+					<th>èµ›äº‹åç§°</th>
+					<th>æ“ä½œ</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php for($i=1; $i<=9; $i++) { ?>
 				<tr>
-					<td><span class="title">ÎÒÊÇÈüÊÂÃû³ÆÎÒÊÇÈüÊÂÃû³ÆÎÒÊÇÈüÊÂÃû³ÆÎÒÊÇÈüÊÂÃû³ÆÎÒÊÇÈüÊÂÃû³Æ</span></td>
+					<td><span class="title">æˆ‘æ˜¯èµ›äº‹åç§°æˆ‘æ˜¯èµ›äº‹åç§°æˆ‘æ˜¯èµ›äº‹åç§°æˆ‘æ˜¯èµ›äº‹åç§°æˆ‘æ˜¯èµ›äº‹åç§°</span></td>
 					<?php if($i % 2 == 0) { ?>
-					<td class="align-c"><a href="#" class="item">ÐÞ¸Ä</a><a href="javascript:;" class="item">½áÊø</a><a href="examine-identity.php" class="item">Éí·ÝÉóºË</a><a href="examine-ranking.php" class="item">ÅÅÃûÉóºË</a><a href="javascript:;" class="item">ÉÏ¼Ü</a><a href="javascript:;" class="color-g item">ÏÂ¼Ü</a></td>
+					<td class="align-c"><a href="#" class="item">ä¿®æ”¹</a><a href="javascript:;" class="item">ç»“æŸ</a><a href="examine_identity.php" class="item">èº«ä»½å®¡æ ¸</a><a href="examine_ranking.php" class="item">æŽ’åå®¡æ ¸</a><a href="javascript:;" class="item">ä¸Šæž¶</a><a href="javascript:;" class="color-g item">ä¸‹æž¶</a></td>
 					<?php } else { ?>
-					<td class="align-c"><span class="color-g item">ÐÞ¸Ä</span><span class="color-g item">ÒÑ½áÊø</span><a href="examine-identity.php" class="item">Éí·ÝÉóºË</a><a href="examine-ranking.php" class="item">ÅÅÃûÉóºË</a><a href="javascript:;" class="color-g item">ÉÏ¼Ü</a><a href="javascript:;" class="item">ÏÂ¼Ü</a></td>
+					<td class="align-c"><span class="color-g item">ä¿®æ”¹</span><span class="color-g item">å·²ç»“æŸ</span><a href="examine_identity.php" class="item">èº«ä»½å®¡æ ¸</a><a href="examine_ranking.php" class="item">æŽ’åå®¡æ ¸</a><a href="javascript:;" class="color-g item">ä¸Šæž¶</a><a href="javascript:;" class="item">ä¸‹æž¶</a></td>
 					<?php } ?>
 				</tr>
 				<?php } ?>
 			</tbody>
 		</table>
-		<!-- ÁÐ±í E -->
-		<!-- ·ÖÒ³ S -->
+		<!-- åˆ—è¡¨ E -->
+		<!-- åˆ†é¡µ S -->
 		<div class="page_box">
-			<div class="c_page"><a class="c_up" href="###"><i class="arrow"></i>ÉÏÒ»Ò³</a>
+			<div class="c_page"><a class="c_up" href="###"><i class="arrow"></i>ä¸Šä¸€é¡µ</a>
 				<div class="c_page_list layoutfix">
 					<a href="###">1</a>
 					<span class="c_page_ellipsis">...</span>
@@ -53,30 +55,30 @@
 					<span class="c_page_ellipsis">...</span>
 					<a href="###">999</a>
 				</div>
-				<a class="c_down" href="###">ÏÂÒ»Ò³<i class="arrow"></i></a>
-				<a class="c_up_nocurrent" href="###"><i class="arrow"></i>ÉÏÒ»Ò³</a>
-				<a class="c_down_nocurrent" href="###">ÏÂÒ»Ò³<i class="arrow"></i></a>
-				<div class="c_pagevalue">µ½
+				<a class="c_down" href="###">ä¸‹ä¸€é¡µ<i class="arrow"></i></a>
+				<a class="c_up_nocurrent" href="###"><i class="arrow"></i>ä¸Šä¸€é¡µ</a>
+				<a class="c_down_nocurrent" href="###">ä¸‹ä¸€é¡µ<i class="arrow"></i></a>
+				<div class="c_pagevalue">åˆ°
 					<input type="text" name="" class="c_page_num">
-					Ò³
-					<input type="button" name="" value="È·¶¨" class="c_page_submit">
+					é¡µ
+					<input type="button" name="" value="ç¡®å®š" class="c_page_submit">
 				</div>
 			</div>
 		</div>
-		<!-- ·ÖÒ³ E -->
+		<!-- åˆ†é¡µ E -->
 	</div>
 </div>
-<!-- Ò³½Å S -->
+<!-- é¡µè„š S -->
 <?php include('footer.php') ?>
-<!-- Ò³½Å E -->
-<!-- µ¯²ã S -->
+<!-- é¡µè„š E -->
+<!-- å¼¹å±‚ S -->
 <div class="pop-box pop-normal pop-box-msg">
 	<div class="pop-hd"><a href="###" class="c_close">&times;</a></div>
 	<div class="pop-bd">
-		<div class="text-single"><i class="icon-info margin-r"></i>ÊÇ·ñÈ·ÈÏÁ¢¼´½áÊø±ÈÈü£¿</div>
+		<div class="text-single"><i class="icon-info margin-r"></i>æ˜¯å¦ç¡®è®¤ç«‹å³ç»“æŸæ¯”èµ›ï¼Ÿ</div>
 	</div>
-	<div class="pop-ft"><a href="javascript:;" class="btn btn-fill btn-small weight-n">È· ÈÏ</a><a href="javascript:;" class="btn btn-border btn-small margin-l weight-n">È¡ Ïû</a></div>
+	<div class="pop-ft"><a href="javascript:;" class="btn btn-fill btn-small weight-n">ç¡® è®¤</a><a href="javascript:;" class="btn btn-border btn-small margin-l weight-n">å– æ¶ˆ</a></div>
 </div>
-<!-- µ¯²ã S -->
+<!-- å¼¹å±‚ S -->
 </body>
 </html>

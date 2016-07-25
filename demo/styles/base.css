@@ -14,9 +14,9 @@ button, input[type="button"], input[type="submit"]{line-height:normal !important
 table{border-collapse:collapse;border-spacing:0;}
 input,textarea{border:0;background:transparent;-webkit-box-sizing:border-box;box-sizing:border-box;outline:0;-webkit-appearance:none;border-radius:0;}
 body{min-width:16rem;overflow-x:hidden;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-font-smoothing:antialiased;-moz-user-select:none;background-color:#eee;}
-h1{font:600 1rem/2 Tahoma;}
-h2{font:600 0.9rem/2 Tahoma;}
-h3{font:600 0.8rem/1.5 Tahoma;}
+h1{font:600 1rem/2 Tahoma,"Microsoft YaHei","SimHei";}
+h2{font:600 0.9rem/2 Tahoma,"Microsoft YaHei","SimHei";}
+h3{font:600 0.8rem/1.5 Tahoma,"Microsoft YaHei","SimHei";}
 :focus{outline:0;}
 .ellips{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .clearfix:after{clear:both;content:'.';display:block;height:0;visibility:hidden;line-height:0;}
@@ -259,7 +259,6 @@ h3{font:600 0.8rem/1.5 Tahoma;}
 .list-mode1 .mode-cont .list-item a{display:block;width:100%;height:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-size:.6rem;}
 
 .list-mode2 .list-item{position:relative;padding:.25rem .5rem;margin-bottom:.5rem;background-color:#fff;border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;font-size:.6rem;}
-.list-mode2 .list-item:last-child{margin-bottom:0;}
 .list-mode2 .item-title{font-size:.8rem;font-weight:normal;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .list-mode2 .item-info{color:#666;max-height:2.7rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
 .list-mode2 .item-data{float:left;line-height:1.4rem;color:#666;}
