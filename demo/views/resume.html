@@ -11,8 +11,13 @@
 	</form>
 </div>
 <div class="content" ng-if="validatePass">
+	<!-- load -->
+	<div class="load-mode2" ng-if="!resumeData">
+		<i class="icon-load"></i>
+		<span class="text-load">加载中<span class="dot"></span></span>
+	</div>
 	<!-- form-wrap -->
-	<form class="form-mode">
+	<form class="form-mode" ng-if="resumeData">
 		<div class="form-group form-twin-four form-single">
 			<div class="group-name">姓名</div>
 			<div class="group-cont">{{resumeData.person.name}}</div>
@@ -36,6 +41,90 @@
 		<div class="form-group form-twin-four form-single">
 			<div class="group-name">手机</div>
 			<div class="group-cont">{{resumeData.person.phone}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">Email</div>
+			<div class="group-cont">{{resumeData.person.email}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">学历</div>
+			<div class="group-cont">{{resumeData.person.degrees}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">专业</div>
+			<div class="group-cont">{{resumeData.person.major}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">工作年限</div>
+			<div class="group-cont">{{resumeData.person.worklife}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">工作状态</div>
+			<div class="group-cont">{{resumeData.person.state}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">年薪</div>
+			<div class="group-cont">{{resumeData.person.salary}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">照片</div>
+			<div class="group-cont">{{resumeData.person.photo}}</div>
+		</div>
+	</form>
+	<!-- form-wrap -->
+	<form class="form-mode" ng-if="resumeData">
+		<div class="form-group form-twin-four form-multi">
+			<div class="group-name">个人评价</div>
+			<div class="group-cont">{{resumeData.info.evaluation}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-multi">
+			<div class="group-name">职业目标</div>
+			<div class="group-cont">{{resumeData.info.goal}}</div>
+		</div>
+	</form>
+	<!-- form-wrap -->
+	<form class="form-mode" ng-if="resumeData">
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">职业技能</div>
+			<div class="group-cont"></div>
+		</div>
+		<div ng-repeat="item in resumeData.skill">
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-multi">
+				<div class="group-name">{{item.title}}</div>
+				<div class="group-cont" ng-repeat="subItem in item.description">{{subItem.text}}/{{subItem.grade}}/{{subItem.level}}</div>
+			</div>
+		</div>
+	</form>
+	<!-- form-wrap -->
+	<form class="form-mode" ng-if="resumeData">
+		<div class="line-between"></div>
+		<div class="form-group form-twin-four form-single">
+			<div class="group-name">工作经历</div>
+			<div class="group-cont"></div>
+		</div>
+		<div ng-repeat="item in resumeData.experience">
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-multi">
+				<div class="group-name">{{item.title}}</div>
+				<div class="group-cont">{{item.industry}}/{{item.property}}/{{item.size}}/{{item.description}}/{{item.duty}}/{{item.website}}/{{item.tip}}</div>
+			</div>
+		</div>
+	</form>
+	<!-- form-wrap -->
+	<form class="form-mode" ng-if="resumeData">
+		<div class="form-group form-twin-four form-multi">
+			<div class="group-name">个人爱好</div>
+			<div class="group-cont">{{resumeData.other.hobby}}</div>
 		</div>
 	</form>
 </div>

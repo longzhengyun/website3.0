@@ -15,308 +15,169 @@
 		"photo": "aW1hZ2VzL2phcnkuanBn"
 	},
 	"info": {
-		"sec1": {
-			"name": "基本信息",
-			"icon": "icon-user-tie"
-		},
-		"sec2": {
-			"name": "职业规划",
-			"icon": "icon-books",
-			"data": [
+		"evaluation": "不算是个特别机灵的人，靠着一股精益求精的劲头，愿意在web前端开发这一块拼搏发展。做出了一些成绩，获得了一些认可！工作时有些轻微强迫症，会设计、懂些编程、带过小团队，能在设计部门及后台开发之间做得良好沟通，协助他们、甚至促进他们完善工作，提高项目完成效率。总的来说，是个踏实肯干，愿意钻研的人！",
+		"goal": "工作多年，参与过很多项目！前端技能也渐渐运用得娴熟无比，希望能做个成功的项目来证明自己，不管是参与还是带领团队。愿意为这个目标奋斗终生！"
+	},
+	"skill": [
+		{
+			"title": "编程类",
+			"description": [
 				{
-					"title": "自我评价：",
-					"text": "不算是个特别机灵的人，靠着一股精益求精的劲头，愿意在web前端开发这一块拼搏发展。做出了一些成绩，获得了一些认可！工作时有些轻微强迫症，会设计、懂些编程、带过小团队，能在设计部门及后台开发之间做得良好沟通，协助他们、甚至促进他们完善工作，提高项目完成效率。总的来说，是个踏实肯干，愿意钻研的人！"
+					"text": "HTML/HTML5",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "职业目标：",
-					"text": "工作多年，参与过很多项目！前端技能也渐渐运用得娴熟无比，希望能做个成功的项目来证明自己，不管是参与还是带领团队。愿意为这个目标奋斗终生！"
+					"text": "CSS/CSS3",
+					"grade": "精通",
+					"level": "master"
+				},
+				{
+					"text": "jQuery",
+					"grade": "精通",
+					"level": "master"
+				},
+				{
+					"text": "JavaScript",
+					"grade": "熟练",
+					"level": "good"
+				},
+				{
+					"text": "AJAX",
+					"grade": "熟练",
+					"level": "good"
+				},
+				{
+					"text": "Sass/Less",
+					"grade": "了解",
+					"level": "know"
+				},
+				{
+					"text": "PHP",
+					"grade": "了解",
+					"level": "know"
 				}
 			]
 		},
-		"sec3": {
-			"name": "项目案例",
-			"icon": "icon-stack",
-			"data": [
+		{
+			"title": "工具类",
+			"description": [
 				{
-					"title": "骄阳网 - 评游戏 品生活",
-					"description": "骄阳网，权威的游戏媒体。以游戏下载、游戏资讯、专区专题、游戏活动及玩家互动为特色，为玩家提供最好的游戏资讯。",
-					"duty": "项目前端负责人。带领团队完成项目的全部web页面实现、JS效果实现、JSON数据调用等任务。对项目保持持续前端维护。",
-					"link": "http://www.joyyang.com/",
-					"state": "0"
+					"text": "Photoshop",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "写点评 免费拿周边",
-					"description": "骄阳网专题活动中心。",
-					"duty": "使用AJAX获取JSON完成页面数据加载。独立完成，并制作及维护此专题活动中心下的大部分专题。",
-					"link": "http://www.joyyang.com/act/index.shtml",
-					"state": "0"
+					"text": "Dreamweaver",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "盛久网络 - 企业官网",
-					"description": "盛久网络是以网络服务交易平台为基础，以垂直资讯网站为门户，集移动娱乐内容开发、运营为一体的综合性互动娱乐企业。",
-					"duty": "独立完成该项目。使用HTML5+CSS3+jQuery实现需求。因为面向游戏用户群体，放弃兼容IE6，使项目性能更优！",
-					"link": "http://www.shengjoy.com/",
-					"state": "0"
+					"text": "Sublime Text",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "蜜糖 - 24小时虚拟恋人陪伴，情感治愈平台",
-					"description": "盛久网络旗下虚拟恋爱社交APP-蜜糖的官网",
-					"duty": "独立完成该项目。使用HTML5+CSS3+jQuery实现自适应+响应式布局，根据浏览器的不同呈现不同内容。支持PC、PAD、手机三端浏览，使该网站能够在不同平台有不同的用户体验。",
-					"link": "http://www.metang520.com/",
-					"state": "0"
+					"text": "Developer Tools",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "蜜糖 - 账户管理后台",
-					"description": "盛久网络旗下虚拟恋爱社交APP-蜜糖的账户管理后台",
-					"duty": "独立完成该项目。使用HTML5+CSS3+jQuery实现自适应+响应式布局，AJAX+JSON加载数据，支持PC、PAD、手机三端浏览的单页面网站。",
-					"link": "http://www.metang520.com/withdrawals/index.shtml",
-					"state": "0"
+					"text": "Visual Studio",
+					"grade": "熟练",
+					"level": "good"
 				},
 				{
-					"title": "137home要省钱网",
-					"description": "137home要省钱网，网络实景建材家具商城O2O门户",
-					"duty": "项目前端负责人。独立完成项目的全部web页面实现、JS效果实现等任务。对项目保持持续前端维护。",
-					"link": "http://www.137home.com/",
-					"state": "0"
+					"text": "SVN",
+					"grade": "熟练",
+					"level": "good"
 				},
 				{
-					"title": "喜盈门国际建材品牌中心",
-					"description": "喜盈门国际建材品牌中心是由上海市和徐汇区两级政府规划的国际建材行业流行资讯平台，融合进口建材商城、云·艺术中心及国际商务中心三大区域，以全新的业态模式打造，是亚太地区最高端的艺术主题进口建材品牌展示中心。",
-					"duty": "项目前端负责人。独立完成项目的全部web页面实现、JS效果实现等任务。对项目保持持续前端维护。",
-					"link": "http://guoji.137home.com/guoji/",
-					"state": "0"
-				},
-				{
-					"title": "更多案例",
-					"description": [
-						{
-							"text": "上海移动游戏发展联盟2015年首场沙龙！",
-							"link": "http://www.joyyang.com/act/20150106/act1/index.shtml",
-							"tip": "（移动端沙龙活动系列之一）"
-						},
-						{
-							"text": "花千骨中谁与你是绝配？",
-							"link": "http://www.metang520.com/act/20150707/index.shtml",
-							"tip": "（移动端活动）"
-						},
-						{
-							"text": "我凭什么被爱？",
-							"link": "http://www.metang520.com/act/20150806/index.shtml",
-							"tip": "（移动端活动）"
-						},
-						{
-							"text": "蜜糖七夕情人节 最佳情侣",
-							"link": "http://www.metang520.com/act/20150819/index.shtml",
-							"tip": "（移动端活动）"
-						},
-						{
-							"text": "喜盈门首届装修日记大赛",
-							"link": "http://zt.137home.com/cs/2015/0725/",
-							"tip": "（移动端活动）"
-						},
-						{
-							"text": "第三届十大口碑游戏评选活动",
-							"link": "http://www.joyyang.com/act/gameselection2014/index.shtml",
-							"tip": "（口碑游戏评选系列活动之一）"
-						},
-						{
-							"text": "中国互动娱乐产业服务交易平台",
-							"link": "http://www.huyu123.com/",
-							"tip": "（上线后未推广）"
-						},
-						{
-							"text": "喜盈门云·艺术中心",
-							"link": "http://guoji.137home.com/yun/",
-							"tip": "（暂未正式上线）"
-						}
-					],
-					"state": "1"
+					"text": "GitHub",
+					"grade": "了解",
+					"level": "know"
 				}
 			]
 		},
-		"sec4": {
-			"name": "职业技能",
-			"icon": "icon-tree",
-			"data": [
+		{
+			"title": "其他类",
+			"description": [
 				{
-					"title": "编程类",
-					"description": [
-						{
-							"text": "HTML/HTML5",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "CSS/CSS3",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "jQuery",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "JavaScript",
-							"grade": "熟练",
-							"level": "good"
-						},
-						{
-							"text": "AJAX",
-							"grade": "熟练",
-							"level": "good"
-						},
-						{
-							"text": "Sass/Less",
-							"grade": "了解",
-							"level": "know"
-						},
-						{
-							"text": "PHP",
-							"grade": "了解",
-							"level": "know"
-						}
-					]
+					"text": "浏览器兼容",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "工具类",
-					"description": [
-						{
-							"text": "Photoshop",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "Dreamweaver",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "Sublime Text",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "Developer Tools",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "Visual Studio",
-							"grade": "熟练",
-							"level": "good"
-						},
-						{
-							"text": "SVN",
-							"grade": "熟练",
-							"level": "good"
-						},
-						{
-							"text": "GitHub",
-							"grade": "了解",
-							"level": "know"
-						}
-					]
+					"text": "响应式",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "其他类",
-					"description": [
-						{
-							"text": "浏览器兼容",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "响应式",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "自适应",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "移动端",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "结构表现效果分离",
-							"grade": "精通",
-							"level": "master"
-						},
-						{
-							"text": "性能优化",
-							"grade": "精通",
-							"level": "master"
-						}
-					]
-				}
-			]
-		},
-		"sec5": {
-			"name": "工作经历",
-			"icon": "icon-bubble",
-			"data": [
-				{
-					"title": "上海盛久网络科技发展有限公司（2012年10月 - 2015年10月）",
-					"industry": "互联网 · 网络游戏",
-					"property": "私营 · 民营企业",
-					"size": "20 - 100人",
-					"description": "盛久网络是以网络服务交易平台为基础，以垂直资讯网站为门户，集移动娱乐内容开发、运营为一体的综合性互动娱乐企业。",
-					"duty": "web前端开发主管。承担完成公司所有与前端开发相关的需求，并协助设计及后台开发完成整个项目；培训新人及与前端开发有关联的其他部门同事。",
-					"website": "http://www.shengjoy.com/",
-					"tip": "（盛久网络）"
+					"text": "自适应",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "上海第九城市信息技术有限公司（2011年08月 - 2012年08月）",
-					"industry": "互联网 · 网络游戏",
-					"property": "私营 · 上市企业",
-					"size": "500 - 999人",
-					"description": "第九城市是中国最早的互联网社区和领先的游戏娱乐服务提供商，对中国游戏市场有着全面的了解和深入的把握。",
-					"duty": "高级web前端开发工程师。承担公司网站“九城游戏中心”及其wap版的前端开发需求，并协助设计及后台开发完成各种新项目。部门涉及手机游戏业务，因此移动终端的前端开发也是工作之一。",
-					"website": "http://www.the9.com/",
-					"tip": "（第九城市）"
+					"text": "移动端",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "和家网(上海)信息技术有限公司（2008年8月 - 2011年8月）",
-					"industry": "互联网 · 媒体门户",
-					"property": "私营 · 民营企业",
-					"size": "100 - 499人",
-					"description": "和家网（上海）信息技术有限公司，是目前唯一一家完成两轮私募融资、高投入、高速发展的大型中文家居门户。",
-					"duty": "web前端开发主管。承担完成公司所有与前端开发相关的需求，并协助设计及后台开发完成整个项目；培训新人及与前端开发有关联的其他部门同事。",
-					"website": "http://www.51hejia.com/",
-					"tip": "（和家网）"
+					"text": "结构表现效果分离",
+					"grade": "精通",
+					"level": "master"
 				},
 				{
-					"title": "上海正侗达商贸有限公司（2007年9月 - 2008年7月）",
-					"industry": "互联网 · 电子商务",
-					"property": "私营 · 民营企业",
-					"size": "1 - 49人",
-					"description": "专业的酒水代理商，拥有自己的电子商务平台及行业信息交流门户网站。",
-					"duty": "网站美工/网站制作。负责网页设计，web前端开发，广告制作等。",
-					"website": "###",
-					"tip": "（订酒网，太过久远，网站访问存在问题）"
-				}
-			]
-		},
-		"sec6": {
-			"name": "其他信息",
-			"icon": "icon-cog",
-			"data": [
-				{
-					"title": "个人爱好：",
-					"text": "爱上网，爱阅读，也爱玩游戏；能设计，能管理，更能前端开发；我是一个web前端开发爱好者，在路上前行着，不曾改变！"
-				},
-				{
-					"title": "个人网站：",
-					"text": "<strong>佳瑞网</strong><a href='http://www.jary8.com/' target='_blank'>http://www.jary8.com/</a>"
+					"text": "性能优化",
+					"grade": "精通",
+					"level": "master"
 				}
 			]
 		}
-	},
-	"footerHtml":{
-		"copyright": "Copyright Jary 2016"
+	],
+	"experience": [
+		{
+			"title": "上海盛久网络科技发展有限公司（2012年10月 - 2015年10月）",
+			"industry": "互联网 · 网络游戏",
+			"property": "私营 · 民营企业",
+			"size": "20 - 100人",
+			"description": "盛久网络是以网络服务交易平台为基础，以垂直资讯网站为门户，集移动娱乐内容开发、运营为一体的综合性互动娱乐企业。",
+			"duty": "web前端开发主管。承担完成公司所有与前端开发相关的需求，并协助设计及后台开发完成整个项目；培训新人及与前端开发有关联的其他部门同事。",
+			"website": "http://www.shengjoy.com/",
+			"tip": "（盛久网络）"
+		},
+		{
+			"title": "上海第九城市信息技术有限公司（2011年08月 - 2012年08月）",
+			"industry": "互联网 · 网络游戏",
+			"property": "私营 · 上市企业",
+			"size": "500 - 999人",
+			"description": "第九城市是中国最早的互联网社区和领先的游戏娱乐服务提供商，对中国游戏市场有着全面的了解和深入的把握。",
+			"duty": "高级web前端开发工程师。承担公司网站“九城游戏中心”及其wap版的前端开发需求，并协助设计及后台开发完成各种新项目。部门涉及手机游戏业务，因此移动终端的前端开发也是工作之一。",
+			"website": "http://www.the9.com/",
+			"tip": "（第九城市）"
+		},
+		{
+			"title": "和家网(上海)信息技术有限公司（2008年8月 - 2011年8月）",
+			"industry": "互联网 · 媒体门户",
+			"property": "私营 · 民营企业",
+			"size": "100 - 499人",
+			"description": "和家网（上海）信息技术有限公司，是目前唯一一家完成两轮私募融资、高投入、高速发展的大型中文家居门户。",
+			"duty": "web前端开发主管。承担完成公司所有与前端开发相关的需求，并协助设计及后台开发完成整个项目；培训新人及与前端开发有关联的其他部门同事。",
+			"website": "http://www.51hejia.com/",
+			"tip": "（和家网）"
+		},
+		{
+			"title": "上海正侗达商贸有限公司（2007年9月 - 2008年7月）",
+			"industry": "互联网 · 电子商务",
+			"property": "私营 · 民营企业",
+			"size": "1 - 49人",
+			"description": "专业的酒水代理商，拥有自己的电子商务平台及行业信息交流门户网站。",
+			"duty": "网站美工/网站制作。负责网页设计，web前端开发，广告制作等。",
+			"website": "###",
+			"tip": "（订酒网，太过久远，网站访问存在问题）"
+		}
+	],
+	"other": {
+		"hobby": "爱上网，爱阅读，也爱玩游戏；能设计，能管理，更能前端开发；我是一个web前端开发爱好者，在路上前行着，不曾改变！"
 	}
 }

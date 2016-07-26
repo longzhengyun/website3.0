@@ -9,7 +9,7 @@
 		</ul>
 	</div>
 	<!-- case list -->
-	<ul class="list-mode2 case-list">
+	<ul class="list-mode2 case-list" ng-if="caseData">
 		<li class="list-item" ng-repeat="item in caseData | orderBy:'-date' | filter:{'tags':initSubMenu.tagsKey} | limitTo:10">
 			<h2 class="item-title">{{item.title}}</h2>
 			<p class="item-info">{{item.description}}</p>
@@ -20,6 +20,11 @@
 			<a href="#/caseDetail/{{item.id}}" title="{{item.title}}" class="item-link"></a>
 		</li>
 	</ul>
+	<!-- load -->
+	<div class="load-mode2" ng-if="!caseData">
+		<i class="icon-load"></i>
+		<span class="text-load">加载中<span class="dot"></span></span>
+	</div>
 </div>
 <!-- menu -->
 <div class="menu" ui-view="menu"></div>

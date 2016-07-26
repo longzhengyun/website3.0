@@ -17,7 +17,13 @@
 			<h2 class="title-name">相关文章</h2>
 		</div>
 		<div class="mode-cont">
-			<ul class="clearfix">
+			<!-- load -->
+			<div class="load-mode2" ng-if="!articleData">
+				<i class="icon-load"></i>
+				<span class="text-load">加载中<span class="dot"></span></span>
+			</div>
+			<!-- list -->
+			<ul class="clearfix" ng-if="articleData">
 				<li class="list-item" ng-repeat="item in articleData | orderBy:'-date' | filter:{'tags':detailData.tags} | filter:{'hot':true} | limitTo:4"><a href="#/articleDetail/{{item.id}}">{{item.title}}</a></li>
 			</ul>
 		</div>

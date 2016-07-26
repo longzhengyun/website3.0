@@ -159,23 +159,11 @@ app.controller('resumeController', ['$scope', 'dataService', 'resumeService', 'R
 
 	//获取个人数据
 	dataService.getData(RESUME_DATA).success(function(data){
-		$scope.resumeData = {
-			code:data.code,
-			person:{
-				name: stringDoit(data.person.name, false),
-				nickname: stringDoit(data.person.nickname, false),
-				birthday: stringDoit(data.person.birthday, false),
-				job: stringDoit(data.person.job, false),
-				phone: stringDoit(data.person.phone, false),
-				email: stringDoit(data.person.email, false),
-				degrees: stringDoit(data.person.degrees, false),
-				major: stringDoit(data.person.major, false),
-				worklife: stringDoit(data.person.worklife, false),
-				state: stringDoit(data.person.state, false),
-				salary: stringDoit(data.person.salary, false),
-				photo: stringDoit(data.person.photo, false)
-			}
-		};
+		$scope.resumeData = data;
+		//base64解密数据
+		angular.forEach(data.person, function(value, key){
+			$scope.resumeData.person[key] = stringDoit(value, false);
+		});
 	});
 
 	//获取本地用户数据
@@ -183,8 +171,8 @@ app.controller('resumeController', ['$scope', 'dataService', 'resumeService', 'R
 
 	var today = new Date().getTime();
 
-	//根据本地缓存设置访问状态，pass = true，并且浏览间隔时间不超过360000毫秒（1小时）
-	if($scope.localData.pass == 'true' && (today - $scope.localData.date) < 360000){
+	//根据本地缓存设置访问状态，pass = true，并且浏览间隔时间不超过3600000毫秒（1小时）
+	if($scope.localData.pass == 'true' && (today - $scope.localData.date) < 3600000){
 		$scope.validatePass = true;
 		$scope.localData.date = today;
 		resumeService.setLocalDate($scope.localData); //本地存储用户数据
