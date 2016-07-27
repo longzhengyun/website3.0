@@ -77,6 +77,11 @@
 .search-nothing{text-align:center;padding-top:3.75rem;}
 .search-nothing .text{margin-top:.75rem;}
 
+/* resume */
+.resume-list{margin-bottom:.5rem;}
+.resume-photo{padding:.5rem 0;margin:0 -.75rem;background-color:#eee;}
+.resume-photo img{display:block;width:5rem;height:5rem;margin:0 auto;border-radius:100%;}
+
 /* screen */
 @media (min-width: 992px) {
 html{font-size:26px !important;}

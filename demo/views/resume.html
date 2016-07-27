@@ -18,6 +18,7 @@
 	</div>
 	<!-- form-wrap -->
 	<form class="form-mode" ng-if="resumeData">
+		<div class="resume-photo"><img ng-src="{{resumeData.person.photo}}"></div>
 		<div class="form-group form-twin-four form-single">
 			<div class="group-name">姓名</div>
 			<div class="group-cont">{{resumeData.person.name}}</div>
@@ -34,7 +35,7 @@
 		</div>
 		<div class="line-between"></div>
 		<div class="form-group form-twin-four form-single">
-			<div class="group-name">工作</div>
+			<div class="group-name">职业</div>
 			<div class="group-cont">{{resumeData.person.job}}</div>
 		</div>
 		<div class="line-between"></div>
@@ -69,62 +70,107 @@
 		</div>
 		<div class="line-between"></div>
 		<div class="form-group form-twin-four form-single">
-			<div class="group-name">年薪</div>
+			<div class="group-name">期望年薪</div>
 			<div class="group-cont">{{resumeData.person.salary}}</div>
 		</div>
-		<div class="line-between"></div>
-		<div class="form-group form-twin-four form-single">
-			<div class="group-name">照片</div>
-			<div class="group-cont">{{resumeData.person.photo}}</div>
-		</div>
 	</form>
-	<!-- form-wrap -->
-	<form class="form-mode" ng-if="resumeData">
-		<div class="form-group form-twin-four form-multi">
-			<div class="group-name">个人评价</div>
-			<div class="group-cont">{{resumeData.info.evaluation}}</div>
-		</div>
-		<div class="line-between"></div>
-		<div class="form-group form-twin-four form-multi">
-			<div class="group-name">职业目标</div>
-			<div class="group-cont">{{resumeData.info.goal}}</div>
-		</div>
-	</form>
-	<!-- form-wrap -->
-	<form class="form-mode" ng-if="resumeData">
-		<div class="line-between"></div>
-		<div class="form-group form-twin-four form-single">
-			<div class="group-name">职业技能</div>
-			<div class="group-cont"></div>
-		</div>
-		<div ng-repeat="item in resumeData.skill">
-			<div class="line-between"></div>
-			<div class="form-group form-twin-four form-multi">
+	<div ng-repeat="item in resumeData.info" ng-if="resumeData">
+		<!-- form-wrap -->
+		<form class="form-mode">
+			<div class="form-group form-single">
 				<div class="group-name">{{item.title}}</div>
-				<div class="group-cont" ng-repeat="subItem in item.description">{{subItem.text}}/{{subItem.grade}}/{{subItem.level}}</div>
+				<div class="group-cont"></div>
+			</div>
+		</form>
+		<!-- form-wrap -->
+		<form class="form-mode">
+			<div class="form-group form-multi">
+				<div class="group-cont">{{item.description}}</div>
+			</div>
+		</form>
+	</div>
+	<div ng-if="resumeData">
+		<!-- form-wrap -->
+		<form class="form-mode">
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">职业技能</div>
+				<div class="group-cont"></div>
+			</div>
+		</form>
+		<!-- list mode -->
+		<div class="list-mode1 resume-list" ng-repeat="item in resumeData.skill">
+			<div class="mode-cont">
+				<!-- list -->
+				<ul class="clearfix">
+					<li class="list-item" ng-repeat="subItem in item.description"><span class="item"><span class="float-r color-gray gap-right">{{subItem.grade}}</span>{{subItem.text}}</span></li>
+				</ul>
 			</div>
 		</div>
-	</form>
-	<!-- form-wrap -->
-	<form class="form-mode" ng-if="resumeData">
-		<div class="line-between"></div>
-		<div class="form-group form-twin-four form-single">
-			<div class="group-name">工作经历</div>
-			<div class="group-cont"></div>
-		</div>
-		<div ng-repeat="item in resumeData.experience">
+	</div>
+	<div ng-if="resumeData">
+		<!-- form-wrap -->
+		<form class="form-mode">
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">工作经历</div>
+				<div class="group-cont"></div>
+			</div>
+		</form>
+		<!-- form-wrap -->
+		<form class="form-mode" ng-repeat="item in resumeData.experience">
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">企业名称</div>
+				<div class="group-cont">{{item.title}}</div>
+			</div>
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">入离时间</div>
+				<div class="group-cont">{{item.time}}</div>
+			</div>
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">所属行业</div>
+				<div class="group-cont">{{item.industry}}</div>
+			</div>
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">企业类型</div>
+				<div class="group-cont">{{item.property}}</div>
+			</div>
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">企业规模</div>
+				<div class="group-cont">{{item.size}}</div>
+			</div>
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-single">
+				<div class="group-name">企业网站</div>
+				<div class="group-cont"><a target="_blank" href="{{item.website}}">{{item.tip}}</a></div>
+			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-multi">
-				<div class="group-name">{{item.title}}</div>
-				<div class="group-cont">{{item.industry}}/{{item.property}}/{{item.size}}/{{item.description}}/{{item.duty}}/{{item.website}}/{{item.tip}}</div>
+				<div class="group-name">企业介绍</div>
+				<div class="group-cont">{{item.description}}</div>
 			</div>
-		</div>
-	</form>
-	<!-- form-wrap -->
-	<form class="form-mode" ng-if="resumeData">
-		<div class="form-group form-twin-four form-multi">
-			<div class="group-name">个人爱好</div>
-			<div class="group-cont">{{resumeData.other.hobby}}</div>
-		</div>
-	</form>
+			<div class="line-between"></div>
+			<div class="form-group form-twin-four form-multi">
+				<div class="group-name">个人职责</div>
+				<div class="group-cont">{{item.duty}}</div>
+			</div>
+		</form>
+	</div>
+	<div ng-repeat="item in resumeData.other" ng-if="resumeData">
+		<!-- form-wrap -->
+		<form class="form-mode">
+			<div class="form-group form-single">
+				<div class="group-name">{{item.title}}</div>
+				<div class="group-cont"></div>
+			</div>
+		</form>
+		<!-- form-wrap -->
+		<form class="form-mode">
+			<div class="form-group form-multi">
+				<div class="group-cont">{{item.description}}</div>
+			</div>
+		</form>
+	</div>
 </div>
