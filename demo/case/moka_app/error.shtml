@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=640" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>魔卡幻想</title>
+</head>
+<body id="error">
+<!-- Header -->
+<div class="header">
+	<div class="box_title">
+		<div class="search tem_btn f-r"><a href="gl_search.shtml" class="hide"><span>搜索</span></a></div>
+		<h1 class="title">404 访问异常</h1>
+	</div>
+</div>
+<!-- Header End --> 
+<!-- Container -->
+<div class="container">
+	<div class="content">
+		<p>很抱歉，您访问的游戏/内容不存在！</p>
+		<span><a href="gl_search.shtml">点击搜索</a>，查找更多游戏/内容。</span>
+	</div>
+</div>
+</div>
+<!-- Container End -->
+</body>
+</html>

@@ -1,0 +1,250 @@
+﻿@charset "utf-8";
+/* jary */
+/* September 24, 2015 */
+
+/* main */
+body,h1,h2,h3,p,ul,li{margin:0;padding:0;outline:none;}
+body{font-size:65%;line-height:2;font-family:Microsoft YaHei,Arial,sans-serif;color:#000;}
+ul,li{list-style:none;}
+img{border:none;}
+em,i{font-style:normal;}
+a,a:hover{text-decoration:none;color:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a:focus{outline:none;}
+::-webkit-input-placeholder,:-moz-placeholder,::-moz-placeholder,:-ms-input-placeholder{color:#ccc;}
+.clear{clear:both;}
+.clearfix{zoom:1;}
+.clearfix:after{content:'\20';display:block;clear:both;}
+.hide{display:block;font-size:0;line-height:0;text-indent:-999px;overflow:hidden;}
+
+/* Swiper */
+.swiper-container{position:relative;overflow:hidden;
+    -webkit-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    backface-visibility:hidden;
+    /* Fix of Webkit flickering */
+    z-index:1;}
+.swiper-wrapper {position:relative;width:100%;
+    -webkit-transition-property:-webkit-transform, left, top;
+    -webkit-transition-duration:0s;
+    -webkit-transform:translate3d(0px,0,0);
+    -webkit-transition-timing-function:ease;
+    
+    -ms-transition-property:-ms-transform, left, top;
+    -ms-transition-duration:0s;
+    -ms-transform:translate3d(0px,0,0);
+    -ms-transition-timing-function:ease;
+    
+    transition-property:transform, left, top;
+    transition-duration:0s;
+    transform:translate3d(0px,0,0);
+    transition-timing-function:ease;
+
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;}
+.swiper-free-mode > .swiper-wrapper {
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    margin:0 auto;
+}
+.swiper-slide {float:left;-webkit-box-sizing:content-box;box-sizing:content-box;}
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal{-ms-touch-action: pan-y;}
+.swiper-wp8-vertical{-ms-touch-action: pan-x;}
+
+.listData li .ranking span,.listData li .photo span,.listData li .info .sex .icon,.listData li .info .label .icon,.listData li .change .icon,.loading{background-repeat:no-repeat;
+    -webkit-background-size:contain;
+    -ms-background-size:contain;
+    -moz-background-size:contain;
+    -o-background-size:contain;
+    background-size:contain;}
+
+.listData .swiper-pagination-bullet,.listData li .photo{
+    -webkit-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;}
+
+.listData li .change{
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%);}
+
+.loading{
+    -webkit-transform:translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+    -moz-transform:translate(-50%, -50%);
+    -o-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);}
+
+.loading{position:fixed;left:50%;top:50%;background-image:url("../images/loading.gif");z-index:50;}
+
+/* container */
+.wrapTitle{position:fixed;top:0;left:0;right:0;z-index:9;background-color:#f53f76;text-align:center;font-size:0;overflow:hidden;}
+.wrapTitle li{display:inline-block;background-color:#f55082;color:#fff;overflow:hidden;vertical-align:middle;}
+.wrapTitle li.cur{background-color:#d73063;}
+
+.listData .swiper-pagination{position:fixed;left:0;right:0;z-index:9;border-bottom:1px solid #ccc;background-color:#fff;}
+.listData .swiper-pagination-bullet{display:inline-block;width:50%;height:100%;color:#666;text-align:center;}
+.listData .swiper-pagination-bullet-active{color:#f53f77;}
+.listData .swiper-wrapper{width:400%;}
+.listData .swiper-slide{overflow:auto;}
+
+.listData li{position:relative;border-bottom:1px solid #ccc;}
+.listData li .ranking{float:left;display:table;text-align:center;}
+.listData li .ranking span{display:table-cell;vertical-align:middle;color:#999;}
+.listData .first .ranking span,.listData .second .ranking span,.listData .third .ranking span{display:block;width:100%;height:100%;font-size:0;text-indent:-9999px;overflow:hidden;background-position:center center;}
+.listData .first .ranking span{background-image:url("../images/ranking_top1.png");}
+.listData .second .ranking span{background-image:url("../images/ranking_top2.png");}
+.listData .third .ranking span{background-image:url("../images/ranking_top3.png");}
+.listData li .photo{float:left;}
+.listData li .photo span{display:block;width:100%;height:100%;border-radius:100%;}
+.listData .first .photo,.listData .second .photo,.listData .third .photo{padding:0;}
+.listData li .info{overflow:hidden;color:#fff;font-size:0;}
+.listData li .info .name{display:block;color:#666;overflow:hidden;}
+.listData li .info .sex{display:inline-block;vertical-align:top;}
+.listData li .info .sex.male{background-color:#54bdff;}
+.listData li .info .sex.female{background-color:#ff97d2;}
+.listData li .info .sex i{display:inline-block;vertical-align:top;}
+.listData li .info .sex .icon{font-size:0;}
+.listData li .info .sex.male .icon{background-image:url("../images/userSex_male.png");}
+.listData li .info .sex.female .icon{background-image:url("../images/userSex_female.png");}
+
+.listData li .info .label{display:inline-block;vertical-align:top;}
+.listData li .info .label.a{background-color:#f53f76;}
+.listData li .info .label.b{background-color:#f53f76;}
+.listData li .info .label.c{background-color:#f53f76;}
+.listData li .info .label.d{background-color:#f53f76;}
+.listData li .info .label.e{background-color:#f53f76;}
+.listData li .info .label.f{background-color:#ffab0c;}
+.listData li .info .label.g{background-color:#3fcb34;}
+.listData li .info .label.h{background-color:#9978ff;}
+.listData li .info .label.i{background-color:#ff783d;}
+.listData li .info .label i{display:inline-block;vertical-align:top;}
+.listData li .info .label .icon{font-size:0;}
+.listData li .info .label.a .icon{background-image:url("../images/mylevel_icon1_xhdpi.png");}
+.listData li .info .label.b .icon{background-image:url("../images/mylevel_icon2_xhdpi.png");}
+.listData li .info .label.c .icon{background-image:url("../images/mylevel_icon3_xhdpi.png");}
+.listData li .info .label.d .icon{background-image:url("../images/mylevel_icon4_xhdpi.png");}
+.listData li .info .label.e .icon{background-image:url("../images/mylevel_icon5_xhdpi.png");}
+.listData li .info .label.f .icon{background-image:url("../images/mylevel_icon6_xhdpi.png");}
+.listData li .info .label.g .icon{background-image:url("../images/mylevel_icon7_xhdpi.png");}
+.listData li .info .label.h .icon{background-image:url("../images/mylevel_icon8_xhdpi.png");}
+.listData li .info .label.i .icon{background-image:url("../images/mylevel_icon9_xhdpi.png");}
+
+.listData li .change{position:absolute;top:50%;}
+.listData li .change i{display:inline-block;vertical-align:middle;}
+.listData li .change .icon{font-size:0;}
+.listData li .change.up .icon{background-image:url("../images/ranking_up.png");}
+.listData li .change.up .num{color:#3c3;}
+.listData li .change.down .icon{background-image:url("../images/ranking_down.png");}
+.listData li .change.down .num{color:#f36;}
+
+@media screen and (max-width: 639px) {
+.wrapTitle{height:44px;line-height:44px;}
+.wrapTitle li{height:30px;line-height:30px;font-size:13px;padding:0 35px;}
+.wrapTitle li:first-child{border-radius:5px 0 0 5px;}
+.wrapTitle li:last-child{border-radius:0 5px 5px 0;}
+
+.listData .swiper-pagination{top:44px;height:35px;line-height:35px;}
+.listData .swiper-pagination-bullet{font-size:15px;}
+.listData .swiper-pagination-bullet-active{border-bottom:2px solid #f53f76;}
+.listData .swiper-wrapper{padding-top:80px;}
+
+.listData li .ranking{width:25px;margin:0 10px;height:60px;}
+.listData li .ranking span{font-size:18px;}
+.listData li .photo{width:60px;height:60px;padding:7px;margin-right:10px;}
+.listData .first,.listData .second,.listData .third{padding:10px 0;}
+.listData .first .name,.listData .second .name,.listData .third .name{margin-top:5px;}
+.listData li .info .name{font-size:15px;margin-top:2px;height:30px;padding-right:50px;}
+.listData li .info .sex{height:12px;border-radius:5px;padding:2px 10px 2px 5px;}
+.listData li .info .sex .icon{width:12px;height:12px;margin-right:2px;}
+.listData li .info .sex .age{line-height:12px;font-size:12px;}
+
+.listData li .info .label{height:17px;border-radius:5px;padding:0 10px 0 5px;margin-left:5px;}
+.listData li .info .label .icon{width:17px;height:17px;margin-right:2px;}
+.listData li .info .label .text{line-height:17px;font-size:12px;}
+
+.listData li .change{right:15px;}
+.listData li .change .icon{width:10px;height:15px;margin-right:5px;}
+.listData li .change .num{line-height:15px;font-size:12px;}
+
+.loading{width:120px;height:120px;}
+}
+
+@media screen and (min-width: 360px) and (max-width: 639px) {
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 1079px) {
+.wrapTitle{height:89px;line-height:89px;}
+.wrapTitle li{height:60px;line-height:60px;font-size:26px;padding:0 70px;}
+.wrapTitle li:first-child{border-radius:10px 0 0 10px;}
+.wrapTitle li:last-child{border-radius:0 10px 10px 0;}
+
+.listData .swiper-pagination{top:89px;height:70px;line-height:70px;}
+.listData .swiper-pagination-bullet{font-size:30px;}
+.listData .swiper-pagination-bullet-active{border-bottom:4px solid #f53f76;}
+.listData .swiper-wrapper{padding-top:160px;}
+
+.listData li .ranking{width:50px;margin:0 20px;height:120px;}
+.listData li .ranking span{font-size:36px;}
+.listData li .photo{width:120px;height:120px;padding:15px;margin-right:20px;}
+.listData .first,.listData .second,.listData .third{padding:20px 0;}
+.listData .first .name,.listData .second .name,.listData .third .name{margin-top:10px;}
+.listData li .info .name{font-size:30px;margin-top:5px;height:60px;padding-right:100px;}
+.listData li .info .sex{height:24px;border-radius:10px;padding:5px 20px 5px 10px;}
+.listData li .info .sex .icon{width:24px;height:24px;margin-right:5px;}
+.listData li .info .sex .age{line-height:24px;font-size:24px;}
+
+.listData li .info .label{height:34px;border-radius:10px;padding:0 20px 0 10px;margin-left:10px;}
+.listData li .info .label .icon{width:34px;height:34px;margin-right:5px;}
+.listData li .info .label .text{line-height:34px;font-size:24px;}
+
+.listData li .change{right:30px;}
+.listData li .change .icon{width:20px;height:30px;margin-right:10px;}
+.listData li .change .num{line-height:30px;font-size:24px;}
+
+.loading{width:240px;height:240px;}
+}
+
+@media screen and (min-width: 720px) and (max-width: 1079px) {
+
+}
+
+@media screen and (min-width: 1080px) {
+.wrapTitle{height:150px;line-height:150px;}
+.wrapTitle li{height:101px;line-height:101px;font-size:43px;padding:0 118px;}
+.wrapTitle li:first-child{border-radius:16px 0 0 16px;}
+.wrapTitle li:last-child{border-radius:0 16px 16px 0;}
+
+.listData .swiper-pagination{top:150px;height:118px;line-height:118px;}
+.listData .swiper-pagination-bullet{font-size:50px;}
+.listData .swiper-pagination-bullet-active{border-bottom:6px solid #f53f76;}
+.listData .swiper-wrapper{padding-top:269px;}
+
+.listData li .ranking{width:84px;margin:0 33px;height:202px;}
+.listData li .ranking span{font-size:60px;}
+.listData li .photo{width:202px;height:202px;padding:25px;margin-right:33px;}
+.listData .first,.listData .second,.listData .third{padding:33px 0;}
+.listData .first .name,.listData .second .name,.listData .third .name{margin-top:16px;}
+.listData li .info .name{font-size:50px;margin-top:8px;height:101px;padding-right:168px;}
+.listData li .info .sex{height:40px;border-radius:16px;padding:8px 33px 8px 16px;}
+.listData li .info .sex .icon{width:40px;height:40px;margin-right:8px;}
+.listData li .info .sex .age{line-height:40px;font-size:40px;}
+
+.listData li .info .label{height:57px;border-radius:16px;padding:0 33px 0 16px;margin-left:16px;}
+.listData li .info .label .icon{width:57px;height:57px;margin-right:8px;}
+.listData li .info .label .text{line-height:57px;font-size:40px;}
+
+.listData li .change{right:50px;}
+.listData li .change .icon{width:33px;height:50px;margin-right:16px;}
+.listData li .change .num{line-height:50px;font-size:40px;}
+
+.loading{width:405px;height:405px;}
+}

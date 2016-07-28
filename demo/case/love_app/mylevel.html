@@ -1,0 +1,280 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我的等级 - 24小时虚拟恋人陪伴，情感治愈平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="email=no" name="format-detection" />
+<meta content="telephone=no" name="format-detection" />
+<meta http-equiv="cleartype" content="on" />
+<meta name="keywords" content="恋人,虚拟恋人,虚拟女友,虚拟男友,网络恋人,手机恋人,虚拟恋爱,恋人服务,网络男友,网络女友,我的等级" />
+<meta name="description" content="我的等级 - 24小时虚拟恋人陪伴，情感治愈平台" />
+<style>
+html,body,ul,li,span,i,em,strong,b,dl,dt,dd{margin:0;padding:0;font-style:normal;list-style:none;outline:none;font-weight:normal;}
+body{font-family:Microsoft YaHei, Arial, Verdana, sans serif;font-size:62%;line-height:2em;background-color:#cce4e6;}
+
+.myLevel{position:relative;}
+.topImg{position:absolute;top:0;right:0;left:0;background-position:center bottom;background-repeat:repeat-x;background-image:url(images/mylevel_topImg.png);}
+.levelCont{position:relative;z-index:9;border-left-style:solid;border-left-color:rgba(255,255,255,.5);}
+.levelCont li{position:relative;}
+.levelCont span{display:block;color:#399;line-height:1.8em;}
+.levelCont em{display:inline-block;vertical-align:middle;background-color:#f53f76;background-repeat:no-repeat;color:#fff;}
+.levelCont .f{background-color:#ffab0d;}
+.levelCont .dot,.levelCont .dotFun{position:absolute;background-color:#73dde6;border-radius:50%;}
+.levelCont .dot{z-index:2;}
+.levelCont .dotFun{z-index:1;border:1px solid;border-color:rgba(255,255,255,.8);background-clip:content-box;
+            -webkit-animation:dotFlash 1s ease infinite normal;
+            -ms-animation:dotFlash 1s ease infinite normal;
+            -moz-animation:dotFlash 1s ease infinite normal;
+            -o-animation:dotFlash 1s ease infinite normal;
+            transition:dotFlash 1s ease infinite normal;}
+.levelInfo{background:#fff url(images/mylevel_bg.png) center top no-repeat;background-size:100%;}
+.levelInfo dt{color:#000;}
+.levelInfo dd{color:#666;}
+.levelInfo dd i{color:#f53f77;}
+
+.cloud{position:absolute;background-repeat:no-repeat;}
+.cloud2{opacity:.4;
+    -webkit-transform:rotate(-160deg) scale(1,-1);
+    -ms-transform:rotate(-160deg) scale(1,-1);
+    -moz-transform:rotate(-160deg) scale(1,-1);
+    -o-transform:rotate(-160deg) scale(1,-1);
+    transform:rotate(-160deg) scale(1,-1);}
+.cloud3{opacity:.4;
+    -webkit-transform:rotate(-380deg);
+    -ms-transform:rotate(-380deg);
+    -moz-transform:rotate(-380deg);
+    -o-transform:rotate(-380deg);
+    transform:rotate(-380deg);}
+.cloud4{position:fixed;
+    -webkit-animation:cloudFlash 20s linear infinite normal;
+    -ms-animation:cloudFlash 20s linear infinite normal;
+    -moz-animation:cloudFlash 20s linear infinite normal;
+    -o-animation:cloudFlash 20s linear infinite normal;
+    transition:cloudFlash 20s linear infinite normal;}
+
+@media screen and (max-width: 639px) {
+.topImg{height:25px;background-size:auto 25px;}
+.levelCont{padding-top:45px;padding-bottom:75px;margin-left:30px;border-left-width:2px;}
+.levelCont li{padding-left:20px;margin-bottom:25px;}
+.levelCont span{font-size:14px;}
+.levelCont i{font-size:12px;}
+.levelCont strong{font-size:18px;margin-left:10px;}
+.levelCont em{padding:0 10px 0 25px;line-height:20px;font-size:12px;border-radius:5px;background-position:3px center;background-size:auto 100%;}
+.levelCont .a{background-image:url(images/mylevel_icon1_hdpi.png);}
+.levelCont .b{background-image:url(images/mylevel_icon2_hdpi.png);}
+.levelCont .c{background-image:url(images/mylevel_icon3_hdpi.png);}
+.levelCont .d{background-image:url(images/mylevel_icon4_hdpi.png);}
+.levelCont .e{background-image:url(images/mylevel_icon5_hdpi.png);}
+.levelCont .f{background-image:url(images/mylevel_icon6_hdpi.png);}
+.levelCont .dot{top:7px;left:-9px;width:16px;height:16px;}
+.levelCont .dotFun{top:9px;left:-6px;width:10px;height:10px;}
+.levelInfo{padding:80px 15px 25px 15px;margin-top:-80px;line-height:22px;}
+.levelInfo dt{font-size:14px;}
+.levelInfo dd{font-size:12px;margin-bottom:10px;}
+
+.cloud1,.cloud2,.cloud3,.cloud4{width:50px;height:50px;background-position:0 -50px;background-image:url(images/mylevel_spirit_hdpi.png);}
+.cloud1{top:430px;right:10px;-webkit-transform:scale(.5);-ms-transform:scale(.5);-moz-transform:scale(.5);-o-transform:scale(.5);transform:scale(.5);}
+.cloud2{top:250px;left:-2px;opacity:.4;
+    -webkit-transform:rotate(-160deg) scale(.5,-0.5);
+    -ms-transform:rotate(-160deg) scale(.5,-0.5);
+    -moz-transform:rotate(-160deg) scale(.5,-0.5);
+    -o-transform:rotate(-160deg) scale(.5,-0.5);
+    transform:rotate(-160deg) scale(.5,-0.5);}
+.cloud3{top:650px;left:17px;opacity:.4;
+    -webkit-transform:rotate(-380deg) scale(.5);
+    -ms-transform:rotate(-380deg) scale(.5);
+    -moz-transform:rotate(-380deg) scale(.5);
+    -o-transform:rotate(-380deg) scale(.5);
+    transform:rotate(-380deg) scale(.5); }
+.cloud4{top:100px;left:-100px;width:160px;height:110px;background-position:-140px -20px;-webkit-transform:scale(.5);-ms-transform:scale(.5);-moz-transform:scale(.5);-o-transform:scale(.5);transform:scale(.5);}
+
+@-webkit-keyframes dotFlash{0%{border-width:1px;top:9px;left:-6px;border-color:rgba(255,255,255,.8);} 100%{border-width:10px;top:0;left:-16px;border-color:rgba(255,255,255,0);}}
+@-ms-keyframes dotFlash{0%{border-width:1px;top:9px;left:-6px;border-color:rgba(255,255,255,.8);} 100%{border-width:10px;top:0;left:-16px;border-color:rgba(255,255,255,0);}}
+@-moz-keyframes dotFlash{0%{border-width:1px;top:9px;left:-6px;border-color:rgba(255,255,255,.8);} 100%{border-width:10px;top:0;left:-16px;border-color:rgba(255,255,255,0);}}
+@-o-keyframes dotFlash{0%{border-width:1px;top:9px;left:-6px;border-color:rgba(255,255,255,.8);} 100%{border-width:10px;top:0;left:-16px;border-color:rgba(255,255,255,0);}}
+@keyframes dotFlash{0%{border-width:1px;top:9px;left:-6px;border-color:rgba(255,255,255,.8);} 100%{border-width:10px;top:0;left:-16px;border-color:rgba(255,255,255,0);}}
+
+@-webkit-keyframes cloudFlash{0%{left:-100px;} 100%{left:475px;}}
+@-ms-keyframes cloudFlash{0%{left:-100px;} 100%{left:475px;}}
+@-moz-keyframes cloudFlash{0%{left:-100px;} 100%{left:475px;}}
+@-o-keyframes cloudFlash{0%{left:-100px;} 100%{left:475px;}}
+@keyframes cloudFlash{0%{left:-100px;} 100%{left:475px;}}
+}
+
+@media screen and (min-width: 640px) and (max-width: 1079px) {
+.topImg{height:50px;background-size:auto 50px;}
+.levelCont{padding-top:90px;padding-bottom:150px;margin-left:60px;border-left-width:4px;}
+.levelCont li{padding-left:40px;margin-bottom:50px;}
+.levelCont span{font-size:26px;}
+.levelCont i{font-size:20px;}
+.levelCont strong{font-size:30px;margin-left:20px;}
+.levelCont em{padding:0 20px 0 40px;line-height:34px;font-size:16px;border-radius:10px;background-position:5px center;}
+.levelCont .a{background-image:url(images/mylevel_icon1_hdpi.png);}
+.levelCont .b{background-image:url(images/mylevel_icon2_hdpi.png);}
+.levelCont .c{background-image:url(images/mylevel_icon3_hdpi.png);}
+.levelCont .d{background-image:url(images/mylevel_icon4_hdpi.png);}
+.levelCont .e{background-image:url(images/mylevel_icon5_hdpi.png);}
+.levelCont .f{background-image:url(images/mylevel_icon6_hdpi.png);}
+.levelCont .dot{top:14px;left:-18px;width:32px;height:32px;}
+.levelCont .dotFun{top:18px;left:-12px;width:20px;height:20px;}
+.levelInfo{padding:160px 30px 50px 30px;margin-top:-160px;line-height:42px;}
+.levelInfo dt{font-size:24px;}
+.levelInfo dd{font-size:22px;margin-bottom:20px;}
+
+.cloud{background-image:url(images/mylevel_spirit_hdpi.png);}
+.cloud1,.cloud2,.cloud3{width:50px;height:50px;background-position:0 -50px;}
+.cloud1{top:860px;right:20px;}
+.cloud2{top:500px;left:16px;}
+.cloud3{top:1300px;left:58px;}
+.cloud4{top:200px;left:-200px;width:160px;height:110px;background-position:-140px -20px;}
+
+@-webkit-keyframes dotFlash{0%{border-width:1px;top:18px;left:-12px;border-color:rgba(255,255,255,.8);} 100%{border-width:20px;top:0;left:-32px;border-color:rgba(255,255,255,0);}}
+@-ms-keyframes dotFlash{0%{border-width:1px;top:18px;left:-12px;border-color:rgba(255,255,255,.8);} 100%{border-width:20px;top:0;left:-32px;border-color:rgba(255,255,255,0);}}
+@-moz-keyframes dotFlash{0%{border-width:1px;top:18px;left:-12px;border-color:rgba(255,255,255,.8);} 100%{border-width:20px;top:0;left:-32px;border-color:rgba(255,255,255,0);}}
+@-o-keyframes dotFlash{0%{border-width:1px;top:18px;left:-12px;border-color:rgba(255,255,255,.8);} 100%{border-width:20px;top:0;left:-32px;border-color:rgba(255,255,255,0);}}
+@keyframes dotFlash{0%{border-width:1px;top:18px;left:-12px;border-color:rgba(255,255,255,.8);} 100%{border-width:20px;top:0;left:-32px;border-color:rgba(255,255,255,0);}}
+
+@-webkit-keyframes cloudFlash{0%{left:-200px;} 100%{left:950px;}}
+@-ms-keyframes cloudFlash{0%{left:-200px;} 100%{left:950px;}}
+@-moz-keyframes cloudFlash{0%{left:-200px;} 100%{left:950px;}}
+@-o-keyframes cloudFlash{0%{left:-200px;} 100%{left:950px;}}
+@keyframes cloudFlash{0%{left:-200px;} 100%{left:950px;}}
+}
+
+@media screen and (min-width: 1080px) {
+.topImg{height:84px;background-size:auto 84px;}
+.levelCont{padding-top:152px;padding-bottom:254px;margin-left:101px;border-left-width:6px;}
+.levelCont li{padding-left:68px;margin-bottom:84px;}
+.levelCont span{font-size:44px;}
+.levelCont i{font-size:34px;}
+.levelCont strong{font-size:50px;margin-left:34px;}
+.levelCont em{padding:0 34px 0 68px;line-height:58px;font-size:27px;border-radius:16px;background-position:8px center;}
+.levelCont .a{background-image:url(images/mylevel_icon1_xhdpi.png);}
+.levelCont .b{background-image:url(images/mylevel_icon2_xhdpi.png);}
+.levelCont .c{background-image:url(images/mylevel_icon3_xhdpi.png);}
+.levelCont .d{background-image:url(images/mylevel_icon4_xhdpi.png);}
+.levelCont .e{background-image:url(images/mylevel_icon5_xhdpi.png);}
+.levelCont .f{background-image:url(images/mylevel_icon6_xhdpi.png);}
+.levelCont .dot{top:24px;left:-30px;width:54px;height:54px;}
+.levelCont .dotFun{top:30px;left:-20px;width:34px;height:34px;}
+.levelInfo{padding:270px 50px 84px 50px;margin-top:-270px;line-height:70px;}
+.levelInfo dt{font-size:40px;}
+.levelInfo dd{font-size:38px;margin-bottom:34px;}
+
+.cloud{background-image:url(images/mylevel_spirit_xhdpi.png);}
+.cloud1,.cloud2,.cloud3{width:84px;height:84px;background-position:0 -84px;}
+.cloud1{top:1452px;right:34px;}
+.cloud2{top:844px;left:27px;}
+.cloud3{top:2194px;left:98px;}
+.cloud4{top:338px;left:-338px;width:270px;height:186px;background-position:-236px -34px;}
+
+@-webkit-keyframes dotFlash{0%{border-width:1px;top:30px;left:-20px;border-color:rgba(255,255,255,.8);} 100%{border-width:33px;top:0;left:-54px;border-color:rgba(255,255,255,0);}}
+@-ms-keyframes dotFlash{0%{border-width:1px;top:30px;left:-20px;border-color:rgba(255,255,255,.8);} 100%{border-width:33px;top:0;left:-54px;border-color:rgba(255,255,255,0);}}
+@-moz-keyframes dotFlash{0%{border-width:1px;top:30px;left:-20px;border-color:rgba(255,255,255,.8);} 100%{border-width:33px;top:0;left:-54px;border-color:rgba(255,255,255,0);}}
+@-o-keyframes dotFlash{0%{border-width:1px;top:30px;left:-20px;border-color:rgba(255,255,255,.8);} 100%{border-width:33px;top:0;left:-54px;border-color:rgba(255,255,255,0);}}
+@keyframes dotFlash{0%{border-width:1px;top:30px;left:-20px;border-color:rgba(255,255,255,.8);} 100%{border-width:33px;top:0;left:-54px;border-color:rgba(255,255,255,0);}}
+
+@-webkit-keyframes cloudFlash{0%{left:-338px;} 100%{left:1604px;}}
+@-ms-keyframes cloudFlash{0%{left:-338px;} 100%{left:1604px;}}
+@-moz-keyframes cloudFlash{0%{left:-338px;} 100%{left:1604px;}}
+@-o-keyframes cloudFlash{0%{left:-338px;} 100%{left:1604px;}}
+@keyframes cloudFlash{0%{left:-338px;} 100%{left:1604px;}}
+}
+</style>
+</head>
+<body>
+<div class="myLevel">
+    <div class="topImg"></div>
+    <ul class="levelCont">
+        <li>
+            <span><i>Lv1</i><strong>见习恋人</strong></span>
+            <span>要求：审核通过</span>
+            <span>特权1：提成比例40%</span>
+            <span>特权2：开启接单功能</span>
+            <span>获得头衔：<em class="a">见习恋人</em></span>
+            <div class="dot"><b></b></div>
+            <div class="dotFun"></div>
+        </li>
+        <li>
+            <span><i>Lv2</i><strong>初级恋人</strong></span>
+            <span>要求：魅力值300</span>
+            <span>特权1：提成比例45%</span>
+            <span>特权2：开启自定义服务功能</span>
+            <span>获得头衔：<em class="b">初级恋人</em></span>
+            <div class="dot"></div>
+            <div class="dotFun"></div>
+        </li>
+        <li>
+            <span><i>Lv3</i><strong>高级恋人</strong></span>
+            <span>要求：魅力值1800</span>
+            <span>特权：提成比例50%</span>
+            <span>获得头衔：<em class="c">高级恋人</em></span>
+            <div class="dot"></div>
+            <div class="dotFun"></div>
+        </li>
+        <li>
+            <span><i>Lv4</i><strong>恋爱达人</strong></span>
+            <span>要求：魅力值20000</span>
+            <span>特权：提成比例55%</span>
+            <span>获得头衔：<em class="d">恋爱达人</em></span>
+            <div class="dot"></div>
+            <div class="dotFun"></div>
+        </li>
+        <li>
+            <span><i>Lv5</i><strong>恋爱大师</strong></span>
+            <span>要求：魅力值50000</span>
+            <span>特权：提成比例60%</span>
+            <span>获得头衔：<em class="e">恋爱大师</em></span>
+            <div class="dot"></div>
+            <div class="dotFun"></div>
+        </li>
+        <li>
+            <span><i>Lv6</i><strong>官方特约</strong></span>
+            <span>要求：官方选拔提升</span>
+            <span>特权1：提成比例70%+额外提成奖励</span>
+            <span>特权2：首页推荐</span>
+            <span>获得头衔：<em class="f">特约恋人</em></span>
+            <div class="dot"></div>
+            <div class="dotFun"></div>
+        </li>
+    </ul>
+    <dl class="levelInfo" id="levelInfo">
+        <dt>魅力值简介：</dt>
+        <dd><i>魅力值</i>是你作为恋人的<i>核心指标</i>，魅力值到达相应标准就可以升级为更高级的恋人。</dd>
+        <dt>魅力值获得途径：</dt>
+        <dd>偶遇接单：每日<i>前10单</i>每单可获得<i>10魅力值</i>（上限100）。<i>续时</i>、<i>收礼物</i>可以获得<i>等量爱意的魅力值</i>（即收到续时500爱意/小时则增加500魅力值，收到价值100爱意的礼物则增加100魅力值）</dd>
+        <dt>升级：</dt>
+        <dd>当魅力值到达指定要求时即可升级，升级后可以提升分成比例。</dd>
+        <dt>自定义服务：</dt>
+        <dd>当成为初级恋人后可以自己<i>更改服务</i>（续时）内容及价格，并在通过审核后可以上架并在<i>广场</i>中展示<i>出售</i>。</dd>
+    </dl>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4" id="cloudFlash"></div>
+</div>
+<script>
+//隐藏云
+function cloudFun(){
+    var cloudFlash = document.getElementById('cloudFlash');
+    var levelInfo = document.getElementById('levelInfo');
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) ? document.documentElement.scrollTop : document.body.scrollTop;
+    var maxHeight = levelInfo.offsetTop/1.3;
+    if(scrollTop > maxHeight){
+        cloudFlash.style.display = 'none';
+    }else{
+        cloudFlash.style.display = 'block';
+    };
+};
+window.onload = function(){
+    cloudFun();
+};
+window.onscroll = function(){
+    cloudFun();
+};
+</script>
+</body>
+</html>

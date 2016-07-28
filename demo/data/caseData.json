@@ -97,5 +97,48 @@
 			{"name":"发布新任务-FAQ", "url":"seaclouds_offline/add_step3.php"}
 		],
 		"hot":"false"
+	},
+	{
+		"id":"5",
+		"title":"蜜糖app内嵌页",
+		"description":"蜜糖app内嵌的HTML5页面",
+		"date":"2015-09-25",
+		"belong":"盛久网络",
+		"tags":"Mobile",
+		"pages":[
+			{"name":"蜜糖指数", "url":"love_app/abilityvalue.html"},
+			{"name":"我的等级", "url":"love_app/mylevel.html"},
+			{"name":"排行榜", "url":"love_app/rankinglist.html"},
+			{"name":"应用推荐", "url":"love_app/recommend.html"}
+		],
+		"hot":"false"
+	},
+	{
+		"id":"6",
+		"title":"魔卡幻想专区",
+		"description":"魔卡幻想专区移动版",
+		"date":"2013-04-02",
+		"belong":"盛久网络",
+		"tags":"Mobile",
+		"pages":[
+			{"name":"登录页", "url":"moka_app/login.shtml"},
+			{"name":"注册页", "url":"moka_app/register.shtml"},
+			{"name":"用户信息页-已登录", "url":"moka_app/catalogue.shtml"},
+			{"name":"用户信息页-未登录", "url":"moka_app/catalogue2.shtml"},
+			{"name":"首页", "url":"moka_app/index.shtml"},
+			{"name":"攻略详情页", "url":"moka_app/gl_article_details.shtml"},
+			{"name":"心情详情页", "url":"moka_app/xq_article_details.shtml"},
+			{"name":"微评详情页", "url":"moka_app/wp_article_details.shtml"},
+			{"name":"秀秀详情页", "url":"moka_app/xx_article_details.shtml"},
+			{"name":"公告详情页", "url":"moka_app/gg_article_details.shtml"},
+			{"name":"攻略搜索页", "url":"moka_app/gl_search.shtml"},
+			{"name":"游戏搜索页", "url":"moka_app/yx_search.shtml"},
+			{"name":"攻略发表页", "url":"moka_app/gl_article_comment.shtml"},
+			{"name":"心情发表页", "url":"moka_app/xq_article_comment.shtml"},
+			{"name":"微评发表页", "url":"moka_app/wp_article_comment.shtml"},
+			{"name":"秀秀发表页", "url":"moka_app/xx_article_comment.shtml"},
+			{"name":"报错页", "url":"moka_app/error.shtml"}
+		],
+		"hot":"false"
 	}
 ]
