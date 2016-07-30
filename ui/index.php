@@ -3,7 +3,7 @@
 	<div class="content">
 		<!-- index search -->
 		<div class="index-search">
-			<div class="index-logo"><img src="../images/logo.png"></div>
+			<div class="index-logo"><img src="images/logo.png"></div>
 			<div class="search-cont">
 				<button class="submit icon-search" title="GO"></button>
 				<div class="search-input">
@@ -60,10 +60,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-	<!-- footer -->
-	<div class="footer">
-		<p class="copyright">@Jary 2016</p>
 	</div>
 	<!-- menu -->
 	<div class="menu">

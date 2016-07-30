@@ -10,7 +10,7 @@
 	<!-- content -->
 	<div class="content">
 		<!-- article detail -->
-		<div class="article-detail">
+		<div class="detail-mode">
 			<h2 class="detail-title">你需要知道的22个HTML5技巧</h2>
 			<div class="detail-data">
 				<span class="data-item">HTML</span>
