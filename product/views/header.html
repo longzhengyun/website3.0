@@ -1,0 +1,10 @@
+<div class="header-cont">
+	<!-- title -->
+	<h1 class="header-title">{{initHeader.title}}</h1>
+	<!-- back -->
+	<span class="header-icon icon-back" ng-if="initHeader.btnBack" ng-click="goBack()"></span>
+	<!-- search -->
+	<span class="header-icon icon-search2" ng-if="initHeader.btnSearch" ng-click="goTarget('search')"></span>
+	<!-- home -->
+	<span class="header-icon icon-home2" ng-if="initHeader.btnHome" ng-click="goTarget('home')"></span>
+</div>

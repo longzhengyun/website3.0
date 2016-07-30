@@ -1,0 +1,175 @@
+{
+	"person": {
+		"name": "5p2O5p2w",
+		"nickname": "SmFyeQ==",
+		"birthday": "MTk4NDA2MTA=",
+		"job": "d2Vi5YmN56uv5byA5Y+R",
+		"phone": "MTM0ODI4NzIwNTc=",
+		"email": "amFyeTA0MTlAMTYzLmNvbQ==",
+		"degrees": "5aSn5a2m5pys56eR77yM5a2m5aOr5a2m5L2N",
+		"major": "6K6h566X5py656eR5a2m5LiO5oqA5pyv",
+		"worklife": "MjAwNzA5",
+		"state": "5Zyo6IGM",
+		"salary": "LS0=",
+		"photo": "aW1hZ2VzL2phcnkuanBn"
+	},
+	"info": [
+		{
+			"title":"个人评价",
+			"description": "不算是个特别机灵的人，靠着一股精益求精的劲头，愿意在web前端开发这一块拼搏发展。做出了一些成绩，获得了一些认可！工作时有些轻微强迫症，会设计、懂些编程、带过小团队，能在设计部门及后台开发之间做得良好沟通，协助他们、甚至促进他们完善工作，提高项目完成效率。总的来说，是个踏实肯干，愿意钻研的人！"
+		},
+		{
+			"title":"职业目标",
+			"description": "工作多年，参与过很多项目！前端技能也渐渐运用得娴熟无比，希望能做个成功的项目来证明自己，不管是参与还是带领团队。愿意为这个目标奋斗终生！"
+		}
+	],
+	"skill": [
+		{
+			"title": "编程类",
+			"description": [
+				{
+					"text": "HTML5",
+					"grade": "精通"
+				},
+				{
+					"text": "CSS3",
+					"grade": "精通"
+				},
+				{
+					"text": "jQuery",
+					"grade": "精通"
+				},
+				{
+					"text": "JavaScript",
+					"grade": "熟练"
+				},
+				{
+					"text": "AJAX",
+					"grade": "熟练"
+				},
+				{
+					"text": "Sass/Less",
+					"grade": "了解"
+				},
+				{
+					"text": "PHP",
+					"grade": "了解"
+				}
+			]
+		},
+		{
+			"title": "工具类",
+			"description": [
+				{
+					"text": "Photoshop",
+					"grade": "精通"
+				},
+				{
+					"text": "Dreamweaver",
+					"grade": "精通"
+				},
+				{
+					"text": "Sublime Text",
+					"grade": "精通"
+				},
+				{
+					"text": "Developer Tools",
+					"grade": "精通"
+				},
+				{
+					"text": "Visual Studio",
+					"grade": "熟练"
+				},
+				{
+					"text": "SVN",
+					"grade": "熟练"
+				},
+				{
+					"text": "Git",
+					"grade": "了解"
+				}
+			]
+		},
+		{
+			"title": "其他类",
+			"description": [
+				{
+					"text": "浏览器兼容",
+					"grade": "精通"
+				},
+				{
+					"text": "响应式",
+					"grade": "精通"
+				},
+				{
+					"text": "自适应",
+					"grade": "精通"
+				},
+				{
+					"text": "移动端",
+					"grade": "精通"
+				},
+				{
+					"text": "MVC",
+					"grade": "精通"
+				},
+				{
+					"text": "性能优化",
+					"grade": "精通"
+				}
+			]
+		}
+	],
+	"experience": [
+		{
+			"title": "上海盛久网络科技发展有限公司",
+			"time":"2012年10月 - 2015年10月",
+			"industry": "互联网 · 网络游戏",
+			"property": "私营 · 民营企业",
+			"size": "20 - 100人",
+			"description": "盛久网络是以网络服务交易平台为基础，以垂直资讯网站为门户，集移动娱乐内容开发、运营为一体的综合性互动娱乐企业。",
+			"duty": "web前端开发主管。承担完成公司所有与前端开发相关的需求，并协助设计及后台开发完成整个项目；培训新人及与前端开发有关联的其他部门同事。",
+			"website": "javascript:;",
+			"tip": "盛久网络，已无法访问"
+		},
+		{
+			"title": "上海第九城市信息技术有限公司",
+			"time":"2011年08月 - 2012年08月",
+			"industry": "互联网 · 网络游戏",
+			"property": "私营 · 上市企业",
+			"size": "500 - 999人",
+			"description": "第九城市是中国最早的互联网社区和领先的游戏娱乐服务提供商，对中国游戏市场有着全面的了解和深入的把握。",
+			"duty": "高级web前端开发工程师。承担公司网站“九城游戏中心”及其wap版的前端开发需求，并协助设计及后台开发完成各种新项目。部门涉及手机游戏业务，因此移动终端的前端开发也是工作之一。",
+			"website": "http://www.the9.com/",
+			"tip": "第九城市"
+		},
+		{
+			"title": "和家网(上海)信息技术有限公司",
+			"time":"2008年8月 - 2011年8月",
+			"industry": "互联网 · 媒体门户",
+			"property": "私营 · 民营企业",
+			"size": "100 - 499人",
+			"description": "和家网（上海）信息技术有限公司，是目前唯一一家完成两轮私募融资、高投入、高速发展的大型中文家居门户。",
+			"duty": "web前端开发主管。承担完成公司所有与前端开发相关的需求，并协助设计及后台开发完成整个项目；培训新人及与前端开发有关联的其他部门同事。",
+			"website": "http://www.51hejia.com/",
+			"tip": "和家网"
+		},
+		{
+			"title": "上海正侗达商贸有限公司",
+			"time":"2007年9月 - 2008年7月",
+			"industry": "互联网 · 电子商务",
+			"property": "私营 · 民营企业",
+			"size": "1 - 49人",
+			"description": "专业的酒水代理商，拥有自己的电子商务平台及行业信息交流门户网站。",
+			"duty": "网站美工/网站制作。负责网页设计，web前端开发，广告制作等。",
+			"website": "javascript:;",
+			"tip": "订酒网，已无法访问"
+		}
+	],
+	"other": [
+		{
+			"title":"个人爱好",
+			"description": "爱上网，爱阅读，也爱听音乐；能设计，能管理，更能前端开发；我是一个web前端开发爱好者，在路上前行着，不曾改变！"
+		}
+	]
+}

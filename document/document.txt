@@ -1,6 +1,5 @@
-网站结构：
-登录前和登录后
+佳瑞网 V3.0
 
-1、登录前：普通响应式文章列表
+使用技术包括：HTML5、CSS3、AngularJS、JavaScript、PHP等
 
-2、登录后：webapp布局 
+新版采用移动端优先，PC端兼容的模式，以AngularJS为基础，更新了整个网站。

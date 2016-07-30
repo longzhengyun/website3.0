@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html style="font-size:20px;">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<title>空气检测仪</title>
+<meta name="description" content="空气检测仪" />
+<meta name="keywords" content="空气检测仪" />
+<meta name="apple-mobile-web-app-title" content="空气检测仪" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="section-wrap add-device-wrap">
+	<div class="section-header">
+		<div class="select-city"><span class="city-name">上海</span><span class="arrow-down"></span></div>
+		<div class="other-action"><span class="btn-share"><i class="icon-share"></i></span><span class="btn-out"><i class="icon-out"></i></span></div>
+	</div>
+	<div class="weather-details clearfix">
+		<div class="icon-weather icon-sunny"></div>
+		<ul class="data-weather">
+			<li class="date">今天<span class="gap-horizontal">4.19</span>周二</li>
+			<li class="degrees"><span class="gap-right">12-23℃</span>晴</li>
+		</ul>
+		<div class="data-pm">PM2.5<span class="pm-value">123</span></div>
+	</div>
+	<ul class="weather-profile clearfix">
+		<li class="list-item">
+			<div class="week-name">昨天</div>
+			<div class="icon-weather icon-storm"></div>
+			<div class="degrees">27-32℃</div>
+		</li>
+		<li class="list-item">
+			<div class="week-name">昨天</div>
+			<div class="icon-weather icon-sunny"></div>
+			<div class="degrees">27-32℃</div>
+		</li>
+		<li class="list-item">
+			<div class="week-name">昨天</div>
+			<div class="icon-weather icon-heavy-rain"></div>
+			<div class="degrees">27-32℃</div>
+		</li>
+		<li class="list-item">
+			<div class="week-name">昨天</div>
+			<div class="icon-weather icon-cloudy"></div>
+			<div class="degrees">27-32℃</div>
+		</li>
+	</ul>
+	<div class="user-details">
+		<div class="user-title">蘑菇的家
+			<div class="more-action">
+				<span class="icon-action"></span>
+				<div class="list-action" style="display:block;">
+					<span class="icon-arrow"></span>
+					<div class="list-item"><span class="icon-symbol">+</span>添加设备</div>
+					<div class="list-item"><span class="icon-symbol">-</span>解绑设备</div>
+				</div>
+			</div>
+		</div>
+		<div class="user-data clearfix">
+			<div class="user-data-pm">
+				<div class="data-pm-value">19</div>
+				<div class="data-pm-level">
+					<p class="name">PM2.5</p>
+					<span class="level level-2">正常</span>
+					<!-- PM2.5等级对应类名：
+					<span class="level level-1">良好</span>
+					<span class="level level-2">正常</span>
+					<span class="level level-3">轻度污染</span>
+					<span class="level level-4">中度污染</span>
+					<span class="level level-5">重度污染</span>
+					<span class="level level-6">严重污染</span>
+					<span class="level level-7">不宜生存</span> -->
+				</div>
+			</div>
+			<ul class="user-data-more">
+				<li><span class="icon-data icon-degrees"></span>温度 35℃</li>
+				<li><span class="icon-data icon-humidity"></span>湿度 50%</li>
+				<li><span class="icon-data icon-tvoc"></span>TVOC 良</li>
+			</ul>
+		</div>
+		<div class="chart-pm"><img src="http://pic.c-ctrip.com/h5/air_detector/sample.png" alt="" style="max-width:100%;"></div>
+		<div class="slide-nav"><span class="nav-item cur"></span><span class="nav-item"></span></div>
+	</div>
+</div>
+<div class="alert-wrap alert-normal">
+	<div class="alert-cont">
+		<p class="alert-text">退出后需重新登录才可查看数据，是否确认退出</p>
+	</div>
+	<div class="alert-btn">
+		<a href="javascript:;" class="btn-item">取消</a>
+		<a href="javascript:;" class="btn-item color-blue">确认退出</a>
+	</div>
+</div>
+<div class="alert-wrap alert-normal">
+	<div class="alert-cont">
+		<p class="alert-text">解绑设备后则不能恢复，只能重新绑定；是否确认解绑“设备昵称”</p>
+	</div>
+	<div class="alert-btn">
+		<a href="javascript:;" class="btn-item">取消</a>
+		<a href="javascript:;" class="btn-item color-blue">确认解绑</a>
+	</div>
+</div>
+<div class="pop-wrap pop-normal">
+	<p class="pop-text"><i class="icon-success"></i> 解绑成功</p>
+</div>
+<div class="share-wrap">
+	<div class="share-cont">
+		<ul class="share-list clearfix">
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-sina"></span><p class="text-share">新浪微博</p></a></li>
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-wx"></span><p class="text-share">微信</p></a></li>
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-wxpyq"></span><p class="text-share">微信朋友圈</p></a></li>
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-qq"></span><p class="text-share">QQ</p></a></li>
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-qqkj"></span><p class="text-share">QQ空间</p></a></li>
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-msg"></span><p class="text-share">短信</p></a></li>
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-email"></span><p class="text-share">邮件</p></a></li>
+			<li class="list-item"><a href="javascript:;"><span class="icon-share icon-copy"></span><p class="text-share">复制</p></a></li>
+		</ul>
+		<button class="btn-fill btn-blue btn-normal">取消</button>
+	</div>
+</div>
+</body>
+</html>

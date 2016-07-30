@@ -1,0 +1,17 @@
+<!-- header -->
+<div class="header" ui-view="header"></div>
+<!-- content -->
+<div class="content">
+	<div ng-repeat="item in resumeData.other">
+		<!-- title-mode -->
+		<div class="title-mode">
+			<h2 class="title-cont">{{item.title}}</h2>
+		</div>
+		<!-- form-wrap -->
+		<form class="form-mode">
+			<div class="form-group form-multi">
+				<div class="group-cont">{{item.description}}</div>
+			</div>
+		</form>
+	</div>
+</div>
