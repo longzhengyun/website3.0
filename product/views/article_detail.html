@@ -9,7 +9,7 @@
 			<span class="data-item">分类：{{detailData.tags}}</span>
 			<span class="data-item">日期：{{detailData.date}}</span>
 		</div>
-		<div class="detail-cont">{{detailData.content}}</div>
+		<div class="detail-cont" ng-bind-html="detailData.content"></div>
 	</div>
 	<!-- list mode -->
 	<div class="list-mode1">

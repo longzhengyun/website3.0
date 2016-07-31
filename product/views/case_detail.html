@@ -1,33 +1,55 @@
 <!-- header -->
 <div class="header" ui-view="header"></div>
 <!-- content -->
-<div class="content">
+<div class="content case-detail">
 	<!-- case detail -->
 	<div class="detail-mode">
 		<h2 class="detail-title">{{detailData.title}}</h2>
-		<div class="detail-data">
-			<span class="data-item">所属：{{detailData.belong}}</span>
-			<span class="data-item">分类：{{detailData.tags}}</span>
-			<span class="data-item">日期：{{detailData.date}}</span>
+	</div>
+	<!-- title-mode -->
+	<div class="title-mode">
+		<h2 class="title-cont">案例信息</h2>
+	</div>
+	<!-- form-wrap -->
+	<form class="form-mode">
+		<div class="form-group form-twin-two form-single">
+			<div class="group-name">所属</div>
+			<div class="group-cont">{{detailData.belong}}</div>
 		</div>
-		<div class="detail-cont">{{detailData.description}}</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-two form-single">
+			<div class="group-name">分类</div>
+			<div class="group-cont">{{detailData.tags}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-two form-single">
+			<div class="group-name">日期</div>
+			<div class="group-cont">{{detailData.date}}</div>
+		</div>
+		<div class="line-between"></div>
+		<div class="form-group form-twin-two form-multi">
+			<div class="group-name">简介</div>
+			<div class="group-cont">{{detailData.description}}</div>
+		</div>
+	</form>
+	<!-- title-mode -->
+	<div class="title-mode">
+		<h2 class="title-cont">访问案例页面</h2>
 	</div>
 	<!-- list mode -->
 	<div class="list-mode1 gap-bottom">
-		<div class="mode-title">
-			<h2 class="title-name">访问案例页面</h2>
-		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
 				<li class="list-item" ng-repeat="item in detailData.pages"><a target="_blank" class="item" href="case/{{item.url}}">{{item.name}}</a></li>
 			</ul>
 		</div>
 	</div>
+	<!-- title-mode -->
+	<div class="title-mode">
+		<h2 class="title-cont">相关案例</h2>
+	</div>
 	<!-- list mode -->
 	<div class="list-mode1">
-		<div class="mode-title">
-			<h2 class="title-name">相关案例</h2>
-		</div>
 		<div class="mode-cont">
 			<ul class="clearfix">
 				<li class="list-item" ng-repeat="item in caseData | orderBy:'-date' | filter:{'tags':detailData.tags} | filter:{'hot':true} | limitTo:4"><a class="item" href="#/caseDetail/{{item.id}}">{{item.title}}</a></li>

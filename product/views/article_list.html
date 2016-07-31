@@ -10,7 +10,7 @@
 	</div>
 	<!-- article list -->
 	<ul class="list-mode2 article-list" ng-if="articleData">
-		<li class="list-item" ng-repeat="item in articleData | orderBy:'-date' | filter:{'tags':initSubMenu.tagsKey} | limitTo:10">
+		<li class="list-item" ng-repeat="item in articleData | orderBy:'-date' | filter:{'tags':initSubMenu.tagsKey}">
 			<h2 class="item-title">{{item.title}}</h2>
 			<p class="item-info">{{item.description}}</p>
 			<div class="clearfix">
