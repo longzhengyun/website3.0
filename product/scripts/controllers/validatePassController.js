@@ -1,4 +1,4 @@
-app.controller('validatePassController', ['$scope', '$state', '$window', 'resumePassService', 'localService', 'RESUME_CODE', function($scope, $state, $window, resumePassService, localService, RESUME_CODE) {
+app.controller('validatePassController', ['$scope', '$window', 'resumePassService', 'localService', 'RESUME_CODE', function($scope, $window, resumePassService, localService, RESUME_CODE) {
 	//优先判断是否有访问资格
 	if(resumePassService()){
 		$window.history.back();//返回
@@ -10,14 +10,7 @@ app.controller('validatePassController', ['$scope', '$state', '$window', 'resume
 	//初始化
 	$scope.initHeader = {
 		title:'访问验证',
-		btnBack:true,
 		btnHome:true
-	};
-
-	//是否为首次访问
-	var firstVisit = false;
-	if(!localService.getLocalData('resumeData')){
-		firstVisit = true;
 	};
 
 	$scope.visitAction = function(){
@@ -29,11 +22,7 @@ app.controller('validatePassController', ['$scope', '$state', '$window', 'resume
 			};
 
 			localService.setLocalData('resumeData', $scope.localData); //本地存储用户数据
-			if(firstVisit){
-				$state.go('resume');
-			}else{
-				$window.history.back();//返回
-			};
+			$window.history.back();//返回
 		};
 	};
 }]);
