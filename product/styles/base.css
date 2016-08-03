@@ -7,6 +7,8 @@ address,cite,dfn,em,var,i{font-style:normal;font-weight:400;}
 html,body{height:100%;}
 dfn{font-family:Arial;}
 ul,ol{list-style:none;}
+pre{white-space:pre-wrap;word-wrap:break-word;}
+img{max-width:100%;height:auto;}
 a{color:#333;text-decoration:none;}
 fieldset,img,button,input{border:0;}
 button,input,select,textarea{font-size:100%;}
