@@ -10,39 +10,30 @@
 </head>
 <body>
 <?php 
-//变量 获取当前文件的绝对路径
-echo "__FILE__: ===>".__FILE__;
-echo "<br/>";
+date_default_timezone_set('UTC');
 
-//变量 获取当前脚本的目录
-echo "__DIR__: ===>".__DIR__;
-echo "<br/>";
+$dir = '/Users/jary/website/ui/';
 
-//dirname返回路径的目录部分，dirname(__FILE__)相当于__DIR__
-echo "dirname(__FILE__): ===>".dirname(__FILE__);
-echo "<br/>";
-
-//$_SERVER['PHP_SELF']和$_SERVER['SCRIPT_NAME']的结果一般相同，他们都是获取当前脚本的文件名
-//只有当php以cgi方式运行时有区别，但是现在几乎找不到以cgi方式运行php了
-echo '$_SERVER["PHP_SELF"]: ===>'.$_SERVER['PHP_SELF'];
-echo "<br/>";
-echo '$_SERVER["SCRIPT_NAME"]: ===>'.$_SERVER['SCRIPT_NAME'];
-echo "<br/>";
-
-//当前执行脚本的绝对路径。记住，在CLI方式运行php是获取不到的
-echo '$_SERVER["SCRIPT_FILENAME"]:  ========>  '.$_SERVER['SCRIPT_FILENAME'];
-echo '<br/>';
- 
-//当前运行脚本所在的文档根目录。在服务器配置文件中定义。
-echo '$_SERVER["DOCUMENT_ROOT"]:  ========>  '.$_SERVER['DOCUMENT_ROOT'];
-echo '<br>';
- 
-//getcwd()返回当前工作目录
-echo "getcwd():  ========>  ".getcwd();
-echo '<br>';
+if(is_dir($dir)){
+	if($dh = opendir($dir)){
+		while (($file = readdir($dh))!=false) {
+			$filePath = $dir.$file;
+			preg_match("/<head.*>(.*)<\/head>/smUi", $file, $fileTitle); 
+			$fmt = filemtime($filePath);
+			echo "<span style='color:#999'>(".date("Y-m-d H:i:s", $fmt).")</span><span style='color:#f00'>".$fileTitle."</span>".$filePath."<br/>";
+		}
+		closedir($dh);
+	}
+}
 ?>
 
-<div class="section-wrap" id="content"></div>
+<div class="section-wrap">
+	<!-- <div class="enter"><input type="text" name="" id="catalog"></div> -->
+	<ul class="list">
+		
+	</ul>
+</div>
+<div id="content"></div>
 <script type="text/babel" src="js/javascript.js"></script>
 </body>
 </html>
