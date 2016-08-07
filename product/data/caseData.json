@@ -396,5 +396,27 @@
 			{"name":"联系我们", "url":"shoushu/contact.html"}
 		],
 		"hot":"true"
+	},
+	{
+		"id":"98f13708210194c475687be6106a3b84",
+		"title":"HiRead",
+		"description":"悦德英文童书馆H5版",
+		"date":"2016-08-03",
+		"belong":"HiRead",
+		"tags":"Mobile",
+		"pages":[
+			{"name":"登录", "url":"hiread/login.shtml"},
+			{"name":"注册", "url":"hiread/register.shtml"},
+			{"name":"忘记密码", "url":"hiread/forget.shtml"},
+			{"name":"新闻资讯", "url":"hiread/index.shtml"},
+			{"name":"推荐", "url":"hiread/index_recommend.shtml"},
+			{"name":"分类", "url":"hiread/index_classify.shtml"},
+			{"name":"排行榜", "url":"hiread/ranking_list.shtml"},
+			{"name":"排行榜-分类", "url":"hiread/ranking_classify.shtml"},
+			{"name":"搜索", "url":"hiread/search.shtml"},
+			{"name":"详情", "url":"hiread/product_detail.shtml"},
+			{"name":"购物车", "url":"hiread/shopping_cart.shtml"}
+		],
+		"hot":"true"
 	}
 ]
