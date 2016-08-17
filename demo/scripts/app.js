@@ -10,8 +10,7 @@ app.controller('mainController', ['$scope', 'dataService', 'HTMLFILES_DATA', fun
 		if($scope.userDir != undefined && $scope.userDir != ''){
 			//获取数据
 			dataService.getData(HTMLFILES_DATA, '/' + $scope.userDir + '/').success(function(data){
-				$scope.initData = data.htmlFiles;
-				console.log(data);
+				$scope.htmlDatas = data.htmlFiles;
 			});
 		}else{
 			alert('请输入需要加载的文件目录');

@@ -13,14 +13,35 @@
 	<!-- header -->
 	<div class="header">
 		<div class="wrap">
-			<span>http://hfdoc.qa.lc.ctripcorp.com/</span>
-			<input type="text" placeholder="输入原型目录名" ng-model="userDir" />
-			<button ng-click="loadDir()">确定</button>
+			<label class="in-label">
+				<span class="label-name">目录：</span>
+				<input class="in-text" type="text" placeholder="输入原型目录名" ng-model="userDir" />
+			</label>
+			<label class="in-label">
+				<span class="label-name">仓库：</span>
+				<select class="in-select">
+					<option value="">仓库一</option>
+				</select>
+			</label>
+			<label class="in-label">
+				<span class="label-name">分支：</span>
+				<select class="in-select">
+					<option value="">分支一</option>
+				</select>
+			</label>
+			<button class="btn-init" ng-click="loadDir()">确定</button>
 		</div>
 	</div>
 	<!-- content -->
 	<div class="content">
-		
+		<ul class="html-list wrap">
+			<li class="list-item clearfix" ng-repeat="data in htmlDatas" ng-if="htmlDatas">
+				<h3 class="item-title" ng-bind="data.title"></h3>
+				<p class="item-name">文件名：<span ng-bind="data.name"></span></p>
+				<p class="item-date">修改时间：<span ng-bind="data.date | date"></span></p>
+				<a href="#" target="_blank" class="item-link"></a>
+			</li>
+		</ul>
 	</div>
 </div>
 <!-- script library -->
