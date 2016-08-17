@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app" style="font-size:20px;">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>demo</title>
@@ -9,17 +9,25 @@
 <link rel="stylesheet" href="styles/demo.css">
 </head>
 <body>
-<div class="section-wrap" ui-view="content"></div>
+<div class="section-wrap" ng-app="app" ng-controller="mainController">
+	<!-- header -->
+	<div class="header">
+		<div class="wrap">
+			<span>http://hfdoc.qa.lc.ctripcorp.com/</span>
+			<input type="text" placeholder="输入原型目录名" ng-model="userDir" />
+			<button ng-click="loadDir()">确定</button>
+		</div>
+	</div>
+	<!-- content -->
+	<div class="content">
+		
+	</div>
+</div>
 <!-- script library -->
-<script src="scripts/library/angular/angular.min.js"></script>
-<script src="scripts/library/angular/angular-sanitize.min.js"></script>
-<script src="scripts/library/angular/angular-ui-router.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-sanitize.min.js"></script>
+<script src="scripts/angular-ui-router.min.js"></script>
 <!-- script common -->
 <script src="scripts/app.js"></script>
-<!-- script controllers -->
-<script src="scripts/controllers/headerController.js"></script>
-<script src="scripts/controllers/homeController.js"></script>
-<!-- script services -->
-<script src="scripts/services/dataService.js"></script>
 </body>
 </html>

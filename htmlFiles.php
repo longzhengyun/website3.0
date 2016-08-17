@@ -1,7 +1,7 @@
 <?php
-$dir = dirname(dirname(__FILE__));
-$dir_replace = str_replace("\\","/","$dir")."/ui/";
-
+$dir = dirname(__FILE__);
+$var = $_REQUEST['id'];
+$dir_replace = str_replace("\\", "/", "$dir").$var;
 if (is_dir($dir_replace)){
 	if ($dh = opendir($dir_replace)){
 		while (($file = readdir($dh)) != false){
@@ -11,7 +11,7 @@ if (is_dir($dir_replace)){
 
 			//去掉子目录
 			if (!is_dir($filePath)){
-				//去掉非html,php文件
+				//去掉非html, php文件
 				if(strpos($fileName, ".html") || strpos($fileName, ".php")) {
 					$arr_title = file($filePath);
 					//输出网页标题
@@ -27,11 +27,9 @@ if (is_dir($dir_replace)){
 					};
 					//获取文件修改时间
 					$fmt = filemtime($filePath);
-					// $htmlFiles[] = {
-					// 	'title': $page_title,
-					// 	'date': $fmt,
-					// 	'name': $fileName
-					// };
+
+					//整合数据
+					$htmlFiles[] = array('title' => $page_title, 'name' => $fileName, 'date' => $fmt);
 				}
 			}
 		}
