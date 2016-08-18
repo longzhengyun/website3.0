@@ -4,7 +4,7 @@ var app = angular.module('app', ['ngSanitize', 'ui.router']);
 //常数
 app.constant('PROJECT_URL', 'http://10.3.8.87:8080/showProject');
 app.constant('BRANCH_URL', 'http://10.3.8.87:8080/showBranches');
-app.constant('HTMLFILES_DATA', '../htmlFiles.php');
+app.constant('HTMLFILES_DATA', 'htmlFiles.php');
 
 //控制器
 app.controller('mainController', ['$scope', '$location', 'dataService', function($scope, $location, dataService) {

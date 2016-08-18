@@ -7,8 +7,8 @@ app.controller('homeController', ['$scope', '$state', 'dataService', 'ARTICLE_DA
 	};
 
 	//推荐文章
-	dataService.getData(ARTICLE_DATA).success(function(data){
-		$scope.initData.articleData = data;
+	dataService.getData(ARTICLE_DATA, 'article_data').success(function(data){
+		// $scope.initData.articleData = data;
 	});
 
 	//推荐网站
