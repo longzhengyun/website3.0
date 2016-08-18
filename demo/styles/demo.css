@@ -9,7 +9,7 @@ body{font:16px/36px Arial,"Lucida Grande",Verdana,"Microsoft YaHei","SimHei",san
 /* header */
 .header{padding:20px 0;background-color:#0accb1;color:#fff;font-size:14px;}
 .header .in-text{width:360px;}
-.header .btn-init{width:120px;}
+.header .btn-init{width:120px;background-color:#06c;color:#fff;border-color:#06c;}
 
 /* content */
 .content{background-color:#fafafa}

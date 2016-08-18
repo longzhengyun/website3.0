@@ -15,18 +15,18 @@
 		<div class="wrap">
 			<label class="in-label">
 				<span class="label-name">目录：</span>
-				<input class="in-text" type="text" placeholder="输入原型目录名" ng-model="userDir" />
+				<input class="in-text" type="text" placeholder="输入原型目录名" ng-model="userDir" ng-keyup="myKeyup($event)" />
 			</label>
 			<label class="in-label">
 				<span class="label-name">仓库：</span>
-				<select class="in-select">
+				<select class="in-select" ng-model="userProjects">
 					<option value="">仓库一</option>
 				</select>
 			</label>
 			<label class="in-label">
 				<span class="label-name">分支：</span>
-				<select class="in-select">
-					<option value="">分支一</option>
+				<select class="in-select" ng-model="userBranchs">
+					<option value="release">release</option>
 				</select>
 			</label>
 			<button class="btn-init" ng-click="loadDir()">确定</button>
@@ -35,11 +35,11 @@
 	<!-- content -->
 	<div class="content">
 		<ul class="html-list wrap">
-			<li class="list-item clearfix" ng-repeat="data in htmlDatas" ng-if="htmlDatas">
+			<li class="list-item clearfix" ng-repeat="data in htmlDatas | orderBy:'-date'">
 				<h3 class="item-title" ng-bind="data.title"></h3>
 				<p class="item-name">文件名：<span ng-bind="data.name"></span></p>
-				<p class="item-date">修改时间：<span ng-bind="data.date | date"></span></p>
-				<a href="#" target="_blank" class="item-link"></a>
+				<p class="item-date">修改时间：<span ng-bind="data.date"></span></p>
+				<a ng-href="{{htmlURL}}/{{data.name}}" target="_blank" class="item-link"></a>
 			</li>
 		</ul>
 	</div>
