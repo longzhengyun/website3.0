@@ -1,4 +1,4 @@
-app.controller('resumeOtherController', ['$scope', '$state', 'dataService', 'resumePassService', 'RESUME_DATA', function($scope, $state, dataService, resumePassService, RESUME_DATA) {
+app.controller('resumeOtherController', ['$scope', '$state', 'dataService', 'resumePassService', function($scope, $state, dataService, resumePassService) {
 	//优先判断是否有访问资格
 	if(!resumePassService()){
 		$state.go('validatePass');
@@ -12,7 +12,7 @@ app.controller('resumeOtherController', ['$scope', '$state', 'dataService', 'res
 	};
 
 	//获取个人数据
-	dataService.getData(RESUME_DATA).success(function(data){
-		$scope.resumeData = data;
+	dataService.getData('user_data').success(function(data){
+		$scope.resumeData = angular.fromJson(data.db_data[0].other);
 	});
 }]);

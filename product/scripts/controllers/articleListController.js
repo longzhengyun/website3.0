@@ -1,4 +1,4 @@
-app.controller('articleListController', ['$scope', 'dataService', 'ARTICLE_DATA', function($scope, dataService, ARTICLE_DATA) {
+app.controller('articleListController', ['$scope', 'dataService', function($scope, dataService) {
 	//初始化
 	$scope.initData = {
 		itemName:'文章',
@@ -22,8 +22,8 @@ app.controller('articleListController', ['$scope', 'dataService', 'ARTICLE_DATA'
 	};
 
 	//获取文章数据
-	dataService.getData(ARTICLE_DATA).success(function(data){
-		$scope.articleData = data;
+	dataService.getData('article_data').success(function(data){
+		$scope.articleData = data.db_data;
 	});
 
 	//点击菜单切换内容

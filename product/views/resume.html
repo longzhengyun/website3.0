@@ -10,61 +10,61 @@
 	<div ng-if="resumeData">
 		<!-- form-wrap -->
 		<form class="form-mode">
-			<div class="resume-photo"><img ng-src="{{resumeData.person.photo}}"></div>
+			<div class="resume-photo"><img ng-src="{{resumeData.photo}}"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">姓名</div>
-				<div class="group-cont">{{resumeData.person.name}}</div>
+				<div class="group-cont">{{resumeData.user}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">昵称</div>
-				<div class="group-cont">{{resumeData.person.nickname}}</div>
+				<div class="group-cont">{{resumeData.nickname}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">年龄</div>
-				<div class="group-cont">{{resumeData.person.age}}</div>
+				<div class="group-cont">{{resumeData.age}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">手机</div>
-				<div class="group-cont">{{resumeData.person.phone}}</div>
+				<div class="group-cont">{{resumeData.phone}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">Email</div>
-				<div class="group-cont">{{resumeData.person.email}}</div>
+				<div class="group-cont">{{resumeData.email}}</div>
 			</div>
 		</form>
 		<form class="form-mode">
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">学历</div>
-				<div class="group-cont">{{resumeData.person.degrees}}</div>
+				<div class="group-cont">{{resumeData.degrees}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">专业</div>
-				<div class="group-cont">{{resumeData.person.major}}</div>
+				<div class="group-cont">{{resumeData.major}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">职业</div>
-				<div class="group-cont">{{resumeData.person.job}}</div>
+				<div class="group-cont">{{resumeData.job}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">工作年限</div>
-				<div class="group-cont">{{resumeData.person.worklife}}年</div>
+				<div class="group-cont">{{resumeData.worklife}}年</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">工作状态</div>
-				<div class="group-cont">{{resumeData.person.state}}</div>
+				<div class="group-cont">{{resumeData.state}}</div>
 			</div>
 			<div class="line-between"></div>
 			<div class="form-group form-twin-four form-single">
 				<div class="group-name">期望年薪</div>
-				<div class="group-cont">{{resumeData.person.salary}}</div>
+				<div class="group-cont">{{resumeData.salary}}元</div>
 			</div>
 		</form>
 		<form class="form-mode">

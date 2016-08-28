@@ -1,4 +1,4 @@
-app.controller('siteListController', ['$scope', 'dataService', 'SITE_DATA', function($scope, dataService, SITE_DATA) {
+app.controller('siteListController', ['$scope', 'dataService', function($scope, dataService) {
 	//初始化
 	$scope.initData = {
 		itemName:'网站',
@@ -20,8 +20,8 @@ app.controller('siteListController', ['$scope', 'dataService', 'SITE_DATA', func
 	};
 
 	//获取网站数据
-	dataService.getData(SITE_DATA).success(function(data){
-		$scope.siteData = data;
+	dataService.getData('site_data').success(function(data){
+		$scope.siteData = data.db_data;
 	});
 
 	//点击菜单切换内容

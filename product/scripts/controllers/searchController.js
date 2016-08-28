@@ -1,4 +1,4 @@
-app.controller('searchController', ['$scope', '$window', 'dataService', 'localService', 'ARTICLE_DATA', function($scope, $window, dataService, localService, ARTICLE_DATA) {
+app.controller('searchController', ['$scope', '$window', 'dataService', 'localService', function($scope, $window, dataService, localService) {
 	//空对象转空数组
 	function isEmptyObject(OBJ){
 		if(typeof OBJ === 'object' && !(OBJ instanceof Array)){
@@ -18,8 +18,8 @@ app.controller('searchController', ['$scope', '$window', 'dataService', 'localSe
 	$scope.localData = isEmptyObject(localService.getLocalData('searchData'));
 
 	//获得文章数据
-	dataService.getData(ARTICLE_DATA).success(function(data){
-		$scope.articleData = data;
+	dataService.getData('article_data').success(function(data){
+		// $scope.articleData = data;
 	});
 
 	//初始化搜索数据

@@ -24,7 +24,7 @@
 			</div>
 			<!-- list -->
 			<ul class="clearfix" ng-if="initData.articleData">
-				<li class="list-item" ng-repeat="item in initData.articleData | orderBy:'-date' | filter:{'hot':'true'} | limitTo:12"><a class="item" href="#/articleDetail/{{item.id}}">{{item.title}}</a></li>
+				<li class="list-item" ng-repeat="item in initData.articleData | orderBy:'-date' | filter:{'hot':'y'} | limitTo:12"><a class="item" href="#/articleDetail/{{item.id}}">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -41,7 +41,7 @@
 			</div>
 			<!-- list -->
 			<ul class="clearfix" ng-if="initData.siteData">
-				<li class="list-item" ng-repeat="item in initData.siteData | orderBy:'-date' | filter:{'hot':'true'} | limitTo:6"><a target="_blank" class="item" href="{{item.url}}">{{item.title}}</a></li>
+				<li class="list-item" ng-repeat="item in initData.siteData | orderBy:'-date' | filter:{'hot':'y'} | limitTo:6"><a target="_blank" class="item" href="{{item.url}}">{{item.title}}</a></li>
 			</ul>
 		</div>
 	</div>

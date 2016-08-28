@@ -1,4 +1,4 @@
-app.controller('caseListController', ['$scope', '$state', 'dataService', 'resumePassService', 'CASE_DATA', function($scope, $state, dataService, resumePassService, CASE_DATA) {
+app.controller('caseListController', ['$scope', '$state', 'dataService', 'resumePassService', function($scope, $state, dataService, resumePassService) {
 	//优先判断是否有访问资格
 	if(!resumePassService()){
 		$state.go('validatePass');
@@ -22,9 +22,10 @@ app.controller('caseListController', ['$scope', '$state', 'dataService', 'resume
 	};
 
 	//获取案例数据
-	dataService.getData(CASE_DATA).success(function(data){
-		$scope.caseData = data;
+	dataService.getData('case_data').success(function(data){
+		$scope.caseData = data.db_data;
 	});
+	
 	//点击菜单切换内容
 	$scope.subMenuAction = function(item){
 		angular.forEach($scope.initSubMenu.items, function(value){

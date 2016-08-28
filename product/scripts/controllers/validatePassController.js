@@ -1,4 +1,4 @@
-app.controller('validatePassController', ['$scope', '$window', 'resumePassService', 'localService', 'RESUME_CODE', function($scope, $window, resumePassService, localService, RESUME_CODE) {
+app.controller('validatePassController', ['$scope', '$window', 'dataService', 'resumePassService', 'localService', function($scope, $window, dataService, resumePassService, localService) {
 	//优先判断是否有访问资格
 	if(resumePassService()){
 		$window.history.back();//返回
@@ -14,10 +14,15 @@ app.controller('validatePassController', ['$scope', '$window', 'resumePassServic
 	};
 
 	$scope.visitAction = function(){
-		if(md5($scope.inviteCode) == RESUME_CODE){
+		//验证权限
+		var validate = 0;
+		if($scope.inviteCode.length >= 5){
+			validate = parseInt(dataService.getValidate(md5($scope.inviteCode)));
+		};
+		if(validate){
 			var today = new Date().getTime();
 			$scope.localData = {
-				pass:'true',
+				code:md5($scope.inviteCode),
 				date:today
 			};
 
