@@ -19,7 +19,7 @@ app.controller('searchController', ['$scope', '$window', 'dataService', 'localSe
 
 	//获得文章数据
 	dataService.getData('article_data').success(function(data){
-		// $scope.articleData = data;
+		$scope.articleData = data.db_data;
 	});
 
 	//初始化搜索数据
@@ -41,7 +41,11 @@ app.controller('searchController', ['$scope', '$window', 'dataService', 'localSe
 	$scope.searchAction = function(){
 		if(!$scope.searchValue == ''){//非空则搜索
 			$scope.searchResult = true;
-			$scope.searchData = $scope.articleData;
+			
+			$scope.searchData = [];
+			angular.forEach($scope.articleData, function(value){
+				$scope.searchData.push({'id':value.id, 'title':value.title});
+			});
 
 			//判断是否有包含或重复
 			function transferAction(array){
