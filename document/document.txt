@@ -1,5 +1,14 @@
-佳瑞网 V3.0
+项目介绍：
+佳瑞网，前端开发类技术个人网站。
 
-使用技术包括：HTML5、CSS3、AngularJS、JavaScript、PHP等
+目录：
+product 生产环境的项目
 
-新版采用移动端优先，PC端兼容的模式，以AngularJS为基础，更新了整个网站。
+prototype 项目原型
+
+document 说明文档
+
+backups 过渡版本
+
+test 测试
+
