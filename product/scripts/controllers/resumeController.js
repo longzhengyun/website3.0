@@ -16,10 +16,10 @@ app.controller('resumeController', ['$scope', '$state', 'dataService', 'resumePa
 		$scope.resumeData = data.db_data[0];
 
 		var year = new Date().getFullYear();
-        var month = (new Date().getMonth() + 1) > 9 ? new Date().getMonth() + 1 : '0' + (new Date().getMonth() + 1);
-        var day = new Date().getDate() > 9 ? new Date().getDate() : '0' + new Date().getDate();
+        var month = (new Date().getMonth() + 1) > 9 ?  '' + (new Date().getMonth() + 1) : '0' + (new Date().getMonth() + 1);
+        var day = new Date().getDate() > 9 ? '' + new Date().getDate() : '0' + new Date().getDate();
         var age = (year + month + day - $scope.resumeData.birthday.replace(/-/g,'')).toString().substr(0, 2);
-        var worklife = (year + month).toString().substr(0, 4) - $scope.resumeData.worklife.toString().substr(0, 4);
+        var worklife = year - $scope.resumeData.worklife.toString().substr(0, 4);
 
         //格式化年龄
 		$scope.resumeData.age = age;
