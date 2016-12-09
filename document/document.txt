@@ -1,14 +1,14 @@
-��Ŀ���ܣ�
-��������ǰ�˿����༼��������վ��
+项目介绍：
+佳瑞网，前端开发类个人技术网站。
 
-Ŀ¼��
-product ������������Ŀ
+目录：
+product 生产环境的项目
 
-prototype ��Ŀԭ��
+prototype 项目原型
 
-document ˵���ĵ�
+document 说明文档
 
-backups ���ɰ汾
+backups 过渡版本
 
-test ����
+test 测试
 
