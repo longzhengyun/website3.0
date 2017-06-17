@@ -1,9 +1,5 @@
 var app = angular.module('app', ['ngSanitize', 'ui.router']);
 
-//常数
-app.constant('REQUEST_DATA', '/static/data/db_config.php');//数据
-app.constant('RESUME_URL', '/resume/');//Resume URL
-
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/home');
 	$stateProvider
@@ -84,6 +80,84 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 			}
 		}
 	})
+	.state('validatePass', {
+		url: '/validatePass',
+		views: {
+			'header@validatePass': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/validate_pass.html',
+				controller: 'validatePassController'
+			}
+		}
+	})
+	.state('resume', {
+		url: '/resume',
+		views: {
+			'header@resume': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/resume.html',
+				controller: 'resumeController'
+			}
+		}
+	})
+	.state('resumeInfo', {
+		url: '/resumeInfo',
+		views: {
+			'header@resumeInfo': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/resume_info.html',
+				controller: 'resumeInfoController'
+			}
+		}
+	})
+	.state('resumeSkill', {
+		url: '/resumeSkill',
+		views: {
+			'header@resumeSkill': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/resume_skill.html',
+				controller: 'resumeSkillController'
+			}
+		}
+	})
+	.state('resumeExperience', {
+		url: '/resumeExperience',
+		views: {
+			'header@resumeExperience': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/resume_experience.html',
+				controller: 'resumeExperienceController'
+			}
+		}
+	})
+	.state('resumeOther', {
+		url: '/resumeOther',
+		views: {
+			'header@resumeOther': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/resume_other.html',
+				controller: 'resumeOtherController'
+			}
+		}
+	})
 	.state('about', {
 		url: '/about',
 		views: {
@@ -110,16 +184,29 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 			}
 		}
 	})
-	.state('myapp', {
-		url: '/myapp',
+	.state('caseList', {
+		url: '/caseList',
 		views: {
-			'header@myapp': {
+			'header@caseList': {
 				templateUrl: 'views/header.html',
 				controller: 'headerController'
 			},
 			'content': {
-				templateUrl: 'views/myapp.html',
-				controller: 'myappController'
+				templateUrl: 'views/case_list.html',
+				controller: 'caseListController'
+			}
+		}
+	})
+	.state('caseDetail', {
+		url: '/caseDetail/:id', //在id前面加一个冒号，从而制订了一个参数化URL
+		views: {
+			'header@caseDetail': {
+				templateUrl: 'views/header.html',
+				controller: 'headerController'
+			},
+			'content': {
+				templateUrl: 'views/case_detail.html',
+				controller: 'caseDetailController'
 			}
 		}
 	})

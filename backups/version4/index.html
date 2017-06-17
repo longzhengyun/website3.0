@@ -3,37 +3,31 @@
 <head>
 <meta charset="utf-8" />
 <title>佳瑞网-web前端开发</title>
-<meta http-equiv="x-dns-prefetch-control" content="on" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!-- DNS 缓存 S-->
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//www.jary8.com">
+<!-- DNS 缓存 E-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="full-screen" content="yes" />
-<meta name="x5-fullscreen" content="true" />
-<meta name="x5-page-mode" content="app" />
-<meta name="browsermode" content="application" />
-<meta name="apple-mobile-web-app-title" content="佳瑞网" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="format-detection" content="email=no, telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="email=no" name="format-detection" />
+<meta content="telephone=no" name="format-detection" />
 <meta name="renderer" content="webkit" />
 <meta name="keywords" content="佳瑞网,web前端开发" />
 <meta name="description" content="佳瑞网，关注web前端开发的个人网站" />
-<meta name="author" content="Jary" />
-<link rel="shortcut icon" type="image/x-icon" sizes="any" mask href="/static/images/icon_launcher.png" />
-<link rel="apple-touch-icon-precomposed" href="/static/images/icon_launcher.png" />
-<link rel="dns-prefetch" href="//www.jary8.com" />
-<link rel="stylesheet" href="/static/styles/base.css" />
-<link rel="stylesheet" href="/static/styles/website.css" />
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/website.css" />
 </head>
 <body>
 <div class="section-wrap" ui-view="content"></div>
 <!-- script library -->
-<script src="/static/library/common/config.js"></script>
-<script src="/static/library/angular/angular.min.js"></script>
-<script src="/static/library/angular/angular-sanitize.min.js"></script>
-<script src="/static/library/angular/angular-ui-router.min.js"></script>
+<script src="scripts/library/angular/angular.min.js"></script>
+<script src="scripts/library/angular/angular-sanitize.min.js"></script>
+<script src="scripts/library/angular/angular-ui-router.min.js"></script>
 <!-- script common -->
 <script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
 <!-- script controllers -->
 <script src="scripts/controllers/homeController.js"></script>
 <script src="scripts/controllers/menuController.js"></script>
@@ -42,12 +36,20 @@
 <script src="scripts/controllers/articleDetailController.js"></script>
 <script src="scripts/controllers/siteListController.js"></script>
 <script src="scripts/controllers/ownerController.js"></script>
+<script src="scripts/controllers/validatePassController.js"></script>
+<script src="scripts/controllers/resumeController.js"></script>
+<script src="scripts/controllers/resumeInfoController.js"></script>
+<script src="scripts/controllers/resumeSkillController.js"></script>
+<script src="scripts/controllers/resumeExperienceController.js"></script>
+<script src="scripts/controllers/resumeOtherController.js"></script>
 <script src="scripts/controllers/aboutController.js"></script>
 <script src="scripts/controllers/versionController.js"></script>
-<script src="scripts/controllers/myappController.js"></script>
+<script src="scripts/controllers/caseListController.js"></script>
+<script src="scripts/controllers/caseDetailController.js"></script>
 <script src="scripts/controllers/searchController.js"></script>
 <!-- script services -->
 <script src="scripts/services/dataService.js"></script>
 <script src="scripts/services/localService.js"></script>
+<script src="scripts/services/resumePassService.js"></script>
 </body>
 </html>

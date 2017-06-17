@@ -1,0 +1,27 @@
+<!-- header -->
+<div class="header" ui-view="header"></div>
+<!-- content -->
+<div class="content">
+	<!-- sub menu -->
+	<div class="sub-menu">
+		<ul class="sub-menu-cont">
+			<li ng-repeat="item in initSubMenu.items" ng-class="{true:'menu-item cur', false:'menu-item'}[item.isCurrent]" ng-click="subMenuAction(item)">{{item.itemName}}</li>
+		</ul>
+	</div>
+	<!-- site list -->
+	<ul class="list-mode2 site-list" ng-if="siteData">
+		<li class="list-item" ng-repeat="item in siteData | filter:{'category':initSubMenu.tagsKey}">
+			<div class="item-tags" ng-if="initSubMenu.tagsShow"><span ng-class="{'tags-item tags-item1':item.category=='技术', 'tags-item tags-item2':item.category=='工具', 'tags-item tags-item3':item.category=='其他'}">{{item.category}}</span></div>
+			<h2 class="item-title">{{item.title}}</h2>
+			<p class="item-info">{{item.description}}</p>
+			<a target="_blank" href="{{item.url}}" title="{{item.title}}" class="item-link"></a>
+		</li>
+	</ul>
+	<!-- load -->
+	<div class="load-mode2" ng-if="!siteData">
+		<i class="icon-load"></i>
+		<span class="text-load">加载中<span class="dot"></span></span>
+	</div>
+</div>
+<!-- menu -->
+<div class="menu" ui-view="menu"></div>

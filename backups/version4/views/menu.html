@@ -1,0 +1,6 @@
+<ul class="menu-cont">
+	<li ng-repeat="item in initMenu.items" ng-class="{true:'menu-item cur', false:'menu-item'}[item.isCurrent]" ng-click="goTarget(item.itemKey)">
+		<i class="menu-icon {{item.itemIcon}}"></i>
+		<span class="menu-text">{{item.itemName}}</span>
+	</li>
+</ul>

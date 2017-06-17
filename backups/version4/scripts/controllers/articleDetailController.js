@@ -15,10 +15,6 @@ app.controller('articleDetailController', ['$scope', '$location', 'dataService',
 		angular.forEach($scope.articleData, function(value){
 			if(value.id == id){
 				$scope.detailData = value;
-				$scope.detailData.date = $scope.detailData.date * 1000;//秒转毫秒
-
-				var regexp = /\"\/content\/uploadfile\//g;//正则表达式匹配图片
-				$scope.detailData.content = $scope.detailData.content.replace(regexp, '"/static/content/uploadfile/');//正则匹配替换文章图片路径
 			}
 		});
 	});
